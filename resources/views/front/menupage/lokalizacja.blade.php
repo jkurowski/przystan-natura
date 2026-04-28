@@ -51,7 +51,7 @@
             </div>
         </section>
 
-        <section class="">
+        <section class="pb-0">
             <!-- Brakuje mapy -->
             <div class="container">
                 <div class="row flex-wrap-nowrap">
