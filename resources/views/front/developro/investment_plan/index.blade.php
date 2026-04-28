@@ -89,7 +89,7 @@
                             subtitle="+ wiata garażowa"
                             area="{{ $p->area }} m²"
                             rooms="{{ $p->rooms }}"
-                            status="{!! roomStatusBadge($p->status) !!}"
+                            status="{{ $p->status }}"
                             floors="2"
                             price="1.299.000 zł"
                             condition="-"

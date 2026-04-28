@@ -27,7 +27,7 @@
         <ul class="mb-0 list-unstyled">
             @if($area)<li class="w-50 border-right">Działka <span>{{ $area }}</span></li>@endif
             @if($rooms)<li class="w-50">Pokoje <span>{{ $rooms }}</span></li>@endif
-            @if($status)<li>Status <span class="{{ $statusClass }}"><strong>{{ $status }}</strong></span></li>@endif
+            @if($status)<li>Status {!! roomStatusBadge($p->status) !!}</li>@endif
             @if($floors)<li>Kondygnacje <span>{{ $floors }}</span></li>@endif
             @if($price)<li>Cena <span>{{ $price }}</span></li>@endif
             @if($condition)<li>Stan <span>{{ $condition }}</span></li>@endif
