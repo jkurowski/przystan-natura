@@ -46,43 +46,6 @@
                     @if($investment->plan)
                         <div id="plan-holder">
                             <img src="{{ asset('/investment/plan/'.$investment->plan->file) }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan" class="w-100 h-100 object-fit-cover rounded">
-
-                            @if($investment->type == 1)
-                                <map name="invesmentplan">
-                                    @if($investment->buildings)
-                                        @foreach($investment->buildings as $building)
-                                            <area
-                                                shape="poly"
-                                                href="{{route('front.developro.building', [$investment->slug, $building])}}"
-                                                alt="{{$building->slug}}"
-                                                data-item="{{$building->id}}" title="{{$building->name}}"
-                                                data-roomnumber="{{$building->number}}"
-                                                data-roomtype="{{$building->typ}}"
-                                                data-roomstatus="{{$building->status}}"
-                                                coords="@if($building->html) {{cords($building->html)}} @endif">
-                                        @endforeach
-                                    @endif
-                                </map>
-                            @endif
-
-                            @if($investment->type == 2)
-                                <map name="invesmentplan">
-                                    @foreach($investment->floors as $floor)
-                                        @if($floor->html)
-                                            <area
-                                                shape="poly"
-                                                href="{{route('front.developro.floor', [$investment->slug, $floor, 'floorSlug' => Str::slug($floor->name)])}}"
-                                                title="{{$floor->name}}"
-                                                alt="floor-{{$floor->id}}"
-                                                data-item="{{$floor->id}}"
-                                                data-floornumber="{{$floor->id}}"
-                                                data-floortype="{{$floor->type}}"
-                                                coords="@if($floor->html) {{cords($floor->html)}} @endif">
-                                        @endif
-                                    @endforeach
-                                </map>
-                            @endif
-
                             @if($investment->type == 3)
                                 <map name="invesmentplan">
                                     @if($investment->properties)
@@ -119,7 +82,23 @@
                     </p>
                 @else
                     @foreach($properties as $p)
-                        <div class="col-12 col-md-6 col-xl-4">
+
+                        <x-list-property-card
+                            number="{{ $p->number }}"
+                            title="{{ $p->name }}"
+                            subtitle="+ wiata garażowa"
+                            area="{{ $p->area }} m²"
+                            rooms="{{ $p->rooms }}"
+                            status="{!! roomStatusBadge($p->status) !!}"
+                            floors="2"
+                            price="1.299.000 zł"
+                            condition="-"
+                            pdfUrl="#"
+                            historyUrl="#"
+                            statusClass="status-{{ $p->status }}"
+                        />
+
+                        <div class="col-12 col-md-6 col-xl-4 d-none">
                             <div class="mieszkania-list-item position-relative">
                                 @if($p->type == 1)
                                     @if($p->investment->type == 1 && $p->status <> 3)
