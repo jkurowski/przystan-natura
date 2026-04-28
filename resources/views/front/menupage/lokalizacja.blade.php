@@ -28,6 +28,117 @@
 
 @section('content')
     <main>
+
+        <section class="pt-0 pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="{{ asset('images/wizualizacja-inwestycji-1.jpg') }}" alt="" class="w-100 big-borders" width="1620" height="825">
+                    </div>
+                </div>
+                <div class="row row-under">
+                    <div class="col-5 d-flex justify-content-center offset-1">
+                        <div class="big-stroke">
+                            <img src="{{ asset('images/horse.jpg') }}" alt="" class="big-borders" width="590" height="500">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex justify-content-end align-items-end h-100">
+                            <h3>W bezpośrednim <br>sąsiedztwie ze <i>stadniną <br>koni i szkółką</i></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="">
+            <!-- Brakuje mapy -->
+            <div class="container">
+                <div class="row flex-wrap-nowrap">
+                    <div class="col-7">
+                        <div class="section-text pe-0">
+                            <span>LOKALIZACJA</span>
+                            <h2>Między naturą <i>a wygodą</i></h2>
+                            <p>W pobliżu i na terenie osiedla zaplanowano udogodnienia sprzyjające aktywnemu i spokojnemu stylowi życia, takie jak mini-park, plac zabaw, siłownia plenerowa, drogi rowerowe, miejsca do wspólnego spędzania czasu oraz parkingi dla gości. To miejsce, które łączy bliskość natury z przestrzenią do odpoczynku, aktywności i wygodnego życia na co dzień.</p>
+                        </div>
+
+                        <div class="row location-points mt-100">
+                            <div class="col-6">
+                                <div class="location-point">
+                                <span class="circle">
+                                    <img src="{{ asset('images/icons/horse.svg') }}" alt="" width="50" height="50">
+                                </span>
+                                    <div>
+                                        <h3>2 min</h3>
+                                        <p>STADNINA KONI I SZKÓŁKA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="location-point">
+                                <span class="circle">
+                                    <img src="{{ asset('images/icons/cart.svg') }}" alt="" width="50" height="50">
+                                </span>
+                                    <div>
+                                        <h3>4 min</h3>
+                                        <p>MARKET DINO I PIZZERIA</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row location-points">
+                            <div class="col-6">
+                                <div class="location-point">
+                                <span class="circle">
+                                    <img src="{{ asset('images/icons/grocery-zabka.svg') }}" alt="" width="50" height="50">
+                                </span>
+                                    <div>
+                                        <h3>4 min</h3>
+                                        <p>SKLEP ŻABKA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="location-point">
+                                <span class="circle">
+                                    <img src="{{ asset('images/icons/playground.svg') }}" alt="" width="50" height="50">
+                                </span>
+                                    <div>
+                                        <h3>5 min</h3>
+                                        <p>PLAC ZABAW DLA DZIECI</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row location-points">
+                            <div class="col-6">
+                                <div class="location-point">
+                                <span class="circle">
+                                    <img src="{{ asset('images/icons/baby.svg') }}" alt="" width="50" height="50">
+                                </span>
+                                    <div>
+                                        <h3>5 min</h3>
+                                        <p>LEŚNE PRZEDSZKOLE</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="location-point">
+                                <span class="circle">
+                                    <img src="{{ asset('images/icons/medical.svg') }}" alt="" width="50" height="50">
+                                </span>
+                                    <div>
+                                        <h3>5 min</h3>
+                                        <p>PRZYCHODNIA LEKARSKA</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         @include('front.contact.page-contact', [
             'page_name' => 'Lokalizacja',
             'back' => true
