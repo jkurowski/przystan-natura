@@ -1402,7 +1402,8 @@ header.scrolled #logo img {
 #page-kontakt #pageheader,
 #page-oferta #pageheader,
 #page-gallery #pageheader,
-#page-about #pageheader {
+#page-about #pageheader,
+#page-location #pageheader {
   background: url("../images/pageheaders/kontakt.jpg") no-repeat center;
   background-size: cover;
 }
