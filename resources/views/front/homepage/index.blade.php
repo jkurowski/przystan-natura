@@ -1,7 +1,7 @@
 @extends('layouts.homepage')
 
 @section('content')
-    <section id="mainFeatures" class="py-5 d-none">
+    <section id="mainFeatures" class="py-5">
         <div class="container">
             <div class="row">
                 <!-- ITEM -->
@@ -40,7 +40,7 @@
         </div>
     </section>
 
-    <section class="bg-logo p-0 d-none">
+    <section class="bg-logo p-0">
         <div class="container">
             <div class="row flex-wrap-nowrap">
                 <div class="col-6">
@@ -84,7 +84,7 @@
         </div>
     </section>
 
-    <section class="pt-0 pb-0 d-none">
+    <section class="pt-0 pb-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -106,7 +106,7 @@
         </div>
     </section>
 
-    <section class="d-none">
+    <section class="">
         <div class="container">
             <div class="row flex-wrap-nowrap">
                 <div class="col-6 d-flex align-items-center">
@@ -129,7 +129,7 @@
         </div>
     </section>
 
-    <section class="houses-gradient d-none">
+    <section class="houses-gradient">
         <!-- Gradient z lewej dzwinie wyglada -->
         <div class="container">
             <div class="row flex-wrap-nowrap">
@@ -154,7 +154,7 @@
         </div>
     </section>
 
-    <section class="d-none">
+    <section class="">
         <!-- Brakuje mapy -->
         <div class="container">
             <div class="row flex-wrap-nowrap">
@@ -242,7 +242,7 @@
         </div>
     </section>
 
-    <section class="pb-0 d-none">
+    <section class="pb-0">
         <div class="container">
             <div class="row flex-wrap-nowrap">
                 <div class="col-7">
@@ -334,7 +334,7 @@
         </div>
     </section>
 
-    <section id="plan" class="d-none">
+    <section id="plan" class="">
         <!-- Troszke rozmyty plan -->
         <div class="container">
             <div class="row">
@@ -508,7 +508,7 @@
         </div>
     </section>
 
-    <section id="mainGallery" class="pt-0 d-none">
+    <section id="mainGallery" class="pt-0">
         <div class="container">
             <div class="row">
                 <div class="col-7">
