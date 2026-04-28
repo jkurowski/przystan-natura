@@ -7,23 +7,7 @@
 
 
 @section('pagehader')
-    <div id="pageheader">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>O inwestorze</h1>
-                    <nav class="breadcrumbs">
-                        <a href="/">Strona główna</a>
-                        <span class="sep">
-                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.7779 4.6098L3.32777 0.159755C3.22485 0.0567475 3.08745 0 2.94095 0C2.79445 0 2.65705 0.0567475 2.55412 0.159755L2.2264 0.487394C2.01315 0.700889 2.01315 1.04788 2.2264 1.26105L5.96328 4.99793L2.22225 8.73895C2.11933 8.84196 2.0625 8.97928 2.0625 9.1257C2.0625 9.27228 2.11933 9.4096 2.22225 9.51269L2.54998 9.84025C2.65298 9.94325 2.7903 10 2.9368 10C3.0833 10 3.2207 9.94325 3.32363 9.84025L7.7779 5.38614C7.88107 5.2828 7.93774 5.14484 7.93741 4.99817C7.93774 4.85094 7.88107 4.71305 7.7779 4.6098Z" fill="#A4804D"/></svg>
-                        </span>
-                        <span class="current">O inwestorze</span>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="pageheader-end"></div>
-    </div>
+    <x-page-header title="O inwestorze" :breadcrumbs="[['label' => 'O inwestorze', 'url' => '#']]" />
 @endsection
 
 @section('content')
@@ -65,38 +49,26 @@
         <section id="mainFeatures" class="py-5">
             <div class="container">
                 <div class="row">
-                    <!-- ITEM -->
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="feature-box">
-                            <img src="{{ asset('/images/icons/real-estate.svg') }}" alt="" class="icon">
-                            <h2 class="fw-bold">Nieruchomości</h2>
-                            <p>Tworzymy nowoczesne inwestycje mieszkaniowe, łącząc funkcjonalność, jakość wykonania i przemyślane podejście do codziennego komfortu.</p>
-                        </div>
-                    </div>
-                    <!-- ITEM -->
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="feature-box">
-                            <img src="{{ asset('/images/icons/solar-energy.svg') }}" alt="" class="icon">
-                            <h2 class="fw-bold">Fotowoltaika</h2>
-                            <p>Rozwijamy projekty z obszaru energii odnawialnej, stawiając na nowoczesne rozwiązania, efektywność i odpowiedzialne podejście do przyszłości.</p>
-                        </div>
-                    </div>
-                    <!-- ITEM -->
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="feature-box">
-                            <img src="{{ asset('/images/icons/startup.svg') }}" alt="" class="icon">
-                            <h2 class="fw-bold">Venture Capital</h2>
-                            <p>Inwestujemy w perspektywiczne przedsięwzięcia, wspierając innowacyjne pomysły, rozwój biznesu i projekty z realnym potencjałem wzrostu.</p>
-                        </div>
-                    </div>
-                    <!-- ITEM -->
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="feature-box">
-                            <img src="{{ asset('/images/icons/profit.svg') }}" alt="" class="icon">
-                            <h2 class="fw-bold">Rynki finansowe</h2>
-                            <p>Działamy w obszarze finansów, opierając decyzje na doświadczeniu, analizie  i długofalowym podejściu do budowania wartości.</p>
-                        </div>
-                    </div>
+                    <x-feature-box
+                        icon="real-estate.svg"
+                        title="Nieruchomości"
+                        text="Tworzymy nowoczesne inwestycje mieszkaniowe, łącząc funkcjonalność, jakość wykonania i przemyślane podejście do codziennego komfortu."
+                    />
+                    <x-feature-box
+                        icon="solar-energy.svg"
+                        title="Fotowoltaika"
+                        text="Rozwijamy projekty z obszaru energii odnawialnej, stawiając na nowoczesne rozwiązania, efektywność i odpowiedzialne podejście do przyszłości."
+                    />
+                    <x-feature-box
+                        icon="startup.svg"
+                        title="Venture Capital"
+                        text="Inwestujemy w perspektywiczne przedsięwzięcia, wspierając innowacyjne pomysły, rozwój biznesu i projekty z realnym potencjałem wzrostu."
+                    />
+                    <x-feature-box
+                        icon="profit.svg"
+                        title="Rynki finansowe"
+                        text="Działamy w obszarze finansów, opierając decyzje na doświadczeniu, analizie i długofalowym podejściu do budowania wartości."
+                    />
                 </div>
             </div>
         </section>
