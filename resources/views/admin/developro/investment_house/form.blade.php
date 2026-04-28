@@ -303,36 +303,19 @@
                 </form>
                 @endsection
                 @push('scripts')
-                    <script src="{{ asset('/js/typeahead.min.js') }}" charset="utf-8"></script>
                     <script src="{{ asset('/js/plan/underscore.js') }}" charset="utf-8"></script>
                     <script src="{{ asset('/js/plan/mappa-backbone.js') }}" charset="utf-8"></script>
-                    <script src="{{ asset('/js/datepicker/bootstrap-datepicker.min.js') }}" charset="utf-8"></script>
-                    <script src="{{ asset('/js/datepicker/bootstrap-datepicker.pl.min.js') }}" charset="utf-8"></script>
-                    <link href="{{ asset('/js/datepicker/bootstrap-datepicker3.css') }}" rel="stylesheet">
-                    <link href="{{ asset('/js/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet">
-                    <script src="{{ asset('/js/bootstrap-select/bootstrap-select.min.js') }}" charset="utf-8"></script>
-                    <script src="{{ asset('/js/inputmask.min.js') }}"></script>
                     <script type="text/javascript">
                         const map = {
                             "name":"imagemap",
                             "areas":[{!! $entry->cords !!}]
                         };
-                        const added = document.getElementById('added');
-                        const visitorRelated = document.getElementById('visitorRelated');
-                        const visitorRelatedChoose = document.getElementById('visitor_related_type_3');
-
-                        function toggleVisitorRelated() {
-                            if (visitorRelatedChoose.checked) {
-                                visitorRelated.classList.remove('d-none');
-                                visitorRelated.classList.add('d-block');
-                            } else {
-                                visitorRelated.classList.remove('d-block');
-                                visitorRelated.classList.add('d-none');
-
-                                $('#visitorRelated .selectpicker').selectpicker('deselectAll');
-                            }
-                        }
-
+                        $(document).ready(function() {
+                            const mapview = new MapView({el: '.mappa'}, map);
+                            @if($investment->plan)
+                            mapview.loadImage('/investment/plan/{{$investment->plan->file}}');
+                            @endif
+                        });
                         function roundAreaValue() {
                             const areaInput = document.getElementById('form_area');
                             const areaSearchInput = document.getElementById('form_area_search');
@@ -343,292 +326,6 @@
                         }
                         document.getElementById('form_area').addEventListener('input', roundAreaValue);
                         window.addEventListener('load', roundAreaValue);
-
-                        const users = new Bloodhound({
-                                datumTokenizer: Bloodhound.tokenizers.obj.nonword(['name', 'lastname', 'mail', 'phone']),
-                                queryTokenizer: Bloodhound.tokenizers.whitespace,
-                                prefetch: {
-                                    url: "/admin/rodo/clients"
-                                }
-                            }),
-                            inputClientId = $('#inputClientId'),
-                            inputClient = $('#inputClient'),
-                            clientItem = document.querySelector('#selectedClientItem');
-
-                        users.clearPrefetchCache();
-                        users.initialize();
-                        inputClient.typeahead({
-                                hint: true,
-                                highlight: true,
-                                minLength: 3
-                            },
-                            {
-                                name: 'users',
-                                templates: {
-                                    suggestion: function (data) {
-                                        return '<div class="item">' +
-                                            '<div class="row">' +
-                                            '<div class="col-12"><h4>'+ data.name +' '+ data.lastname +'</h4></div>' +
-                                            '<div class="col-12">' + (data.mail ? '<span>E: ' + data.mail + '</span>' : '') + '</div>' +
-                                            '<div class="col-12">' + (data.phone ? '<span>T: ' + data.phone + '</span>' : '') + '</div>' +
-                                            '</div>' +
-                                            '</div>';
-                                    }
-                                },
-                                display: 'value',
-                                source: users
-                            });
-                        inputClient.on('typeahead:select', function (ev, suggestion) {
-                            //console.log('Selected suggestion:', suggestion);
-                            //console.log('Before setting inputClient value:', inputClient.val());
-
-                            inputClientId.val(suggestion.id);
-                            inputClient.val(suggestion.name);
-
-                            inputClient.typeahead('val', suggestion.name)
-
-                            //console.log('After setting inputClient value:', inputClient.val());
-
-                            clientItem.innerHTML = '<div class="row"><div class="col-12">' +
-                                '<h4><a href="/admin/crm/clients/' + suggestion.id + '">' + suggestion.name + ' ' + suggestion.lastname + '</a> <button type="button" id="btn-confirm" class="btn btn-primary btn-sm action-button"><i class="las la-trash-alt"></i></button></h4>' +
-                                (suggestion.mail ? '<span>E: ' + suggestion.mail + '</span>\n' : '') +
-                                (suggestion.phone ? '<span>T: ' + suggestion.phone + '</span>\n' : '') +
-                                '</div></div>';
-
-                            $("#inputInvestment").focus();
-                        });
-
-                        clientItem.addEventListener('click', function(event) {
-                            if (event.target && (event.target.id === 'btn-confirm' || event.target.closest('#btn-confirm'))) {
-                                clientItem.innerHTML = '';
-                                inputClientId.val(0);
-                                inputClient.typeahead('val', '')
-                            }
-                        });
-
-                        document.getElementById('inputClient').addEventListener('input', () => {
-                            inputClientId.val(0);
-                        })
-
-                        toggleVisitorRelated();
-
-                        document.querySelectorAll('input[name="visitor_related_type"]').forEach((input) => {
-                            input.addEventListener('change', toggleVisitorRelated);
-                        });
-
-                        const appendStatusAlert = (message, type, duration = 7000) => {
-                            const wrapper = document.createElement('div')
-                            wrapper.innerHTML = [
-                                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-                                `   <div>${message}</div>`,
-                                '</div>'
-                            ].join('')
-
-                            statusAlertPlaceholder.append(wrapper);
-
-                            if(duration > 0){
-                                setTimeout(() => {
-                                    wrapper.remove();
-                                }, duration);
-                            }
-                        }
-                        function clearTextInputs(divElementId) {
-                            const textInputs = divElementId.getElementsByTagName('input');
-                            for (let i = 0; i < textInputs.length; i++) {
-                                if (textInputs[i].type === 'text') {
-                                    textInputs[i].value = '';
-                                }
-                            }
-                        }
-
-                        $(document).ready(function() {
-                            @if($floor->file)
-                            const mapview = new MapView({el: '.mappa'}, map);
-                            mapview.loadImage('/investment/floor/{{ $floor->file }}');
-                            @endif
-
-                            $('.select-related').selectpicker();
-
-                            $('.datepicker').datepicker({
-                                format: 'yyyy-mm-dd',
-                                todayHighlight: true,
-                                language: "pl"
-                            });
-
-                            const priceBruttoInput = document.getElementById("form_price_brutto");
-                            const priceNettoInput = document.getElementById("form_price");
-                            const vatRateSelect = document.getElementById("vatSelect");
-
-                            function calculateNetto(brutto, vatRate) {
-                                const vatMultiplier = 1 + vatRate / 100;
-                                return brutto / vatMultiplier;
-                            }
-
-                            function updateNettoPrice() {
-                                const bruttoValue = parseFloat(priceBruttoInput.value) || 0;
-                                const vatRateValue = parseFloat(vatRateSelect.value) || 0;
-                                const nettoValue = calculateNetto(bruttoValue, vatRateValue);
-                                priceNettoInput.value = nettoValue.toFixed(2);
-                            }
-
-                            updateNettoPrice();
-                            priceBruttoInput.addEventListener("input", updateNettoPrice);
-                            vatRateSelect.addEventListener("change", updateNettoPrice);
-
-                            const statusSelect = document.getElementById('statusSelect');
-                            const formSaleInput = document.getElementById('formSaleInput');
-                            const formReservationInput = document.getElementById('formReservationInput');
-                            const addedTbody = document.getElementById('added');
-                            const statusAlertPlaceholder = document.getElementById('statusAlertPlaceholder');
-                            statusAlertPlaceholder.innerHTML = '';
-
-                            function toggleDivs() {
-                                const selectedValue = statusSelect.value;
-                                statusAlertPlaceholder.innerHTML = '';
-                                //console.log(statusSelect.value);
-
-                                formSaleInput.classList.add('d-none');
-                                formSaleInput.classList.remove('d-block');
-                                formReservationInput.classList.add('d-none');
-                                formReservationInput.classList.remove('d-block');
-
-                                if (selectedValue === '3') {
-                                    formSaleInput.classList.remove('d-none');
-                                    formSaleInput.classList.add('d-block');
-
-                                    if (addedTbody && addedTbody.children.length === 0) {
-                                    } else {
-                                        appendStatusAlert('Do tego mieszkania są przypisane inne powierzchnie', 'warning', 0);
-                                    }
-
-                                } else if (selectedValue === '2') {
-                                    formReservationInput.classList.remove('d-none');
-                                    formReservationInput.classList.add('d-block');
-
-                                    if (addedTbody && addedTbody.children.length === 0) {
-                                    } else {
-                                        appendStatusAlert('Do tego mieszkania są przypisane inne powierzchnie', 'warning', 0);
-                                    }
-
-                                }
-                            }
-
-                            // Initial call to set the correct div visibility on page load
-                            toggleDivs();
-
-                            // Event listener for dropdown change
-                            statusSelect.addEventListener('change', toggleDivs);
-
-                            function clearDateInputs() {
-                                clearTextInputs(formSaleInput);
-                                clearTextInputs(formReservationInput);
-                            }
-
-                            statusSelect.addEventListener('change', clearDateInputs);
-
-                            @if(Route::is('admin.developro.investment.building.floor.properties.edit'))
-                            attachSpanFunctionality();
-
-                            $('#button-addon').click(function(e) {
-                                e.preventDefault();
-
-                                const relatedPropertyId = $('#related_property_id').val();
-
-                                if (!relatedPropertyId) {
-                                    alert('Please select a property to add.');
-                                    return;
-                                }
-
-                                const data = {
-                                    property: {{ $entry->id  }},
-                                    related_property_id: relatedPropertyId,
-                                    _token: '{{ csrf_token() }}'  // Include CSRF token if needed
-                                };
-
-                                $.ajax({
-                                    url: '{{ route('admin.developro.investment.related.store', ['investment' => $investment, 'floor' => $floor, 'property' => $entry->id]) }}',
-                                    method: 'POST',
-                                    data: data,
-                                    success: function(response) {
-                                        $('#added').append(response);
-                                        attachSpanFunctionality();
-
-                                        const lastTypeInputValue = $('#added input[name="related_type"]:last').val();
-
-                                        if (lastTypeInputValue === '1') {
-                                            appendAlert('Mieszkanie zostało przypisane poprawnie', 'success');
-                                        } else if (lastTypeInputValue === '2') {
-                                            appendAlert('Komórka lokatorska została przypisana poprawnie', 'success');
-                                        } else if (lastTypeInputValue === '3') {
-                                            appendAlert('Miejsce parkingowe zostało przypisane poprawnie', 'success');
-                                        } else {
-                                            appendAlert('Wybrana powierzchnia została przypisana poprawnie', 'success');
-                                        }
-                                    },
-                                    error: function(xhr) {
-                                        const errorMessage = xhr.responseJSON.error;
-
-                                        appendAlert(errorMessage, 'danger');
-                                    }
-                                });
-                            });
-                            @endif
-                            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-                            const appendAlert = (message, type, duration = 4000) => {
-                                const wrapper = document.createElement('div')
-                                wrapper.innerHTML = [
-                                    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-                                    `   <div>${message}</div>`,
-                                    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-                                    '</div>'
-                                ].join('')
-
-                                alertPlaceholder.append(wrapper);
-
-                                setTimeout(() => {
-                                    wrapper.remove();
-                                }, duration);
-                            }
-                            @if(Route::is('admin.developro.investment.building.floor.properties.edit'))
-                            function attachSpanFunctionality() {
-                                const spans = added.querySelectorAll(".remove-related");
-                                spans.forEach(function(span) {
-                                    span.addEventListener("click", function(d) {
-                                        const closestTr = this.closest("tr");
-                                        var related = this.getAttribute('data-property');
-
-                                        const button = $(d.currentTarget);
-                                        button.css('pointer-events', 'none');
-
-                                        $.ajax({
-                                            url: '{{ route('admin.developro.investment.related.remove', ['investment' => $investment, 'floor' => $floor, 'property' => $entry->id]) }}', // Replace with the appropriate endpoint
-                                            type: 'POST',
-                                            data: {
-                                                _token: '{{ csrf_token() }}',
-                                                related_id: related
-                                            },
-                                            success: function() {
-                                                appendAlert('Lokal został poprawnie usunięty', 'success');
-                                                if (closestTr) {
-                                                    closestTr.remove(); // Remove the row after successful deletion
-                                                }
-                                            },
-                                            error: function(xhr, status, error) {
-                                                console.error(error);
-                                                alert('Wystąpił błąd podczas usuwania.');
-                                            },
-                                            complete(){
-                                                button.css('pointer-events', 'auto');
-                                            }
-                                        });
-                                    });
-                                });
-                            }
-                            @endif
-
-                            const ibanMask = new Inputmask("A{0,2}99 9999 9999 9999 9999 9999 9999");
-                            ibanMask.mask(document.getElementById('bank_account'));
-                        });
                     </script>
                     <script>
                         const addButton = document.getElementById('add-price-component');
@@ -678,6 +375,27 @@
                                 if (component) component.remove();
                             }
                         });
+
+                        const priceBruttoInput = document.getElementById("form_price_brutto");
+                        const priceNettoInput = document.getElementById("form_price");
+                        const vatRateSelect = document.getElementById("vatSelect");
+
+                        function calculateNetto(brutto, vatRate) {
+                            const vatMultiplier = 1 + vatRate / 100;
+                            return brutto / vatMultiplier;
+                        }
+
+                        function updateNettoPrice() {
+                            const bruttoValue = parseFloat(priceBruttoInput.value) || 0;
+                            const vatRateValue = parseFloat(vatRateSelect.value) || 0;
+                            const nettoValue = calculateNetto(bruttoValue, vatRateValue);
+                            priceNettoInput.value = nettoValue.toFixed(2);
+                        }
+
+                        updateNettoPrice();
+                        priceBruttoInput.addEventListener("input", updateNettoPrice);
+                        vatRateSelect.addEventListener("change", updateNettoPrice);
+
                         document.addEventListener('input', function(e) {
                             const areaInput = document.getElementById('form_area');
                             const area = parseFloat(areaInput.value.replace(',', '.'));
