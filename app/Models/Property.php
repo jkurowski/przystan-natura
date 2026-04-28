@@ -1,0 +1,374 @@
+<?php
+
+namespace App\Models;
+
+use App\Helpers\PropertyAreaTypes;
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Notifications\Notifiable;
+
+use Spatie\Activitylog\LogOptions;
+use Spatie\Activitylog\Traits\LogsActivity;
+
+class Property extends Model
+{
+    use LogsActivity, Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'id',
+        'investment_id',
+        'building_id',
+        'floor_id',
+        'status',
+        'name',
+        'name_list',
+        'number',
+        'number_order',
+        'type',
+        'rooms',
+        'area',
+        'area_search',
+        'price',
+        'price_brutto',
+        'price_30',
+        'vat',
+        'bank_account',
+        'garden_area',
+        'balcony_area',
+        'balcony_area_2',
+        'terrace_area',
+        'loggia_area',
+        'plot_area',
+        'parking_space',
+        'window',
+        'window_type',
+        'media',
+        'garage',
+        'type',
+        'html',
+        'cords',
+        'file',
+        'file_2',
+        'file_pdf',
+        'file_webp',
+        'walk_3d',
+        'model_3d',
+        'meta_title',
+        'meta_description',
+        'for_investor',
+        'for_show',
+        'kitchen',
+        'commercial',
+        'storage',
+        'views',
+        'active',
+        'highlighted',
+        'promotion_end_date',
+        'promotion_price',
+        'promotion_price_show',
+        'client_id',
+        'saled_at',
+        'reservation_until',
+        'visitor_related_type',
+        'text',
+        'history_info',
+        'security_features',
+        'geoportal_id',
+        'vox_id',
+        'vox_type',
+        'is_investment_property'
+    ];
+
+    public function priceHistory($date = '2025-09-11')
+    {
+        return $this->hasMany(PriceHistory::class, 'real_estate_id')
+            ->where('date_modified', '>', $date)
+            ->whereNotNull('price_before_gross')
+            ->where('price_before_gross', '>', 0)
+            ->orderBy('date_modified', 'desc'); // newest first
+    }
+
+    /**
+     * Get next property
+     * @param int $investment
+     * @param int $current_number_order
+     * @return Property
+     */
+    public function findNext(int $investment, int $current_number_order, ?int $floor_id = null, ?int $building_id = null)
+    {
+
+        $query = $this->where('investment_id', $investment)->where('number_order', '>', $current_number_order);
+
+        if (!is_null($floor_id)) {
+            $query->where('floor_id', $floor_id);
+        }
+
+        if (!is_null($building_id)) {
+            $query->where('building_id', $building_id);
+        }
+
+        return $query->first();
+    }
+
+    /**
+     * Get previous property
+     * @param int $investment
+     * @param int $current_number_order
+     * @return Property
+     */
+    public function findPrev(int $investment, int $current_number_order, ?int $floor_id = null, ?int $building_id = null)
+    {
+        $query = $this->where('investment_id', $investment)->where('number_order', '<', $current_number_order)->orderByDesc('number_order');
+
+        if (!is_null($floor_id)) {
+            $query->where('floor_id', $floor_id);
+        }
+
+        if (!is_null($building_id)) {
+            $query->where('building_id', $building_id);
+        }
+
+        return $query->first();
+    }
+
+    /**
+     * Get notifications for room
+     * @return HasMany
+     */
+    public function roomsNotifications(): HasMany
+    {
+        return $this->hasMany(
+            'App\Models\Notification',
+            'notifiable_id',
+            'id'
+        )->where('notifiable_type', 'App\Models\Property')->latest();
+    }
+
+    public function getActivitylogOptions(): LogOptions
+    {
+        $logOptions = new LogOptions();
+        $logOptions->useLogName('Powierzchnia');
+        $logOptions->logFillable();
+
+        return $logOptions;
+    }
+
+    public function investment()
+    {
+        return $this->belongsTo(Investment::class);
+    }
+
+    public function city()
+    {
+        return $this->hasOneThrough(
+            City::class,
+            Investment::class,
+            'id',            // Primary key in investments
+            'id',            // Primary key in cities
+            'investment_id',  // Foreign key in properties (points to investments)
+            'city_id'        // Foreign key in investments (points to cities)
+        )->select(['cities.id as city_id', 'cities.name']); // Avoid ID ambiguity
+    }
+
+    public function floor()
+    {
+        return $this->belongsTo(Floor::class);
+    }
+
+    public function building()
+    {
+        return $this->belongsTo(Building::class);
+    }
+
+    public function getLocation(): string
+    {
+        $buildingName = $this->building ? $this->building->name : null;
+        $floorName = $this->floor ? $this->floor->name : null;
+
+        if ($buildingName && $floorName) {
+            return "{$buildingName} - {$floorName}";
+        } elseif ($floorName) {
+            return "{$floorName}";
+        }
+
+        return 'Brak lokalizacji'; // Fallback if no building or floor is set
+    }
+
+    /**
+     * Get the client that owns the property.
+     */
+    public function client()
+    {
+        return $this->belongsTo(Client::class, 'client_id');
+    }
+
+//    public function priceHistory(): HasMany
+//    {
+//        return $this->hasMany(PropertyPrice::class)->orderBy('changed_at', 'desc');
+//    }
+
+    public function lowestPriceLast30Days()
+    {
+        $dateFrom = Carbon::now()->subDays(30);
+
+        return $this->priceHistory()
+            ->where('changed_at', '>=', $dateFrom)
+            ->orderBy('price_brutto', 'asc')
+            ->first()?->price_brutto;  // zwr�ci lowest price albo null, je�li brak
+    }
+
+    public function visitorRelatedProperties()
+    {
+        return $this->belongsToMany(Property::class, 'property_visitor_related', 'property_id', 'related_property_id');
+    }
+
+    public function getHasPriceHistoryAttribute(): bool
+    {
+        return $this->priceHistory()->exists();
+    }
+
+    public function relatedProperties()
+    {
+        return $this->belongsToMany(Property::class, 'property_property', 'property_id', 'related_property_id');
+    }
+
+    public function connectedProperty()
+    {
+        return $this->hasOne(Property::class, 'storey_property', 'id');
+    }
+
+    public function payments()
+    {
+        return $this->hasMany(PropertyPayment::class);
+    }
+
+    public function nextPaymentAfterToday()
+    {
+        return $this->payments()
+            ->where('due_date', '>', Carbon::today())
+            ->orderBy('due_date', 'asc')
+            ->first();
+    }
+
+    public function investmentPayments()
+    {
+        return $this->hasManyThrough(InvestmentPayment::class, Investment::class, 'id', 'investment_id', 'investment_id', 'id');
+    }
+
+    // Define an accessor for the URL
+    public function getUrlAttribute()
+    {
+        $investmentSlug = $this->investment->slug ?? '';
+        return "/inwestycje/i/{$investmentSlug}/pietro/{$this->floor_id}/m/{$this->id}";
+    }
+
+    public function priceComponents()
+    {
+        return $this->belongsToMany(PropertyPriceComponent::class, 'property_price_component_property')
+            ->withPivot('value', 'value_m2', 'category')
+            ->withTimestamps();
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::updating(function ($property) {
+            if ($property->isDirty('status') && $property->getOriginal('status') == 2 && $property->status != 2) {
+                event('property.status.changed', $property);
+            }
+        });
+    }
+
+    // API
+
+    public function priceComponentsForXML()
+    {
+        return $this->belongsToMany(PropertyPriceComponent::class, 'property_price_component_property')
+            ->withPivot('value', 'value_m2', 'category')
+            ->withTimestamps();
+    }
+
+    public function getRelatedTypesAttribute()
+    {
+        $types = $this->relatedProperties
+            ->pluck('type')
+            ->map(fn ($type) => PropertyAreaTypes::getStatusText($type) ?? 'X')
+            ->unique()
+            ->values();
+
+        return $types->isNotEmpty()
+            ? $types->implode(', ')
+            : 'X';
+    }
+
+    public function getRelatedNumbersAttribute()
+    {
+        $numbers = $this->relatedProperties
+            ->pluck('number')
+            ->filter()
+            ->values();
+
+        return $numbers->isNotEmpty()
+            ? $numbers->implode(', ')
+            : 'X';
+    }
+
+    public function getRelatedPricesAttribute()
+    {
+        $prices = $this->relatedProperties->map(function ($property) {
+
+            return ($property->highlighted == 1 && $property->promotion_price > 0)
+                ? $property->promotion_price
+                : $property->price_brutto;
+        })
+            ->filter()   // usuwa null
+            ->values();  // resetuje indeksy
+
+        return $prices->isNotEmpty()
+            ? $prices->implode(', ')
+            : 'X';
+    }
+
+    public function getTotalWithRelatedPriceAttribute()
+    {
+        if ($this->type != 1 && $this->type != 5) {
+            return 'X';
+        }
+
+        // Cena głównej nieruchomości
+        $mainPrice = ($this->highlighted == 1 && $this->promotion_price > 0)
+            ? $this->promotion_price
+            : $this->price_brutto;
+
+        // Suma cen powiązanych nieruchomości
+        $relatedTotal = $this->relatedProperties->sum(function ($prop) {
+            return ($prop->highlighted == 1 && $prop->promotion_price > 0)
+                ? (float)$prop->promotion_price
+                : (float)$prop->price_brutto;
+        });
+
+        return (float)$mainPrice + (float)$relatedTotal;
+    }
+
+    public function getDisplayPriceAttribute()
+    {
+        if ($this->type != 1 && $this->type != 5) {
+            return 'X';
+        }
+
+        // Jeśli wyróżnione i jest poprawna promocja, użyj promotion_price
+        if ($this->highlighted == 1 && $this->promotion_price > 0) {
+            return $this->promotion_price;
+        }
+
+        // W przeciwnym razie price_brutto jeśli istnieje
+        return $this->price_brutto ?? 'X';
+    }
+}
