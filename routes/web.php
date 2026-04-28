@@ -126,10 +126,10 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
 
 
 //        // Inwestycja domkowa
-        //Route::get('/{slug}/d/{property},{propertySlug},{propertyArea}', 'InvestmentHouseController@index')->name('house');
+        Route::get('/{slug}/d/{property},{propertySlug},{propertyArea}', 'InvestmentHouseController@index')->name('house');
 //
 //        //Historia cen
-//        Route::get('/historia/{property}', 'History\IndexController@show')->name('history');
+        Route::get('/historia/{property}', 'History\IndexController@show')->name('history');
 //        Route::get('/przynalezne/{property}', 'History\IndexController@others')->name('others');
 //        Route::get('/przynalezne/{property}/show', 'History\IndexController@other')->name('others.show');
 //        Route::get('/przynalezne/{property}/table', 'History\IndexController@otherTable')->name('others.table');
