@@ -654,12 +654,12 @@ section {
   border-radius: 0 32px 32px 0;
 }
 #page-about .section-text {
-  padding-right: 4vw;
+  padding-right: 80px;
   padding-left: 0;
 }
 #page-about .flex-row-reverse .section-text {
   padding-right: 0;
-  padding-left: 4vw;
+  padding-left: 80px;
 }
 #page-about .section-text h2 {
   font-size: 64px;
