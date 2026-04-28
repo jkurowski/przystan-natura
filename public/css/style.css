@@ -2575,503 +2575,182 @@ body.hidden-scroll {
   content: "\f00d";
 }
 @media (max-width: 1619.98px) {
-  header {
-    height: 126px;
-  }
-  header .header-phone a {
-    padding: 15px 25px;
-  }
-  header nav li {
-    margin-right: 23px;
-  }
-  header #logo img {
-    width: 150px;
-    height: 76px;
-  }
-  #page p,
-  #page li,
-  p,
-  li {
-    font-size: 16px;
-    line-height: 27px;
-  }
   .contact-box {
-    padding: 145px 30px 15px;
+    border-radius: 38px;
+    padding: 50px;
   }
-  footer h4 {
-    font-size: 47px;
-    line-height: 62px;
+  .contact-box span {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20px;
   }
-  footer .footer-contact li {
-    line-height: 51px;
-    font-size: 33px;
+  .contact-box span .icon {
+    width: 30px;
+    height: 30px;
   }
-  .section-header h2.big {
-    font-size: 53px;
-    line-height: 68px;
+  .contact-box h4 {
+    font-size: 31px;
+    line-height: 40px;
   }
-  article h3 {
-    font-size: 23px;
+  .contact-box .contact-link {
+    font-size: 19px;
+    line-height: 28px;
+  }
+  .contact-box .contact-data {
+    height: 100px;
   }
 }
 /* end of 1640 */
 /* end of 1479.98 */
 @media (max-width: 1399.98px) {
-  header {
-    height: 68px;
+  .contact-box {
+    border-radius: 28px;
+    padding: 20px;
   }
-  header .container {
-    max-width: 100%;
-    padding: 0;
+  #pageheader .pageheader-end {
+    height: 55px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    margin-top: 20px;
   }
-  header .row {
-    margin: 0;
-  }
-  header nav li {
-    margin-right: 22px;
-  }
-  header nav li a,
-  header nav li span {
-    font-size: 14px;
-  }
-  header .header-phone a {
-    padding: 11px 20px;
-    font-size: 14px;
-  }
-  header #logo {
-    margin: 10px 0;
-  }
-  header #logo img {
-    width: 100px;
-    height: auto;
-  }
-  .mieszkania-submenu h1 {
-    margin: 20px 0;
-    font-size: 23px;
-  }
-  #page {
-    padding: 50px 0;
-  }
-  .section-header h2.big {
-    font-size: 39px;
-    line-height: 50px;
-    margin: 10px 0 15px;
-  }
-  .section-header .section-header-subtitle {
-    font-size: 14px;
-    line-height: 20px;
-    padding: 2px 12px;
-  }
-  #contactForm textarea.form-control {
-    height: 140px;
-  }
-  #contactForm img {
-    margin-bottom: -48px;
-    position: relative;
-    bottom: -95px;
-  }
-  .iconbox h3 {
-    font-size: 22px;
-    margin: 15px 0;
-  }
-  .iconbox p {
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 23px;
-  }
-  #numbers {
-    padding: 50px 0 20px !important;
-  }
-  .numerbox {
-    padding: 24px 0 0 20px;
-  }
-  .numerbox span {
-    font-size: 50px;
-    line-height: normal;
-  }
-  .numerbox p {
-    font-size: 22px;
-    line-height: 27px;
-  }
-  .numerbox:before {
-    width: 64px;
-    height: 64px;
-  }
-  .zrealizowane h3 {
-    font-size: 26px;
+  #pageheader h1 {
+    font-size: 66px;
+    line-height: 121px;
+    margin-bottom: 40px;
   }
 }
 /* end of 1359.98 */
 /* end of 1199.98 */
+@media (min-width: 1200px) {
+  .pe-xl-6 {
+    padding-right: 5rem !important;
+  }
+}
 @media (max-width: 1199.98px) {
-  footer h4 {
-    font-size: 36px;
-    line-height: 46px;
+  .contact-box {
+    border-radius: 28px;
+    padding: 20px;
   }
-  footer .footer-contact li {
-    line-height: 39px;
-    font-size: 24px;
+  .contact-box span {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20px;
   }
-  #searchForm label {
-    font-size: 18px;
-    line-height: 22px;
+  .contact-box span .icon {
+    width: 30px;
+    height: 30px;
   }
-  #searchForm button {
-    padding: 10px 0;
-    border-radius: 4px;
+  .contact-box h4 {
+    font-size: 31px;
+    line-height: 40px;
   }
-  #searchForm button svg {
-    width: 32px;
-    height: 32px;
-  }
-  #hero p {
-    font-size: 34px;
-    line-height: 37px;
-    margin-left: 0;
-    padding-left: 20px;
-    border-left: 3px solid #FF9500;
-  }
-  #hero h1 {
-    font-size: 96px;
-  }
-  #hero .hero-img-sub {
-    border: 0;
-    border-bottom: 20px solid #003761;
-    border-right: 20px solid #003761;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 319px;
-  }
-  #hero .hero-button .bttn {
+  .contact-box .contact-link {
     font-size: 19px;
-    padding: 22px 95px 22px 28px;
+    line-height: 28px;
   }
-  #hero .hero-button .bttn span {
-    width: 57px;
-    height: 57px;
+  .contact-box .contact-data {
+    height: 100px;
   }
-  .news-card__title {
-    font-size: 20px;
-    line-height: 24px;
-    margin: 25px 0 0 0;
+  .bttn {
+    border-radius: 28px;
+    padding: 13px 30px;
+    letter-spacing: 0;
   }
-  .news-card__date {
-    font-size: 11px;
+  .bttn.bttn-icon {
+    padding-right: 15px;
   }
-  .news-card__body {
-    padding: 15px 10px;
-    transition: background-color 0.25s ease;
+  #map {
+    height: 450px;
+    border-radius: 28px;
   }
-  .news-card__arrow {
-    top: -30px;
-    right: 0;
-    width: 60px;
-    height: 60px;
+  .mt-130 {
+    margin-top: 75px !important;
   }
-  #newsList {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  #searchForm {
-    padding-bottom: 0;
-  }
-  header #triggermenu {
-    display: block;
-  }
-  .openmenu header nav {
-    display: block !important;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #003761 url(../images/bg.png) repeat-y center top;
-    z-index: 999;
-    top: 67px;
-  }
-  .openmenu header nav ul {
-    flex-flow: column wrap;
-  }
-  .openmenu header nav ul li {
-    text-align: center;
-    margin: 0;
-  }
-  .openmenu header nav li a,
-  .openmenu header nav li span {
-    font-size: 20px;
-  }
-  .openmenu header li ul {
-    background: #003761;
-    border: 1px solid #ff9500;
-    position: static;
-    width: 100%;
-    display: block;
-    margin-top: 13px;
-  }
-  .openmenu header li ul li {
-    padding: 5px 0;
-  }
-  .openmenu header li ul li a {
-    color: white;
+  .big-borders {
+    border-radius: 28px;
   }
 }
 /* end of 1199.98 */
 @media (max-width: 991.98px) {
-  footer .footer-contact li {
-    line-height: 32px;
-    font-size: 21px;
+  .contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  footer h4 {
-    font-size: 27px;
-    line-height: 36px;
+  .contact-box .contact-data {
+    height: auto;
+    padding-bottom: 20px;
   }
-  .footer-company {
-    text-align: center;
-  }
-  .footer-company img {
-    margin: 0 auto;
-  }
-  article {
-    padding: 20px;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 30px;
-  }
-  article .arrow {
-    width: 60px;
-    height: 60px;
-  }
-  .single-article h1 {
-    font-size: 28px;
+  #pageheader h1 {
+    font-size: 56px;
+    line-height: 61px;
     margin-bottom: 20px;
-  }
-  .carrer-item {
-    padding: 20px;
-    margin-right: 0;
-  }
-  .zrealizowane h3 {
-    font-size: 22px;
-  }
-  .iconbox h3 {
-    font-size: 17px;
-    margin: 15px 0;
-  }
-  #hero p {
-    font-size: 27px;
-    line-height: 30px;
-  }
-  #hero .hero-button .bttn {
-    font-size: 13px;
-    padding: 18px 84px 18px 25px;
-  }
-  #hero .hero-button .bttn span {
-    width: 47px;
-    height: 47px;
-    right: 2px;
   }
 }
 /* end of 991.98 */
 @media (max-width: 767.98px) {
-  .contact-box {
-    padding: 75px 30px 15px;
-  }
-  .contact-box svg {
-    width: 120px;
-    height: 120px;
-    left: -60px;
-    top: -40px;
-  }
-  h2 {
-    font-size: 26px;
-  }
-  .pt-5.pt-xxl-6.pb-5.pb-xxl-0 {
-    padding: 30px 18px !important;
-  }
-  footer .footer-contact li {
-    line-height: 29px;
-    font-size: 16px;
-  }
-  footer h4 {
-    font-size: 20px;
-    line-height: 30px;
-  }
-  footer .footer-menu li,
-  footer .footer-menu p {
-    line-height: 16px;
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-  footer h5 {
-    font-size: 17px;
-    margin-bottom: 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 10px;
-  }
-  footer #copyrights p {
-    line-height: normal;
-    font-size: 10px;
-  }
-  .col-md-6:nth-child(2n+1) article {
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 30px !important;
-  }
-  .iconbox {
-    text-align: center;
-    margin-bottom: 30px;
-    border: 1px solid #1c4d72;
-    background: #003761;
-    padding: 20px 20px 10px !important;
-  }
-  .iconbox img {
-    width: 48px;
-    height: 48px;
-    margin: 0 auto;
-  }
-  .iconbox p {
-    font-size: 13px;
-    line-height: 24px;
-  }
-  .news-card__arrow {
-    top: auto !important;
-    right: -10px;
-    width: 40px;
-    height: 40px;
-    bottom: -20px !important;
-  }
-  #hero .hero-img-sub {
-    display: none;
-  }
-  #hero p {
-    font-size: 20px;
-    line-height: 22px;
-    margin: 0;
-  }
-  #hero h1 {
-    font-size: 64px;
-    line-height: 65px;
-  }
-  #hero .hero-button .bttn {
-    font-size: 13px;
-    padding: 18px 55px 18px 20px;
-  }
-  #page-home article {
-    padding: 0;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-  #page-home .news-card__title {
-    font-size: 15px;
-    line-height: 19px;
-    margin: 15px 0 0 0;
-  }
-  #page-home .slick-arrow.slick-button {
-    width: 50px;
-    height: 50px;
-  }
-  #page-home .news-card__arrow {
-    top: -30px !important;
-    right: 0;
-    width: 60px;
-    height: 60px;
-    bottom: 0 !important;
+  main {
+    padding-top: 0;
   }
 }
 /* end of 767.98 */
 @media (max-width: 575.98px) {
-  footer {
-    text-align: center;
+  main {
+    padding-left: 15px;
+    padding-right: 15px;
   }
-  footer p {
-    line-height: 18px;
-    font-size: 14px;
+  #pageheader .pageheader-end {
+    height: 33px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    margin-top: 17px;
   }
-  #page,
-  .section-mobile {
-    padding: 30px 18px !important;
+  #pageheader h1 {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 18px;
   }
-  .contact-box {
-    padding: 75px 10px 15px;
+  .breadcrumbs {
+    font-size: 9px;
   }
-  h2 {
-    font-size: 22px;
+  .contact-box .contact-link {
+    font-size: 16px;
+    line-height: 31px;
   }
-  h3 {
-    font-size: 18px;
+  .contact-box h4 {
+    font-size: 25px;
+    line-height: 30px;
   }
-  h3 br {
-    display: none;
-  }
-  #page p,
-  #page li,
-  p,
-  li {
-    font-size: 13px;
-    line-height: 24px;
-  }
-  .iconbox {
-    text-align: center;
-  }
-  .iconbox br {
-    display: none;
-  }
-  .iconbox img {
-    margin: 0 auto 15px;
-  }
-  .section-header h2.big {
-    font-size: 29px;
-    line-height: 34px;
-  }
-  #numbers {
-    padding: 40px 18px 20px !important;
-  }
-  .zrealizowane {
-    padding: 15px;
-  }
-  #searchForm label {
-    font-size: 15px;
-    line-height: 18px;
-    font-weight: 500;
-  }
-  .section-header h2 {
-    font-weight: 700;
-    font-size: 26px;
-    font-style: normal;
-    margin: 10px 0;
-  }
-  #hero {
-    margin-bottom: 50px;
-  }
-  #hero .hero-button {
-    position: absolute;
-    bottom: -70px;
-    right: 0;
-    left: 0;
-  }
-  #hero .hero-button .bttn {
+  .contact-box .bttn {
     width: 100%;
   }
-  #hero h1 {
-    font-size: 43px;
-    line-height: 38px;
+  .section-text h2 {
+    font-size: 39px;
+    line-height: 44px;
+    margin-bottom: 30px;
   }
-  #hero p {
-    font-size: 16px;
-    line-height: 22px;
-    margin: 0;
+  .section-text span {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
   }
-  #page-home .news-card__arrow {
-    top: -20px !important;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    bottom: 0 !important;
+  #contactForm .form-control {
+    border-radius: 10px;
   }
-  #newsList {
-    padding-top: 60px;
-    padding-bottom: 0;
+  .bttn {
+    width: 100%;
+    border-radius: 10px;
+    letter-spacing: 0;
+  }
+  #map {
+    height: 350px;
+    border-radius: 10px;
+  }
+  .big-borders {
+    border-radius: 10px;
+  }
+  .mt-130 {
+    margin-top: 30px !important;
   }
 }
 /* end of 575.98 */

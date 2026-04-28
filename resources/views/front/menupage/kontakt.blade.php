@@ -12,7 +12,7 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-lg-4">
                     <div class="contact-box">
                         <span></span>
                         <h4>Telefon</h4>
@@ -27,7 +27,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                     <div class="contact-box">
                         <span></span>
                         <h4>E-mail</h4>
@@ -42,7 +42,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                     <div class="contact-box">
                         <span></span>
                         <h4>Adres</h4>
@@ -59,13 +59,13 @@
                 </div>
             </div>
             <div class="row mt-130">
-                <div class="col-6">
+                <div class="col-12 col-xl-6">
                     <x-section-header title="Napisz <i>do nas!</i>" subtitle="FORMULARZ KONTAKTOWY" />
-                    <div class="pe-6">
+                    <div class="pe-0 pe-xl-6">
                         @include('front.contact.form', ['page_name' => 'Kontakt'])
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-xl-6 mt-6 mt-xl-0">
                     <div id="map"></div>
                 </div>
             </div>
