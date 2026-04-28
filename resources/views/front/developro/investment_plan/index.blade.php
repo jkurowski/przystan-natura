@@ -42,7 +42,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 pe-4 ps-4">
                     @if($investment->plan)
                         <div id="plan-holder">
                             <img src="{{ asset('/investment/plan/'.$investment->plan->file) }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan" class="w-100 h-100 object-fit-cover rounded">
