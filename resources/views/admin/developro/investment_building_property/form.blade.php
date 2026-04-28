@@ -420,6 +420,7 @@
                                 <div class="row w-100 form-group">
                                     @include('form-elements.input-text', ['label' => 'Cena netto', 'sublabel'=> 'Tylko liczby', 'name' => 'price', 'value' => $entry->price])
                                 </div>
+
                                 <div class="row w-100 form-group">
                                     <button id="add-price-component"
                                             class="btn btn-primary mt-2"
