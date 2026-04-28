@@ -47,7 +47,7 @@
                     <div class="section-text">
                         <span>PRZYSTAŃ NATURA W LICZBACH</span>
                         <h2>Nowy standard <i>każdego dnia</i></h2>
-                        <a href="" class="bttn bttn-icon mt-5">
+                        <a href="{{ route('front.developro.plan') }}" class="bttn bttn-icon mt-5">
                             Sprawdź domy
                             <svg class="icon" viewBox="0 0 26 26">
                                 <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
@@ -114,7 +114,7 @@
                         <span>O INWESTYCJI</span>
                         <h2>W rytmie <i>natury</i></h2>
                         <p>Przystań Natura powstaje w Dłutówku pod Łodzią, w powiecie pabianickim - w miejscu otoczonym lasami, pięknym krajobrazem i spokojem, który czuć od pierwszej chwili. W najbliższym otoczeniu znajdują się tereny sprzyjające spacerom, rowerowym przejażdżkom i codziennemu odpoczynkowi od miejskiego tempa, a bezpośrednie sąsiedztwo stadniny koni dodatkowo podkreśla wyjątkowy, naturalny charakter tej lokalizacji. To miejsce stworzone dla osób, które chcą mieszkać bliżej natury, ale nadal korzystać z wygody codziennego życia.</p>
-                        <a href="" class="bttn bttn-icon mt-5">
+                        <a href="{{ route('front.developro.plan') }}" class="bttn bttn-icon mt-5">
                             Sprawdź domy
                             <svg class="icon" viewBox="0 0 26 26">
                                 <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
