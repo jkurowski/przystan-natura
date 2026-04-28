@@ -22,9 +22,9 @@ class MenuController extends Controller
 
         $pages = [
             'kontakt' => 1,
-            'lokalizacja' => 1,
-            'o-inwestorze' => 1,
-            'galeria' => 1,
+            'lokalizacja' => 4,
+            'o-inwestorze' => 2,
+            'galeria' => 3,
         ];
 
         if (isset($pages[$uri])) {
