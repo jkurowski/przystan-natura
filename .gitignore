@@ -19,3 +19,4 @@ yarn-error.log
 config/tracker.php
 /resources/views/form-elements/tintmce.blade.php
 .DS_Store
+/storage/debugbar/
