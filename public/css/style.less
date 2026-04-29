@@ -630,7 +630,7 @@ header {
         display: inline-flex;
         align-items: center;
         position: relative;
-        &:before {
+        &.rwd-menu:before {
             content: "";
             position: absolute;
             width: 0;
@@ -641,7 +641,7 @@ header {
             opacity: 0;
             transition: all .3s;
         }
-        &:hover {
+        &.rwd-menu:hover {
             &:before {
                 opacity: 1;
                 width: 40px;

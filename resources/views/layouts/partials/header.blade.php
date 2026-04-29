@@ -1,23 +1,23 @@
 <!-- NAVIGATION -->
 <header>
-    <div class="container">
+    <div class="container-fluid container-xl">
         <div class="row">
-            <div class="col-4 col-xl-2">
+            <div class="col-3 col-md-2">
                 <div id="logo">
                     <a href="">
                         <img src="{{ asset('images/SVG/logo.svg') }}" alt="" width="172" height="213">
                     </a>
                 </div>
             </div>
-            <div class="col-8 col-xl-10">
-                <nav class="h-100 align-items-center justify-content-end">
+            <div class="col-9 col-md-10">
+                <nav class="h-100 align-items-start align-items-xl-center justify-content-end">
                     <ul class="mb-0 list-unstyled d-flex justify-content-end">
-                        <li><a href="/">Strona główna</a></li>
-                        <li><a href="{{ route('front.developro.plan') }}">Oferta domów</a></li>
-                        <li><a href="{{ route('front.menu.show', ['uri' => 'lokalizacja']) }}">Lokalizacja</a></li>
-                        <li><a href="{{ route('front.menu.show', ['uri' => 'galeria']) }}">Galeria</a></li>
-                        <li><a href="{{ route('front.menu.show', ['uri' => 'o-inwestorze']) }}">O inwestorze</a></li>
-                        <li><a href="{{ route('front.menu.show', ['uri' => 'kontakt']) }}">Kontakt</a></li>
+                        <li class="rwd-menu"><a href="/">Strona główna</a></li>
+                        <li class="rwd-menu"><a href="{{ route('front.developro.plan') }}">Oferta domów</a></li>
+                        <li class="rwd-menu"><a href="{{ route('front.menu.show', ['uri' => 'lokalizacja']) }}">Lokalizacja</a></li>
+                        <li class="rwd-menu"><a href="{{ route('front.menu.show', ['uri' => 'galeria']) }}">Galeria</a></li>
+                        <li class="rwd-menu"><a href="{{ route('front.menu.show', ['uri' => 'o-inwestorze']) }}">O inwestorze</a></li>
+                        <li class="rwd-menu"><a href="{{ route('front.menu.show', ['uri' => 'kontakt']) }}">Kontakt</a></li>
                         <li>
                             <a href="tel:+48888367956" class="bttn bttn-active">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,8 +34,16 @@
                             </a>
                         </li>
                     </ul>
+                    <span class="bttn bttn-active d-block d-xl-none" id="triggermenu">
+                            <svg version="1.1" id="menubar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 viewBox="0 0 283.426 283.426" xml:space="preserve">
+<g>
+    <rect x="0" y="40.84" style="fill:#ffffff;" width="283.426" height="47.735"/>
+    <rect x="0" y="117.282" style="fill:#ffffff;" width="283.426" height="47.735"/>
+    <rect x="0" y="194.851" style="fill:#ffffff;" width="283.426" height="47.735"/>
+</g>
+                            </svg></span>
                 </nav>
-                <div id="triggermenu">MENU</div>
             </div>
         </div>
     </div>

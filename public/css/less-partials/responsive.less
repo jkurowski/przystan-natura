@@ -18,11 +18,34 @@
     font-size: 20px
 }
 
-#triggermenu {display:none;float:right;font-size:16px;color:white;font-weight:600;text-transform:uppercase;margin:15px 12px 0;padding:5px 12px;transition:all 200ms linear;background:#222;cursor: pointer}
-#triggermenu:hover {background:#d8951c;color: white !important;}
-.openmenu #triggermenu {color: #f0a61f}
-#triggermenu:before {font-family:'FontAwesome';content:"\f0c9";margin-right:10px;font-weight:normal;width: 14px;display: inline-block;}
-.openmenu #triggermenu:before {content:"\f00d"}
+.openmenu {
+    overflow: hidden;
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--main-green);
+        height: 100% !important;
+        width: 100%;
+        z-index: 200;
+    }
+    ul {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40px;
+        flex-direction: column;
+        width: 200px;
+        margin: auto;
+        li {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
 
 @media (max-width: 1619.98px) {
     .contact-box {
@@ -60,8 +83,9 @@
             line-height: 34px;
         }
     }
-
-
+    header nav ul {
+        gap: 45px;
+    }
 }
 /* end of 1640 */
 
@@ -101,6 +125,23 @@
     .section-text br,
     #page-about .section-text br {
         display: none;
+    }
+
+    header nav ul {
+        gap: 27px;
+    }
+    header li .bttn {
+        font-size: 17px;
+        gap: 13px;
+        padding: 13px 20px;
+    }
+    header #logo img {
+        width: 120px;
+        height: 154px;
+        margin-top: 40px;
+    }
+    #pageheader {
+        padding-top: 230px;
     }
 }
 /* end of 1359.98 */
@@ -183,6 +224,23 @@
         padding-right: 0;
         padding-left: 0;
     }
+
+    .rwd-menu {
+        display: none;
+    }
+
+    #menubar {
+        width: 20px;
+        height: 20px;
+    }
+
+    header {
+        nav {
+            display: flex !important;
+            align-items: start !important;
+            gap: 20px;
+        }
+    }
 }
 /* end of 1199.98 */
 
@@ -229,6 +287,8 @@
     .mt-100 {
         margin-top: 50px !important;
     }
+
+
 }
 /* end of 991.98 */
 
@@ -272,6 +332,30 @@
             font-size: 21px;
             line-height: 50px;
         }
+    }
+
+    header {
+        height: 140px;
+        .bttn {
+            width: auto;
+            padding: 13px 16px;
+        }
+    }
+    header nav {
+        padding-top: 15px;
+    }
+    header #logo img {
+        width: 90px;
+        height: 115px;
+        margin-top: 15px;
+    }
+    header.scrolled {
+        height: 122px;
+    }
+    header.scrolled #logo img {
+        width: 70px;
+        height: 90px;
+        margin-top: 15px;
     }
 }
 /* end of 767.98 */
@@ -425,6 +509,26 @@
     }
     #galleryNav li a {
         display: block;
+    }
+    header li .bttn {
+        font-size: 13px;
+        gap: 10px;
+        padding: 13px 13px;
+    }
+    header #logo img {
+        width: 66px;
+        height: 85px;
+        margin-top: 15px;
+    }
+    header.scrolled {
+        height: 80px;
+    }
+    header.scrolled #logo img {
+        width: 40px;
+        height: 51px;
+    }
+    #pageheader {
+        padding-top: 160px;
     }
 }
 /* end of 575.98 */
