@@ -2932,6 +2932,7 @@ body.hidden-scroll {
   }
   #galleryNav li.active {
     border: 1px solid var(--main-gold);
+    border-radius: 10px;
   }
   #galleryNav li a {
     display: block;
