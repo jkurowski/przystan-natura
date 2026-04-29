@@ -214,42 +214,6 @@
                 @endif
             </div>
         </div>
-
-        <!-- KONTAKT -->
-        <div class="cotnainer-fluid mieszkanie-contact position-relative @if($similarProperties->count() > 0) px-0 @else pb-5 @endif">
-
-            <!-- FORM -->
-            @include('front.contact.clear-contact-form', [
-                'pageTitle' => $property->name,
-                'investmentName' => $investment->name,
-                'investmentId' => $investment->id,
-                'back' => true
-            ])
-
-        </div>
-
-        <!-- KARTA SLIDER-->
-        @if($similarProperties->count() > 0)
-            <div class="container-fluid position-relative karta-slider px-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-10 col-xl-8 col-xxl-6 offset-0 offset-lg-1 offset-xl-2 offset-xxl-3 d-flex align-items-center justify-content-center flex-column scroll-anim-top">
-                            @if($property->is_investment_property)
-                                <h2 class="mb-15 text-center  text-uppercase text-white">podobne apartamenty</br>w tej inwestycji</h2>
-                            @else
-                                <h2 class="mb-15 text-center  text-uppercase text-white">podobne mieszkania</br>w tej inwestycji</h2>
-                            @endif
-                            <p class="text-center text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="karta-slider__slider mt-15 mt-lg-15 mt-xl-15 scroll-anim-bottom">
-                    @foreach($similarProperties as $p)
-                        <x-list-similar-property-card :property="$p" />
-                    @endforeach
-                </div>
-            </div>
-        @endif
     </main>
     <!-- END -> MAIN SECTION -->
 @endsection
