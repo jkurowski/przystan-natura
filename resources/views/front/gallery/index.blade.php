@@ -47,14 +47,7 @@
         <div id="gallery" class="row justify-content-center mt-100">
             @if($gallery && $gallery->photos->count())
                 @foreach($gallery->photos as $image)
-                    <div class="col-4 mb-4">
-                        <a href="{{ asset('uploads/gallery/images/' . $image->file) }}" class="swipebox">
-                            <picture>
-                                <source srcset="{{ asset('uploads/gallery/images/thumbs/webp/' . $image->file_webp) }}" type="image/webp">
-                                <img src="{{ asset('uploads/gallery/images/thumbs/' . $image->file) }}" alt="{{ $image->name ?? '' }}">
-                            </picture>
-                        </a>
-                    </div>
+                    <x-gallery-item :image="$image" />
                 @endforeach
             @else
                 <div class="col-12 text-center">

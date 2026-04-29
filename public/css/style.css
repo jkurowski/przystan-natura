@@ -2707,7 +2707,8 @@ body.hidden-scroll {
   .vw-50 img {
     border-radius: 28px;
   }
-  .flex-row-reverse .vw-50 img {
+  .flex-row-reverse .vw-50 img,
+  #gallery img {
     border-radius: 28px;
   }
   #page-about .section-text {
@@ -2751,6 +2752,13 @@ body.hidden-scroll {
     font-size: 16px;
     line-height: 30px;
   }
+  #galleryNav li a {
+    font-size: 30px;
+    line-height: 54px;
+  }
+  .mt-100 {
+    margin-top: 50px !important;
+  }
 }
 /* end of 991.98 */
 @media (max-width: 767.98px) {
@@ -2784,6 +2792,13 @@ body.hidden-scroll {
   #page-about .section-text {
     padding-right: 0;
     padding-left: 0;
+  }
+  #galleryNav {
+    gap: 39px;
+  }
+  #galleryNav li a {
+    font-size: 21px;
+    line-height: 50px;
   }
 }
 /* end of 767.98 */
@@ -2860,10 +2875,12 @@ body.hidden-scroll {
     height: 350px;
     border-radius: 10px;
   }
-  .big-borders {
+  .big-borders,
+  #gallery img {
     border-radius: 10px;
   }
-  .mt-130 {
+  .mt-130,
+  .mt-100 {
     margin-top: 30px !important;
   }
   section {
@@ -2906,6 +2923,18 @@ body.hidden-scroll {
     width: 57px;
     height: 57px;
     margin-bottom: 20px;
+  }
+  #galleryNav {
+    gap: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+  }
+  #galleryNav li.active {
+    border: 1px solid var(--main-gold);
+  }
+  #galleryNav li a {
+    display: block;
   }
 }
 /* end of 575.98 */
