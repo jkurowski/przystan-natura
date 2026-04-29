@@ -81,7 +81,7 @@
             <div class="row flex-wrap-nowrap">
                 <div class="col-6 d-flex align-items-center">
                     <x-section-header title="W rytmie <i>natury</i>" subtitle="O INWESTYCJI">
-                        <p>Przystań Natura powstaje w Dłutówku pod Łodzią, w powiecie pabianickim - w miejscu otoczonym lasami, pięknym krajobrazem i spokojem, który czuć od pierwszej chwili. W najbliższym otoczeniu znajdują się tereny sprzyjające spacerom, rowerowym przejażdżkom i codziennemu odpoczynkowi od miejskiego tempa, a bezpośrednie sąsiedztwo stadniny koni dodatkowo podkreśla wyjątkowy, naturalny charakter tej lokalizacji. To miejsce stworzone dla osób, które chcą mieszkać bliżej natury, ale nadal korzystać z wygody codziennego życia.</p>
+                        <p>Przystań Natura powstała w Dłutówku pod Łodzią, w powiecie pabianickim - w miejscu otoczonym lasami, pięknym krajobrazem i spokojem, który czuć od pierwszej chwili. W najbliższym otoczeniu znajdują się tereny sprzyjające spacerom, rowerowym przejażdżkom i codziennemu odpoczynkowi od miejskiego tempa, a bezpośrednie sąsiedztwo stadniny koni dodatkowo podkreśla wyjątkowy, naturalny charakter tej lokalizacji. To miejsce stworzone dla osób, które chcą mieszkać bliżej natury, ale nadal korzystać z wygody codziennego życia.</p>
                         <a href="{{ route('front.developro.plan') }}" class="bttn bttn-icon mt-5">
                             Sprawdź domy
                             <svg class="icon" viewBox="0 0 26 26">
@@ -126,7 +126,7 @@
             <div class="row flex-wrap-nowrap">
                 <div class="col-7">
                     <x-section-header title="Między naturą <i>a wygodą</i>" subtitle="LOKALIZACJA" class="pe-0">
-                        <p>W pobliżu i na terenie osiedla zaplanowano udogodnienia sprzyjające aktywnemu i spokojnemu stylowi życia, takie jak mini-park, plac zabaw, siłownia plenerowa, drogi rowerowe, miejsca do wspólnego spędzania czasu oraz parkingi dla gości. To miejsce, które łączy bliskość natury z przestrzenią do odpoczynku, aktywności i wygodnego życia na co dzień.</p>
+                        <p>W pobliżu i na terenie osiedla zaplanowano udogodnienia sprzyjające aktywnemu i spokojnemu stylowi życia, takie jak mini-park, plac zabaw, siłownia plenerowa, drogi rowerowe, miejsca do wspólnego spędzania czasu. To miejsce, które łączy bliskość natury z przestrzenią do odpoczynku, aktywności i wygodnego życia na co dzień.</p>
                     </x-section-header>
 
                     <div class="row location-points mt-100">
