@@ -13,16 +13,13 @@
 @section('content')
     <main>
 
-        <section class="pb-0">
-            <!-- Brakuje mapy -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        {!! parse_text($page->content) !!}
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {!! parse_text($page->content) !!}
                 </div>
             </div>
-        </section>
+        </div>
 
     </main>
 @endsection
