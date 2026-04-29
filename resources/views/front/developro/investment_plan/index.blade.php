@@ -91,7 +91,7 @@
                             rooms="{{ $p->rooms }}"
                             status="{{ $p->status }}"
                             floors="2"
-                            price="$p->price_brutto"
+                            price="{{$p->price_brutto}}"
                             condition="-"
                             pdfUrl="#"
                             historyUrl="#"
