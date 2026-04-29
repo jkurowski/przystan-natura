@@ -29,7 +29,7 @@
             @if($rooms)<li class="w-50">Pokoje <span>{{ $rooms }}</span></li>@endif
             @if($status)<li>Status {!! roomStatusBadge($status) !!}</li>@endif
             @if($floors)<li>Kondygnacje <span>{{ $floors }}</span></li>@endif
-            @if($price)<li>Cena <span>@money($price)</span></li>@endif
+            @if($price && $status == 1)<li>Cena <span>@money($price)</span></li>@endif
             @if($condition)<li>Stan <span>{{ $condition }}</span></li>@endif
         </ul>
         <div class="house-item-footer row">
