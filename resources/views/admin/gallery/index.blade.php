@@ -88,5 +88,6 @@
         $(document).ready(function(){
             $('#nameInput').on('keyup', function(){$.uiTableFilter($('#sortable'), $(this).val(), 'Nazwa');});
         });
+        $(document).ready(function(){$("#sortable tbody.content").sortuj('{{route('admin.gallery.sort')}}');});
     </script>
 @endpush

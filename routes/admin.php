@@ -18,7 +18,6 @@ Route::group([
 //
 //    Route::post('slider/set', 'Slider\IndexController@sort')->name('slider.sort');
     Route::post('gallery/set', 'Gallery\IndexController@sort')->name('gallery.sort');
-    Route::post('gallery/set', 'Gallery\IndexController@sort')->name('gallery.sort');
     Route::post('image/set', 'Gallery\ImageController@sort')->name('image.sort');
     Route::post('charity/set', 'Charity\IndexController@sort')->name('charity.sort');
 //    Route::post('box/set', 'Box\IndexController@sort')->name('box.sort');

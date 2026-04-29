@@ -31,17 +31,32 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <ul id="galleryNav" class="mb-0 list-unstyled">
-                    <li class="active"><a href="">Wizualizacje osiedla</a></li>
-                    <li><a href="">Wizualizacje wnętrz</a></li>
-                    <li><a href="">Zdjęcia z budowy</a></li>
+                <ul id="galleryNav" class="mb-0 list-unstyled text-center">
+                    @foreach($categories as $category)
+                        <li class="{{ $loop->first ? 'active' : '' }}">
+                            <a href="">{{ $category->name }}</a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
         <div id="gallery" class="row justify-content-center mt-100">
-            <div class="col-4">
-                <img src="https://placehold.co/600x400" alt="">
-            </div>
+            @if($gallery && $gallery->photos->count())
+                @foreach($gallery->photos as $image)
+                    <div class="col-4 mb-4">
+                        <a href="{{ asset('uploads/gallery/images/' . $image->file) }}" class="swipebox">
+                            <picture>
+                                <source srcset="{{ asset('uploads/gallery/images/thumbs/webp/' . $image->file_webp) }}" type="image/webp">
+                                <img src="{{ asset('uploads/gallery/images/thumbs/' . $image->file) }}" alt="{{ $image->name ?? '' }}">
+                            </picture>
+                        </a>
+                    </div>
+                @endforeach
+            @else
+                <div class="col-12 text-center">
+                    Brak zdjęć
+                </div>
+            @endif
         </div>
     </div>
 
@@ -51,8 +66,3 @@
     ])
 </main>
 @endsection
-@push('scripts')
-    <script type="text/javascript">
-
-    </script>
-@endpush
