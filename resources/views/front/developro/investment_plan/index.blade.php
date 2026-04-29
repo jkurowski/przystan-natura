@@ -67,14 +67,14 @@
                         </div>
                     @endif
 
-                    @if($investment->search_form)
+                    @if($investment->search_form && 1 == 2)
                         @include('front.developro.search.houses-plan-search-form')
                     @endif
                 </div>
             </div>
         </div>
 
-        <div class="container mieszkania-list">
+        <div class="container mieszkania-list mt-5">
             <div class="row">
                 @if($properties->count() === 0)
                     <p class="text-center text-lg py-3">
