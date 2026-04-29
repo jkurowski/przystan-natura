@@ -14,7 +14,7 @@
     <main>
         <section class="pt-0 pb-0">
             <div class="container">
-                <div class="row flex-wrap flex-xl-wrap-nowrap">
+                <div class="row flex-wrap flex-xl-nowrap">
                     <div class="col-12 col-xl-6">
                         <div class="section-text">
                             <span>KILKA SŁÓW</span>
@@ -24,7 +24,7 @@
                     <div class="col-12 col-xl-6">
                         <div class="section-text mt-2 pe-0">
                             <span class="d-none d-xl-block">&nbsp;</span>
-                            <p>JF Invest jest firmą zarządzającą prywatnym majątkiem – jej celem jest identyfikacja, sfinansowanie i nadzór nad projektami, które mają ten majątek zwiększyć – budować wartość dla kolejnych pokoleń. Determinacja w dążeniu do celu, wizja lepszego jutra i dynamika inwestycyjna to fundamenty naszej działalności.</p>
+                            <p>JF Invest jest firmą zarządzającą prywatnym majątkiem – jej celem jest identyfikacja, sfinansowanie i nadzór nad projektami, które mają ten majątek zwiększyć – budować wartość dla kolejnych pokoleń. Determinacja w dążeniu do celu, wizja lepszego jutra i dynamika inwestycyjna to fundamenty naszej działalności.</p>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                     <x-feature-box
                         icon="profit.svg"
                         title="Rynki finansowe"
-                        text="Działamy w obszarze finansów, opierając decyzje na doświadczeniu, analizie i długofalowym podejściu do budowania wartości."
+                        text="Działamy w obszarze finansów, opierając decyzje na doświadczeniu, analizie  i długofalowym podejściu do budowania wartości."
                     />
                 </div>
             </div>
@@ -91,7 +91,7 @@
                             <div class="house-model-item invest-model">
                                 <div class="house-model-thumb position-relative">
                                     <div class="card-shape">
-                                        <img src="{{ asset('/images/dom-70.jpg') }}" alt="" class="w-100" width="467" height="359">
+                                        <img src="{{ asset('/images/narutowicza.jpg') }}" alt="" class="w-100" width="467" height="359">
                                     </div>
                                     <div class="circle">
                                         <svg class="icon" viewBox="0 0 26 26">
@@ -111,7 +111,7 @@
                             <div class="house-model-item invest-model">
                                 <div class="house-model-thumb position-relative">
                                     <div class="card-shape">
-                                        <img src="{{ asset('/images/dom-90.jpg') }}" alt="" class="w-100" width="467" height="359">
+                                        <img src="{{ asset('/images/borkowice.jpg') }}" alt="" class="w-100" width="467" height="359">
                                     </div>
                                     <div class="circle">
                                         <svg class="icon" viewBox="0 0 26 26">
@@ -131,7 +131,7 @@
                             <div class="house-model-item invest-model">
                                 <div class="house-model-thumb position-relative">
                                     <div class="card-shape">
-                                        <img src="{{ asset('/images/dom-12.jpg') }}" alt="" class="w-100" width="467" height="359">
+                                        <img src="{{ asset('/images/lido.jpg') }}" alt="" class="w-100" width="467" height="359">
                                     </div>
                                     <div class="circle">
                                         <svg class="icon" viewBox="0 0 26 26">
@@ -152,7 +152,7 @@
 
         <section class="">
             <div class="container">
-                <div class="row flex-wrap flex-xl-wrap-nowrap flex-row-reverse">
+                <div class="row flex-wrap flex-xl-nowrap flex-row-reverse">
                     <div class="col-12 col-xl-6 d-flex align-items-center">
                         <div class="section-text">
                             <span>PLANOWANE INWESTYCJE</span>
@@ -169,7 +169,7 @@
 
         <section class="pt-0">
             <div class="container">
-                <div class="row flex-wrap flex-xl-wrap-nowrap">
+                <div class="row flex-wrap flex-xl-nowrap">
                     <div class="col-12 col-xl-6 d-flex align-items-center">
                         <div class="section-text">
                             <span>WARTOŚCI</span>
@@ -192,7 +192,7 @@
 
         <section class="pt-0 pb-0">
             <div class="container">
-                <div class="row flex-wrap flex-xl-wrap-nowrap flex-row-reverse">
+                <div class="row flex-wrap flex-xl-nowrap flex-row-reverse">
                     <div class="col-12 col-xl-6 d-flex align-items-center">
                         <div class="section-text">
                             <span>DOŚWIADCZENIE</span>
