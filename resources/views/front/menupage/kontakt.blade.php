@@ -14,12 +14,14 @@
             <div class="row">
                 <div class="col-12 col-lg-4">
                     <div class="contact-box">
-                        <span></span>
+                        <span>
+                            <img src="{{ asset('images/icons/contact/si_phone.svg') }}" alt="" width="36" height="36" class="icon">
+                        </span>
                         <h4>Telefon</h4>
                         <div class="contact-data">
-                            <a href="" class="contact-link">+48 888 367 956</a>
+                            <a href="tel:+48888367956" class="contact-link">+48 888 367 956</a>
                         </div>
-                        <a href="" class="bttn bttn-icon">
+                        <a href="tel:+48888367956" class="bttn bttn-icon">
                             Zadzwoń do nas
                             <svg class="icon" viewBox="0 0 26 26">
                                 <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
@@ -29,12 +31,14 @@
                 </div>
                 <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                     <div class="contact-box">
-                        <span></span>
+                        <span>
+                            <img src="{{ asset('images/icons/contact/si_email.svg') }}" alt="" width="36" height="36" class="icon">
+                        </span>
                         <h4>E-mail</h4>
                         <div class="contact-data">
-                            <a href="" class="contact-link">konrad.dzialak@janton-invest.pl</a>
+                            <a href="mailto:konrad.dzialak@janton-invest.pl" class="contact-link">konrad.dzialak@janton-invest.pl</a>
                         </div>
-                        <a href="" class="bttn bttn-icon">
+                        <a href="mailto:konrad.dzialak@janton-invest.pl" class="bttn bttn-icon">
                             Napisz do nas
                             <svg class="icon" viewBox="0 0 26 26">
                                 <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
@@ -44,12 +48,14 @@
                 </div>
                 <div class="col-12 col-lg-4 mt-4 mt-lg-0">
                     <div class="contact-box">
-                        <span></span>
+                        <span>
+                            <img src="{{ asset('images/icons/contact/si_marker.svg') }}" alt="" width="36" height="36" class="icon">
+                        </span>
                         <h4>Adres</h4>
                         <div class="contact-data">
-                            <a href="" class="contact-link">ul. Sempołowskiej 4 <br>Pabianice 95-200</a>
+                            <a href="https://maps.app.goo.gl/h9YnsXtc5qQhzHU97" class="contact-link" target="_blank">ul. Sempołowskiej 4 <br>Pabianice 95-200</a>
                         </div>
-                        <a href="" class="bttn bttn-icon">
+                        <a href="https://maps.app.goo.gl/h9YnsXtc5qQhzHU97" class="bttn bttn-icon" target="_blank">
                             SPRAWDŹ JAK TRAFIĆ
                             <svg class="icon" viewBox="0 0 26 26">
                                 <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
