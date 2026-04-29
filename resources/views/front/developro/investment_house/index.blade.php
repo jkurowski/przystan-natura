@@ -21,7 +21,7 @@
         <div class="container next-prev">
             <div class="row">
                 <div class="col-4 d-flex justify-content-start align-items-center">
-                    <x-nav-property-link :property="$prev" label="Poprzednie" direction="prev" />
+
                 </div>
                 <div class="col-4 d-flex justify-content-center align-items-center">
                     @if($investment->type == 1)
@@ -41,7 +41,7 @@
                     @endif
                 </div>
                 <div class="col-4 d-flex justify-content-end align-items-center">
-                    <x-nav-property-link :property="$next" label="Następne" direction="next" />
+
                 </div>
             </div>
         </div>
@@ -60,11 +60,9 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-xl-10 col-xxl-8 d-flex flex-column flex-md-row align-items-center justify-content-center gap-30  gap-lg-100 mt-20 mt-lg-50 mt-xl-70 mb-30">
                         <div class="page-entry-karta__item d-flex flex-row align-items-center justify-content-center gap-15 scroll-anim-top">
-                            <x-icons.icon-area/>
                             <span>Powierzchnia: {{$property->area}} m<sup>2</sup></span>
                         </div>
                         <div class="page-entry-karta__item d-flex flex-row align-items-center justify-content-center gap-15 scroll-anim-top">
-                            <x-icons.icon-room/>
                             <span class="d-flex flex-row align-items-center justify-content-center gap-10">Pokoje: <div class="page-entry-karta__box">{{$property->rooms}}</div></span>
                         </div>
                     </div>
@@ -178,24 +176,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 col-lg-7 col-xl-6 col-xxl-5 d-flex flex-column align-items-start justify-content-start gap-15 mt-15 mt-lg-0 scroll-anim-bottom d-none">
-                        <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
-                            <span>Cena miejsca postojowego - garaż podziemny</span>
-                            <span>ceny od 40.000 zł</span>
-                        </div>
-                        <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
-                            <span>Cena miejsca postojowego - garaż nadziemny</span>
-                            <span>ceny od 40.000 zł</span>
-                        </div>
-                        <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
-                            <span>Cena komórki lokatorskiej</span>
-                            <span>ceny od 40.000 zł</span>
-                        </div>
-                    </div>
-
                 </div>
 
                 @if($property->text)
