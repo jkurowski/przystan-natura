@@ -63,6 +63,7 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
     Route::get('/', 'IndexController@index')->name('index');
     Route::get('/o-nas', 'MenuController@onas')->name('o-nas');
     Route::get('/galeria', 'GalleryController@index')->name('galeria');
+    Route::get('/galeria/{id},{slug}', 'GalleryController@show')->name('galeria.show');
 
 //
 //    Route::get('/kontakt', 'ContactController@index')->name('contact');

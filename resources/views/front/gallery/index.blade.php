@@ -33,8 +33,12 @@
             <div class="col-12">
                 <ul id="galleryNav" class="mb-0 list-unstyled text-center">
                     @foreach($categories as $category)
-                        <li class="{{ $loop->first ? 'active' : '' }}">
-                            <a href="">{{ $category->name }}</a>
+                        <li class="{{ $category->id == $current_id ? 'active' : '' }}">
+                            @if($loop->first)
+                                <a href="{{ route('front.galeria') }}">{{ $category->name }}</a>
+                            @else
+                                <a href="{{ route('front.galeria.show', [$category->id, Str::slug($category->name)]) }}">{{ $category->name }}</a>
+                            @endif
                         </li>
                     @endforeach
                 </ul>

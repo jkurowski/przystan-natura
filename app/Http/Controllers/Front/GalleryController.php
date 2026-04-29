@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 // CMS
 use App\Models\Gallery;
 use App\Models\Page;
+use Illuminate\Support\Str;
 
 class GalleryController extends Controller
 {
@@ -24,19 +25,26 @@ class GalleryController extends Controller
         return view('front.gallery.index', [
             'page' => $page,
             'categories' => $galleries,
-            'gallery' => $firstGallery
+            'gallery' => $firstGallery,
+            'current_id' => $firstGallery?->id
         ]);
     }
 
-    public function show($slug)
+    public function show($id, $slug)
     {
-        $page = Page::where('id', 2)->first();
+        $page = Page::where('id', 1)->first();
 
-        $gallery = Gallery::where('slug', $slug)->with('photos')->first();
+        $galleries = Gallery::where('status', 1)
+            ->orderBy('sort', 'asc')
+            ->get();
+
+        $gallery = Gallery::where('id', $id)->with('photos')->first();
 
         return view('front.gallery.show', [
             'page' => $page,
-            'gallery' => $gallery
+            'categories' => $galleries,
+            'gallery' => $gallery,
+            'current_id' => $id
         ]);
     }
 }
