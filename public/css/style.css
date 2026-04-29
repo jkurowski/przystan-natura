@@ -1413,11 +1413,11 @@ header.scrolled #logo img {
   background: url("../images/pageheaders/kontakt.jpg") no-repeat center;
   background-size: cover;
 }
-#page-pp a {
+#page-pp main a {
   text-decoration: underline;
   color: #b7925e;
 }
-#page-pp ol {
+#page-pp main ol {
   margin-bottom: 1rem;
 }
 /* Homepage
