@@ -94,7 +94,12 @@
                             price="{{$p->price_brutto}}"
                             condition="-"
                             pdfUrl="#"
-                            historyUrl="#"
+                            historyUrl="{{ route('front.developro.house', [
+                                            $p->investment->slug,
+                                            $p,
+                                            Str::slug($p->name),
+                                            round(floatval($p->area), 2).'-m2'
+                                        ]) }}"
                             statusClass="status-{{ $p->status }}"
                         />
 
@@ -128,12 +133,7 @@
                                     @endif
 
                                     @if($p->investment->type == 3 && $p->status <> 3)
-                                        <a class="mieszkania-list-link z-2" href="{{ route('front.developro.house', [
-                                            $p->investment->slug,
-                                            $p,
-                                            Str::slug($p->name),
-                                            round(floatval($p->area), 2).'-m2'
-                                        ]) }}"></a>
+                                        <a class="mieszkania-list-link z-2" href=""></a>
                                     @endif
                                 @endif
 

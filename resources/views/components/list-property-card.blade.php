@@ -43,7 +43,7 @@
             </div>
             <div class="col-12 col-xxl-6 mt-3 mt-xxl-0">
                 <a href="{{ $historyUrl }}" class="bttn bttn-icon">
-                    Pokaż historię
+                    Zobacz dom
                     <svg class="icon" viewBox="0 0 26 26">
                         <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
                     </svg>
