@@ -512,7 +512,8 @@ iframe {
   width: 50vw;
 }
 @media (min-width: 1620px) {
-  .container {
+  .container,
+  .container-xl {
     max-width: 1620px;
   }
   .container-1920 {
