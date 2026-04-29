@@ -33,7 +33,7 @@
             @if($condition)<li>Stan <span>{{ $condition }}</span></li>@endif
         </ul>
         <div class="house-item-footer row">
-            <div class="col-6">
+            <div class="col-12 col-xxl-6">
                 <a href="{{ $pdfUrl }}" class="bttn bttn-icon">
                     Pobierz pdf
                     <svg class="icon" viewBox="0 0 26 26">
@@ -41,7 +41,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-xxl-6 mt-3 mt-xxl-0">
                 <a href="{{ $historyUrl }}" class="bttn bttn-icon">
                     Pokaż historię
                     <svg class="icon" viewBox="0 0 26 26">

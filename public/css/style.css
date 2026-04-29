@@ -2693,6 +2693,14 @@ body.hidden-scroll {
   #pageheader {
     padding-top: 230px;
   }
+  .house-item .house-item-header div {
+    width: 250px;
+    padding-top: 7px;
+  }
+  .house-item .house-item-header div h2 {
+    font-size: 26px;
+    line-height: 28px;
+  }
 }
 /* end of 1359.98 */
 /* end of 1199.98 */
