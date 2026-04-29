@@ -87,7 +87,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-4">
-                        <a href="">
+                        <a href="https://narutowicza1012.pl/" target="_blank">
                             <div class="house-model-item invest-model">
                                 <div class="house-model-thumb position-relative">
                                     <div class="card-shape">
@@ -107,7 +107,7 @@
                         </a>
                     </div>
                     <div class="col-4">
-                        <a href="">
+                        <a href="{{ route('front.developro.plan') }}">
                             <div class="house-model-item invest-model">
                                 <div class="house-model-thumb position-relative">
                                     <div class="card-shape">
@@ -127,7 +127,7 @@
                         </a>
                     </div>
                     <div class="col-4">
-                        <a href="">
+                        <a href="https://lidojurata.pl/" target="_blank">
                             <div class="house-model-item invest-model">
                                 <div class="house-model-thumb position-relative">
                                     <div class="card-shape">
@@ -161,7 +161,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-xl-6 vw-50 ps-3 ps-xl-0 mt-4 mt-sm-5 mt-xl-0">
-                        <img src="{{ asset('images/family-house.jpg') }}" alt="" class="w-100" width="1160" height="787">
+                        <img src="{{ asset('images/Traugutta-7.jpg') }}" alt="" class="w-100" width="950" height="645">
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@
                             <span>WARTOŚCI</span>
                             <h2>Zamieniamy pomysły <br><i>w realizacje</i></h2>
                             <p>JF Invest rozwija się w oparciu o odpowiedzialność, elastyczność i odwagę w podejmowaniu nowych wyzwań. To firma rodzinna, która przez lata nauczyła się uważnie obserwować rynek i mądrze odpowiadać na zmieniające się potrzeby. Dziś łączy doświadczenie zdobywane w różnych branżach z nowoczesnym podejściem do inwestowania, stawiając na jakość, długofalowe myślenie i projekty, które mają realną wartość dla ludzi i otoczenia.</p>
-                            <a href="" class="bttn bttn-icon mt-4 mt-sm-5">
+                            <a href="https://jf-invest.pl/" target="_blank" class="bttn bttn-icon mt-4 mt-sm-5">
                                 Strona inwestora
                                 <svg class="icon" viewBox="0 0 26 26">
                                     <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
@@ -184,7 +184,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-xl-6 vw-50 pe-3 pe-xl-0 mt-4 mt-sm-5 mt-xl-0">
-                        <img src="{{ asset('images/family-house.jpg') }}" alt="" class="w-100" width="1160" height="787">
+                        <img src="{{ asset('images/zmieniamy-pomysly.jpg') }}" alt="" class="w-100" width="950" height="645">
                     </div>
                 </div>
             </div>
@@ -207,7 +207,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-xl-6 vw-50 ps-3 ps-xl-0 mt-4 mt-sm-5 mt-xl-0">
-                        <img src="{{ asset('images/family-house.jpg') }}" alt="" class="w-100" width="1160" height="787">
+                        <img src="{{ asset('images/doswiadczenie.jpg') }}" alt="" class="w-100" width="950" height="645">
                     </div>
                 </div>
             </div>
