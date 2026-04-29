@@ -11,7 +11,9 @@ class InvestmentHouseController extends Controller
 {
     public function index(Property $property)
     {
+        $investment = Investment::find(1);
         return view('front.developro.investment_house.index', [
+            'investment' => $investment,
             'property' => $property,
             'next' => $property->findNext(1, $property->number_order),
             'prev' => $property->findPrev(1, $property->number_order),
