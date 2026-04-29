@@ -127,7 +127,7 @@ Route::group(['namespace' => 'Front', 'middleware' => 'restrictIp', 'as' => 'fro
 
 
 //        // Inwestycja domkowa
-        Route::get('/{slug}/d/{property},{propertySlug},{propertyArea}', 'InvestmentHouseController@index')->name('house');
+        Route::get('/d/{property},{propertySlug},{propertyArea}', 'InvestmentHouseController@index')->name('house');
 //
 //        //Historia cen
         Route::get('/historia/{property}', 'History\IndexController@show')->name('history');

@@ -95,7 +95,6 @@
                             condition="-"
                             pdfUrl="#"
                             historyUrl="{{ route('front.developro.house', [
-                                            $p->investment->slug,
                                             $p,
                                             Str::slug($p->name),
                                             round(floatval($p->area), 2).'-m2'
