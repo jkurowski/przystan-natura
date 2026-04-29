@@ -2789,6 +2789,9 @@ body.hidden-scroll {
     align-items: start !important;
     gap: 20px;
   }
+  .house-item .house-item-header div {
+    width: 350px;
+  }
 }
 /* end of 1199.98 */
 @media (max-width: 991.98px) {
@@ -2829,6 +2832,9 @@ body.hidden-scroll {
   }
   .mt-100 {
     margin-top: 50px !important;
+  }
+  .house-item .house-item-header div {
+    width: 232px;
   }
 }
 /* end of 991.98 */
