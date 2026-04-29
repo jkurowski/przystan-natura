@@ -49,6 +49,19 @@
             height: 100px;
         }
     }
+    .section-text,
+    #page-about .section-text {
+        h2 {
+            font-size: 51px;
+            line-height: 67px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 34px;
+        }
+    }
+
+
 }
 /* end of 1640 */
 
@@ -74,6 +87,20 @@
             line-height: 121px;
             margin-bottom: 40px;
         }
+    }
+
+    section {
+        padding: 100px 0;
+    }
+    .bg-logo-2 .container {
+        padding: 100px 0;
+    }
+    #page-about .section-text {
+        padding-right: 40px
+    }
+    .section-text br,
+    #page-about .section-text br {
+        display: none;
     }
 }
 /* end of 1359.98 */
@@ -130,6 +157,31 @@
     .big-borders {
         border-radius: 28px;
     }
+
+    section {
+        padding: 80px 0;
+    }
+    .bg-logo-2 .container {
+        padding: 80px 0;
+        background-position: right 40px bottom -100px;
+        background-size: 300px auto;
+    }
+    .vw-50 {
+        width: 100%;
+        img {
+            border-radius: 28px;
+        }
+    }
+    .flex-row-reverse .vw-50 img {
+        border-radius: 28px;
+    }
+    #page-about .section-text {
+        padding-right: 0;
+    }
+    #page-about .flex-row-reverse .section-text {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 /* end of 1199.98 */
 
@@ -150,17 +202,87 @@
             margin-bottom: 20px;
         }
     }
+    .section-text {
+        h2 {
+            font-size: 50px;
+            line-height: 60px;
+            margin-bottom: 30px;
+        }
+        span {
+            font-size: 15px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+    }
+    .section-text p,
+    #page-about .section-text p,
+    p, li {
+        font-size: 16px;
+        line-height: 30px;
+    }
 }
 /* end of 991.98 */
 
 @media (max-width: 767.98px) {
- main {
-     padding-top: 0;
- }
+     main {
+         padding-top: 0;
+     }
+
+    section {
+        padding: 40px 0;
+    }
+    .bg-logo-2 .container {
+        padding: 40px 0;
+        background-position: right 40px bottom -40px;
+        background-size: 200px auto;
+    }
+
+    .feature-box {
+        margin-bottom: 40px;
+        border: 1px solid #2e524e;
+        padding: 30px;
+        border-radius: 28px;
+        p {
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        .icon {
+            margin-bottom: 30px;
+        }
+    }
+    #page-about .section-text {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 /* end of 767.98 */
 
 @media (max-width: 575.98px) {
+
+    .mt-6,
+    .mt-170
+    {
+        margin-top: 3rem !important;
+    }
+
+    .vw-50 {
+        img {
+            border-radius: 10px;
+        }
+    }
+    .flex-row-reverse .vw-50 img {
+        border-radius: 10px;
+    }
+
+    .section-text p,
+    #page-about .section-text p,
+    p, li {
+        font-size: 14px;
+        line-height: 25px;
+    }
     main {
         padding-left: 15px;
         padding-right: 15px;
@@ -192,9 +314,11 @@
         }
         .bttn {
             width: 100%;
+            justify-content: center;
         }
     }
-    .section-text {
+    .section-text,
+    #page-about .section-text {
         h2 {
             font-size: 39px;
             line-height: 44px;
@@ -214,6 +338,7 @@
         width: 100%;
         border-radius: 10px;
         letter-spacing: 0;
+        justify-content: center;
     }
     #map {
         height: 350px;
@@ -225,11 +350,60 @@
     .mt-130 {
         margin-top: 30px !important;
     }
+    section {
+        padding: 40px 10px;
+    }
+    .contact-text {
+        h3 {
+            font-weight: 700;
+            font-size: 31px;
+            margin-bottom: 0;
+        }
+        h4 {
+            font-size: 19px;
+            line-height: 30px
+        }
+    }
+    .href-email, .href-phone {
+        font-size: 16px;
+        line-height: 27px;
+        gap: 10px;
+    }
+    .href-email .href-icon-email,
+    .href-phone .href-icon-email,
+    .href-email .href-icon-phone,
+    .href-phone .href-icon-phone {
+        width: 28px;
+        height: 28px;
+    }
+    .href-email .href-icon-email .icon,
+    .href-phone .href-icon-email .icon,
+    .href-email .href-icon-phone .icon,
+    .href-phone .href-icon-phone .icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .feature-box {
+        padding: 25px;
+        margin-bottom: 30px;
+        .icon {
+            width: 57px;
+            height: 57px;
+            margin-bottom: 20px;
+        }
+    }
 }
 /* end of 575.98 */
 
 @media (max-width: 420px) {
-
+    .section-text h2,
+    #page-about .section-text h2
+    {
+        font-size: 27px;
+        line-height: 35px;
+        margin-bottom: 30px;
+    }
 }
 
 /* end of 359.98 */

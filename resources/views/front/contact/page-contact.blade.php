@@ -1,13 +1,13 @@
 <section id="mainContact" class="bg-logo-2 pb-0">
     <div class="container pt-0">
         <div class="row">
-            <div class="col-7">
-                <div class="section-text">
+            <div class="col-12 col-xl-6">
+                <div class="section-text pe-0">
                     <span>KONTAKT</span>
                     <h2>Masz pytania? <br><i>Skontaktuj się z nami!</i></h2>
                 </div>
 
-                <div class="contact-text mt-5">
+                <div class="contact-text mt-3 mt-sm-5">
                     <h3>Konrad Działak</h3>
                     <h4 class="mb-4">Opiekun inwestora</h4>
                     <a href="tel:+48888367956" class="href-phone">
@@ -26,8 +26,10 @@
                     </a>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-12 col-xl-6 mt-4 mt-sm-5 mt-xl-0">
+                <div class="ps-0 ps-xl-5">
                 @include('front.contact.form', ['page_name' => 'Strona główna', 'page_text' => '<p>Zakup domu to inwestycja przy której należy zwrócić uwagę na wiele szczegółów. Skontaktuj się z naszym opiekunem, który odpowie na Twoje pytania i zaprosi Cię na prezentację.</p>'])
+                </div>
             </div>
         </div>
     </div>

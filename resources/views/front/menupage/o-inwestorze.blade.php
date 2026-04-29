@@ -14,16 +14,16 @@
     <main>
         <section class="pt-0 pb-0">
             <div class="container">
-                <div class="row flex-wrap-nowrap">
-                    <div class="col-6">
+                <div class="row flex-wrap flex-xl-wrap-nowrap">
+                    <div class="col-12 col-xl-6">
                         <div class="section-text">
                             <span>KILKA SŁÓW</span>
                             <h2>Wartość to nie tylko <br><i>pomnażanie majątku</i></h2>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-xl-6">
                         <div class="section-text mt-2 pe-0">
-                            <span>&nbsp;</span>
+                            <span class="d-none d-xl-block">&nbsp;</span>
                             <p>JF Invest jest firmą zarządzającą prywatnym majątkiem – jej celem jest identyfikacja, sfinansowanie i nadzór nad projektami, które mają ten majątek zwiększyć – budować wartość dla kolejnych pokoleń. Determinacja w dążeniu do celu, wizja lepszego jutra i dynamika inwestycyjna to fundamenty naszej działalności.</p>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
             </div>
         </section>
 
-        <section id="mainFeatures" class="py-5">
+        <section id="mainFeatures" class="py-0 py-sm-3 py-md-5">
             <div class="container">
                 <div class="row">
                     <x-feature-box
@@ -152,15 +152,15 @@
 
         <section class="">
             <div class="container">
-                <div class="row flex-wrap-nowrap flex-row-reverse">
-                    <div class="col-6 d-flex align-items-center">
+                <div class="row flex-wrap flex-xl-wrap-nowrap flex-row-reverse">
+                    <div class="col-12 col-xl-6 d-flex align-items-center">
                         <div class="section-text">
                             <span>PLANOWANE INWESTYCJE</span>
                             <h2>Apartamentowiec <br><i>Traugutta 7 Łódź</i></h2>
                             <p>Apartamentowiec Traugutta 7 to prestiżowa inwestycja w samym centrum Łodzi, w sąsiedztwie EC1 i Bramy Miasta. Projekt łączy funkcje mieszkaniowe, komercyjne i gastronomiczne, oferując 32 apartamenty, 12 lokali usługowych oraz przestrzeń HORECA z ogródkami. Wyróżnia go unikatowa architektura, zielony ogród na dachu, wertykalne ogrody na tarasach i elewacji oraz podziemny parking ze stacją ładowania pojazdów elektrycznych.</p>
                         </div>
                     </div>
-                    <div class="col-6 vw-50 ps-0">
+                    <div class="col-12 col-xl-6 vw-50 ps-3 ps-xl-0 mt-4 mt-sm-5 mt-xl-0">
                         <img src="{{ asset('images/family-house.jpg') }}" alt="" class="w-100" width="1160" height="787">
                     </div>
                 </div>
@@ -169,13 +169,13 @@
 
         <section class="pt-0">
             <div class="container">
-                <div class="row flex-wrap-nowrap">
-                    <div class="col-6 d-flex align-items-center">
+                <div class="row flex-wrap flex-xl-wrap-nowrap">
+                    <div class="col-12 col-xl-6 d-flex align-items-center">
                         <div class="section-text">
                             <span>WARTOŚCI</span>
                             <h2>Zamieniamy pomysły <br><i>w realizacje</i></h2>
                             <p>JF Invest rozwija się w oparciu o odpowiedzialność, elastyczność i odwagę w podejmowaniu nowych wyzwań. To firma rodzinna, która przez lata nauczyła się uważnie obserwować rynek i mądrze odpowiadać na zmieniające się potrzeby. Dziś łączy doświadczenie zdobywane w różnych branżach z nowoczesnym podejściem do inwestowania, stawiając na jakość, długofalowe myślenie i projekty, które mają realną wartość dla ludzi i otoczenia.</p>
-                            <a href="" class="bttn bttn-icon mt-5">
+                            <a href="" class="bttn bttn-icon mt-4 mt-sm-5">
                                 Strona inwestora
                                 <svg class="icon" viewBox="0 0 26 26">
                                     <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
@@ -183,7 +183,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-6 vw-50 pe-0">
+                    <div class="col-12 col-xl-6 vw-50 pe-3 pe-xl-0 mt-4 mt-sm-5 mt-xl-0">
                         <img src="{{ asset('images/family-house.jpg') }}" alt="" class="w-100" width="1160" height="787">
                     </div>
                 </div>
@@ -192,13 +192,13 @@
 
         <section class="pt-0 pb-0">
             <div class="container">
-                <div class="row flex-wrap-nowrap flex-row-reverse">
-                    <div class="col-6 d-flex align-items-center">
+                <div class="row flex-wrap flex-xl-wrap-nowrap flex-row-reverse">
+                    <div class="col-12 col-xl-6 d-flex align-items-center">
                         <div class="section-text">
                             <span>DOŚWIADCZENIE</span>
                             <h2>Historia, która <br><i>rozwija</i></h2>
                             <p>Historia JF Invest sięga 1976 roku. Od początku firma rozwijała się w różnych branżach, elastycznie odpowiadając na zmieniające się warunki rynkowe i nowe potrzeby. Każdy etap tej drogi budował doświadczenie, które dziś przekłada się na świadome decyzje biznesowe i długofalowe myślenie o rozwoju. To historia oparta na odwadze, konsekwencji i umiejętności dostrzegania nowych kierunków tam, gdzie pojawia się realny potencjał.</p>
-                            <a href="" class="bttn bttn-icon mt-5">
+                            <a href="" class="bttn bttn-icon mt-4 mt-sm-5">
                                 Strona inwestora
                                 <svg class="icon" viewBox="0 0 26 26">
                                     <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
@@ -206,7 +206,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-6 vw-50 ps-0">
+                    <div class="col-12 col-xl-6 vw-50 ps-3 ps-xl-0 mt-4 mt-sm-5 mt-xl-0">
                         <img src="{{ asset('images/family-house.jpg') }}" alt="" class="w-100" width="1160" height="787">
                     </div>
                 </div>

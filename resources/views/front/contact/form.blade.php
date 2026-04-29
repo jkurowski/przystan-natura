@@ -13,7 +13,7 @@
         : route('front.contact.send');
 @endphp
 <div id="contactForm">
-    <form action="{{ $action }}" class="row mt-3 mt-xxl-5 validateForm" method="POST" id="contact-form">
+    <form action="{{ $action }}" class="row mt-4 mt-sm-3 mt-xxl-5 validateForm" method="POST" id="contact-form">
         {{ csrf_field() }}
         <div class="col-12">
             @if (session('success'))
