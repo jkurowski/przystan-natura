@@ -198,7 +198,7 @@
                             <span>DOŚWIADCZENIE</span>
                             <h2>Historia, która <br><i>rozwija</i></h2>
                             <p>Historia JF Invest sięga 1976 roku. Od początku firma rozwijała się w różnych branżach, elastycznie odpowiadając na zmieniające się warunki rynkowe i nowe potrzeby. Każdy etap tej drogi budował doświadczenie, które dziś przekłada się na świadome decyzje biznesowe i długofalowe myślenie o rozwoju. To historia oparta na odwadze, konsekwencji i umiejętności dostrzegania nowych kierunków tam, gdzie pojawia się realny potencjał.</p>
-                            <a href="" class="bttn bttn-icon mt-4 mt-sm-5">
+                            <a href="https://jf-invest.pl/" target="_blank" class="bttn bttn-icon mt-4 mt-sm-5">
                                 Strona inwestora
                                 <svg class="icon" viewBox="0 0 26 26">
                                     <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
