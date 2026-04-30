@@ -221,15 +221,15 @@
     <section class="pb-0">
         <div class="container">
             <div class="row flex-wrap-nowrap">
-                <div class="col-7">
+                <div class="col-12 col-lg-7">
                     <x-section-header title="Wybierz odpowiedni <br><i>metraż dla siebie</i>" subtitle="WARIANTY METRAŻOWE" class="pe-0" />
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-4">
-                    <a href="">
+                <div class="col-12 col-lg-4">
+                    <a href="{{ route('front.developro.plan') }}">
                         <div class="house-model-item">
                             <div class="house-model-thumb position-relative">
                                 <div class="card-shape">
@@ -243,7 +243,7 @@
                             </div>
                             <div class="house-model-content">
                                 <h2>Dom 70 m² <i>+ wiata garażowa</i></h2>
-                                <span href="" class="bttn bttn-icon mt-5 mb-2">
+                                <span href="" class="bttn bttn-icon mt-2 mt-xl-5 mb-2">
                                 Wybierz dom
                                 <svg class="icon" viewBox="0 0 26 26">
                                     <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
@@ -253,8 +253,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-4">
-                    <a href="">
+                <div class="col-12 col-lg-4">
+                    <a href="{{ route('front.developro.plan') }}">
                         <div class="house-model-item">
                             <div class="house-model-thumb position-relative">
                                 <div class="card-shape">
@@ -267,8 +267,8 @@
                                 </div>
                             </div>
                             <div class="house-model-content">
-                                <h2>Dom 70 m² <i>+ wiata garażowa</i></h2>
-                                <span href="" class="bttn bttn-icon mt-5 mb-2">
+                                <h2>Dom 90 m² <i>+ wiata garażowa</i></h2>
+                                <span href="" class="bttn bttn-icon mt-2 mt-xl-5 mb-2">
                                 Wybierz dom
                                 <svg class="icon" viewBox="0 0 26 26">
                                     <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
@@ -278,8 +278,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-4">
-                    <a href="">
+                <div class="col-12 col-lg-4">
+                    <a href="{{ route('front.developro.plan') }}">
                         <div class="house-model-item">
                             <div class="house-model-thumb position-relative">
                                 <div class="card-shape">
@@ -292,8 +292,8 @@
                                 </div>
                             </div>
                             <div class="house-model-content">
-                                <h2>Dom 70 m² <i>+ wiata garażowa</i></h2>
-                                <span href="" class="bttn bttn-icon mt-5 mb-2">
+                                <h2>Dom 120 m² <i>+ wiata garażowa</i></h2>
+                                <span href="" class="bttn bttn-icon mt-2 mt-xl-5 mb-2">
                                 Wybierz dom
                                 <svg class="icon" viewBox="0 0 26 26">
                                     <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
