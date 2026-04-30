@@ -233,7 +233,7 @@
                                     <div class="col-12">
                                         @if($property->file_pdf)
                                             <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" class="bttn mt-5" target="_blank">
-                                                Plan domy .pdf
+                                                Plan domu .pdf
                                             </a>
                                         @endif
                                     </div>
