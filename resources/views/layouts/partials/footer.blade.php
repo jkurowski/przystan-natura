@@ -14,18 +14,18 @@
             <div class="col-12">
                 <div class="footer-content">
                     <div class="row">
-                        <div class="col-3 p-0">
+                        <div class="col-12 col-md-6 col-lg-8 col-xl-3 p-0">
                             <div class="footer-box ps-0 border-0">
                                 <img src="{{ asset('images/logo-color.svg') }}" alt="logo" class="mb-5">
                                 <p>Gotowe wolnostojące domki w stylu skandynawskim z własnymi działkami</p>
                             </div>
                         </div>
-                        <div class="col p-0">
+                        <div class="col-12 col-md-6 col-lg-4 col-xl p-0">
                             <div class="footer-box">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-12 col-xxl-6">
                                         <h4>MENU</h4>
-                                        <ul class="mb-0 list-unstyled">
+                                        <ul class="mb-4 mb-xxl-0 list-unstyled">
                                             <li><a href="/">Strona główna</a></li>
                                             <li><a href="{{ route('front.developro.plan') }}">Oferta domów</a></li>
                                             <li><a href="{{ route('front.menu.show', ['uri' => 'lokalizacja']) }}">Lokalizacja</a></li>
@@ -34,7 +34,7 @@
                                             <li><a href="{{ route('front.menu.show', ['uri' => 'kontakt']) }}">Kontakt</a></li>
                                         </ul>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-12 col-xxl-6">
                                         <h4>INFORMACJE</h4>
                                         <ul class="mb-0 list-unstyled">
                                             <li><a href="{{ route('front.menu.show', ['uri' => 'polityka-prywatnosci']) }}">Polityka prywatności</a></li>
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col p-0">
+                        <div class="col-12 col-xl-6 col-xxl p-0">
                             <div class="footer-box pe-0">
                                 <a href="tel:+48888367956" class="href-phone">
                             <span class="href-icon-phone">
@@ -60,7 +60,7 @@
                             </span>konrad.dzialak@janton-invest.pl
                                 </a>
 
-                                <ul class="social mb-0 list-unstyled">
+                                <ul class="social mb-0 list-unstyled d-none">
                                     <li><a href="https://www.facebook.com/przystannaturadomy" target="_blank">Facebook</a></li>
                                     <li><a href="https://www.instagram.com/przystan.natura?igsh=ZTI5anFnankweGIz">Instagram</a></li>
                                 </ul>

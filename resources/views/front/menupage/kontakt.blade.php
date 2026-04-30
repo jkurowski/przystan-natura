@@ -72,7 +72,10 @@
                     </div>
                 </div>
                 <div class="col-12 col-xl-6 mt-6 mt-xl-0">
-                    <div id="map"></div>
+                    <div id="map">
+                        <img src="{{ asset('images/contact-map.jpg') }}" alt="Mapa lokalizacji" class="d-none d-xl-block w-100">
+                        <img src="{{ asset('images/contact-map-mobile.jpg') }}" alt="Mapa lokalizacji" class="d-block d-xl-none w-100">
+                    </div>
                 </div>
             </div>
         </div>
