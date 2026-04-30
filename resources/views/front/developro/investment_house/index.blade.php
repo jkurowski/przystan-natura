@@ -1,7 +1,7 @@
 @extends('layouts.page', ['body_class' => 'position-relative', 'body_id' => 'page-karta-mieszkania'])
 
 @isset($page)
-    @section('meta_title', $page->title.' - '.$investment->name.' - '.$property->name)
+    @section('meta_title', $page->title.' - '.$property->name)
     @section('seo_title', $page->meta_title)
     @section('seo_description', $page->meta_description)
     @section('seo_robots', $page->meta_robots)
