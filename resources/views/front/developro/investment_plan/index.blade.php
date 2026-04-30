@@ -90,10 +90,10 @@
                             area="{{ $p->plot_area }} m²"
                             rooms="{{ $p->rooms }}"
                             status="{{ $p->status }}"
-                            floors="2"
+                            floors="-"
                             price="{{$p->price_brutto}}"
                             condition="-"
-                            pdfUrl="#"
+                            pdfUrl="{{ asset('/investment/property/pdf/'.$p->file_pdf) }}"
                             historyUrl="{{ route('front.developro.house', [
                                             $p,
                                             Str::slug($p->name),

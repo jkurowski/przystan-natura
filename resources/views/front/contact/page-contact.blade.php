@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="container pt-0" style="background:none">
+    <div class="container pt-0 pb-0" style="background:none">
         <div class="row">
             <div class="col-12">
                 <img src="{{ asset('images/contact-photo.jpg') }}" alt="" class="w-100 big-borders" width="1620" height="765">
