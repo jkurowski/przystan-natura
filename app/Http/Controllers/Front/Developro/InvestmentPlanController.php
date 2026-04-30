@@ -26,7 +26,7 @@ class InvestmentPlanController extends Controller
     public function index(Request $request)
     {
         $investment = Investment::find(1);
-        $uniqueRooms = $this->repository->getUniqueRooms($investment->properties);
+        //$uniqueRooms = $this->repository->getUniqueRooms($investment->properties);
 
         if($investment->type == 1){
             $investment_room = $investment->load(array(
@@ -194,7 +194,7 @@ class InvestmentPlanController extends Controller
             'investment' => $investment,
             'investments' => $investments,
             'properties' => $properties,
-            'uniqueRooms' => $uniqueRooms,
+            //'uniqueRooms' => $uniqueRooms,
             'page' => $page,
             'static_page' => 'plan-inwestycji'
         ]);

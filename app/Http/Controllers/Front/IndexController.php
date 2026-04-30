@@ -14,22 +14,19 @@ class IndexController extends Controller
 {
     public function index(Request $request)
     {
-        if ($request->has('investment')) {
-            $query = $request->only(['area', 'rooms', 'highlighted', 'price', 'type', 'kitchen', 'balcony', 'garden', 'terrace']);
+        $investment = Investment::find(1);
 
-            if ($request->filled('investment')) {
-                return redirect()->route('front.developro.plan', [
-                        'slug' => $request->investment
-                    ] + $query);
-            }
+        if ($investment->type == 3) {
+            $investment_room = $investment->load(array(
+                'properties' => function ($query) use ($request) {}
+            ));
 
-            return redirect()->route('front.developro.search.index', $query);
+            $properties = $investment_room->properties;
         }
 
-        $news = Article::where('status', 1)->where('type', 1)->orderBy('posted_at', 'DESC')->limit(5)->get();
-
         return view('front.homepage.index', [
-            'news' => $news,
+            'investment' => $investment,
+            'properties' => $properties ?? null,
         ]);
     }
 }

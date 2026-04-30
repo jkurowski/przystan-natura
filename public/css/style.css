@@ -1748,9 +1748,8 @@ footer .social li a {
   color: var(--main-gold);
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.33);
 }
-#gallery img {
-  border-radius: 38px
-    ;
+#page-gallery #gallery img {
+  border-radius: 38px;
 }
 .sliderWrapper {
   position: relative;
@@ -2818,6 +2817,19 @@ body.hidden-scroll {
     font-size: 61px;
     line-height: 61px;
   }
+  #bignumbers li {
+    padding: 30px 0 20px;
+  }
+  #bignumbers div {
+    width: 360px;
+  }
+  #bignumbers strong {
+    font-size: 150px;
+    line-height: 108px;
+  }
+  .gallery-wrap {
+    height: 655px;
+  }
 }
 /* end of 1359.98 */
 /* end of 1199.98 */
@@ -2883,7 +2895,7 @@ body.hidden-scroll {
     border-radius: 28px;
   }
   .flex-row-reverse .vw-50 img,
-  #gallery img {
+  #page-gallery #gallery img {
     border-radius: 28px;
   }
   #page-about .section-text {
@@ -2919,6 +2931,12 @@ body.hidden-scroll {
     font-size: 36px;
     line-height: 46px;
     margin-bottom: 54px;
+  }
+  #bignumbers br {
+    display: none;
+  }
+  #bignumbers div {
+    width: calc(100% - 180px);
   }
 }
 /* end of 1199.98 */
@@ -2969,6 +2987,19 @@ body.hidden-scroll {
     font-size: 27px;
     line-height: 36px;
     margin-bottom: 24px;
+  }
+  .gallery-wrap {
+    height: 515px;
+  }
+  .gallery-item-info span {
+    width: 65px;
+    height: 65px;
+    right: 20px;
+    bottom: 20px;
+  }
+  .gallery-item-info span .icon {
+    width: 40px;
+    height: 40px;
   }
 }
 /* end of 991.98 */
@@ -3063,6 +3094,13 @@ body.hidden-scroll {
     height: auto;
     margin: 0 auto 20px !important;
   }
+  #gallery.gallery-wrap {
+    display: none;
+  }
+  #mainGallery {
+    padding: 40px 0 !important;
+    background: rgba(0, 0, 0, 0.3);
+  }
 }
 /* end of 767.98 */
 @media (max-width: 575.98px) {
@@ -3138,7 +3176,7 @@ body.hidden-scroll {
     border-radius: 10px;
   }
   .big-borders,
-  #gallery img {
+  #page-gallery #gallery img {
     border-radius: 10px;
   }
   .mt-130,
@@ -3147,6 +3185,9 @@ body.hidden-scroll {
   }
   section {
     padding: 40px 10px;
+  }
+  .bg-logo .container {
+    padding: 0 10px;
   }
   .contact-text h3 {
     font-weight: 700;
@@ -3278,6 +3319,32 @@ body.hidden-scroll {
     border-bottom-right-radius: 40px;
     border-bottom-left-radius: 40px;
     margin-bottom: 40px;
+  }
+  #bignumbers li {
+    padding: 30px 0 20px;
+  }
+  #bignumbers div {
+    width: calc(100% - 80px);
+  }
+  #bignumbers strong {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  #bignumbers p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #mainGallery {
+    padding: 30px 15px !important;
+    background: rgba(0, 0, 0, 0.3);
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  #mainGallery .d-block {
+    width: 100%;
+  }
+  #mainGallery .bttn {
+    width: 100%;
   }
 }
 /* end of 575.98 */

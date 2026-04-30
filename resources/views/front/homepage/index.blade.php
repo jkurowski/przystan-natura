@@ -30,10 +30,10 @@
 
     <section class="bg-logo p-0">
         <div class="container">
-            <div class="row flex-wrap-nowrap">
-                <div class="col-6">
+            <div class="row flex-wrap flex-xl-nowrap">
+                <div class="col-12 col-xl-6">
                     <x-section-header title="Nowy standard <i>każdego dnia</i>" subtitle="PRZYSTAŃ NATURA W LICZBACH">
-                        <a href="{{ route('front.developro.plan') }}" class="bttn bttn-icon mt-5">
+                        <a href="{{ route('front.developro.plan') }}" class="bttn bttn-icon mt-0 mt-xl-5">
                             Sprawdź domy
                             <svg class="icon" viewBox="0 0 26 26">
                                 <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
@@ -41,7 +41,7 @@
                         </a>
                     </x-section-header>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-xl-6 mt-5 mt-xl-0">
                     <ul id="bignumbers" class="mb-0 list-unstyled">
                         <li>
                             <strong>12</strong>
@@ -155,7 +155,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-xl-6 vw-50 p-0 d-flex align-items-end">
-                    <img src="{{ asset('images/location-map.jpg') }}" alt="" class="w-100" width="1160" height="787">
+                    <img src="{{ asset('images/location-map.jpg') }}" alt="" class="d-none d-xl-block w-100" width="1160" height="787">
+                    <img src="{{ asset('images/location-map-mobile.jpg') }}" alt="" class="d-block d-xl-none w-100" width="960" height="661">
                 </div>
             </div>
         </div>
@@ -250,77 +251,75 @@
         </div>
     </section>
 
-    <section id="plan" class="">
+    <section id="plan" class="d-none d-md-block">
         <!-- Troszke rozmyty plan -->
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <x-section-header title="Wybierz dom <i>dla siebie</i>" subtitle="DOSTĘPNOŚĆ" class="text-center" />
                 </div>
-                <div class="col-12 mt-5">
-                    <img src="{{ asset('images/plan.jpg') }}" alt="" class="w-100 big-borders" width="1620" height="827">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 pe-4 ps-4">
+                    @if($investment->plan)
+                        <div id="plan-holder">
+                            <img src="{{ asset('/investment/plan/'.$investment->plan->file) }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan" class="w-100 h-100 object-fit-cover rounded">
+                            @if($investment->type == 3)
+                                <map name="invesmentplan">
+                                    @if($investment->properties)
+                                        @foreach($investment->properties as $house)
+                                            <area
+                                                shape="poly"
+                                                href="{{route('front.developro.house', [$investment->slug, $house, Str::slug($house->name), round(floatval($house->area), 2).'-m2'])}}"
+                                                title="{{$house->name}}<br>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b><br /><b>{{ roomStatus($house->status) }}</b>"
+                                                alt="{{$house->slug}}"
+                                                data-roomnumber="{{$house->number}}"
+                                                data-roomtype="{{$house->typ}}"
+                                                data-roomstatus="{{$house->status}}"
+                                                coords="{{ $house->html ? (cords($house->html) ?? '') : '' }}"
+                                                class="inline status-{{$house->status}}">
+                                        @endforeach
+                                    @endif
+                                </map>
+                            @endif
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
 
-        <div id="houses" class="container">
+        <div class="container mieszkania-list mt-5">
             <div class="row">
-                <x-list-property-card
-                    number="01"
-                    title="Dom 88,46 m²"
-                    subtitle="+ wiata garażowa"
-                    area="518 m²"
-                    rooms="5"
-                    status="DOSTĘPNY"
-                    floors="2"
-                    price="1.299.000 zł"
-                    condition="urządzony &quot;pod klucz&quot;"
-                    pdfUrl=""
-                    historyUrl=""
-                    statusClass="status-1"
-                />
-                <x-list-property-card
-                    number="01"
-                    title="Dom 88,46 m²"
-                    subtitle="+ wiata garażowa"
-                    area="518 m²"
-                    rooms="5"
-                    status="DOSTĘPNY"
-                    floors="2"
-                    price="1.299.000 zł"
-                    condition="urządzony &quot;pod klucz&quot;"
-                    pdfUrl=""
-                    historyUrl=""
-                    statusClass="status-1"
-                />
-                <x-list-property-card
-                    number="01"
-                    title="Dom 88,46 m²"
-                    subtitle="+ wiata garażowa"
-                    area="518 m²"
-                    rooms="5"
-                    status="DOSTĘPNY"
-                    floors="2"
-                    price="1.299.000 zł"
-                    condition="urządzony &quot;pod klucz&quot;"
-                    pdfUrl=""
-                    historyUrl=""
-                    statusClass="status-1"
-                />
-                <x-list-property-card
-                    number="01"
-                    title="Dom 88,46 m²"
-                    subtitle="+ wiata garażowa"
-                    area="518 m²"
-                    rooms="5"
-                    status="DOSTĘPNY"
-                    floors="2"
-                    price="1.299.000 zł"
-                    condition="urządzony &quot;pod klucz&quot;"
-                    pdfUrl=""
-                    historyUrl=""
-                    statusClass="status-1"
-                />
+                @if($properties->count() === 0)
+                    <p class="text-center text-lg py-3">
+                        Brak wyników wyszukiwania, zmień parametry i spróbuj ponownie.
+                    </p>
+                @else
+                    @foreach($properties as $p)
+
+                        <x-list-property-card
+                            number="{{ $p->number }}"
+                            title="{{ $p->name }}"
+                            subtitle="+ wiata garażowa"
+                            area="{{ $p->plot_area }} m²"
+                            rooms="{{ $p->rooms }}"
+                            status="{{ $p->status }}"
+                            floors="-"
+                            price="{{$p->price_brutto}}"
+                            condition="-"
+                            pdfUrl="{{ asset('/investment/property/pdf/'.$p->file_pdf) }}"
+                            historyUrl="{{ route('front.developro.house', [
+                                            $p,
+                                            Str::slug($p->name),
+                                            round(floatval($p->area), 2).'-m2'
+                                        ]) }}"
+                            statusClass="status-{{ $p->status }}"
+                        />
+                    @endforeach
+                @endif
             </div>
         </div>
     </section>
@@ -328,19 +327,19 @@
     <section id="mainGallery" class="pt-0">
         <div class="container">
             <div class="row">
-                <div class="col-7">
+                <div class="col-12 col-md-7">
                     <x-section-header title="Sprawdź <i>osiedle z bliska</i>" subtitle="GALERIA" class="mb-0" />
                 </div>
-                <div class="col-5 text-end d-flex justify-content-end align-items-end">
-                    <div class="pb-3 d-flex gap-4">
-                        <a href="" class="bttn bttn-icon">
-                            WIZUALIZACJE
+                <div class="col-12 col-md-5 text-end d-flex justify-content-start justify-content-md-end align-items-center">
+                    <div class="pb-3 d-block d-sm-flex gap-2 gap-lg-4">
+                        <a href="/galeria" class="bttn bttn-icon">
+                            OSIEDLE
                             <svg class="icon" viewBox="0 0 26 26">
                                 <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
                             </svg>
                         </a>
-                        <a href="" class="bttn bttn-icon">
-                            POSTĘP BUDOWY
+                        <a href="/galeria/2,wnetrza" class="bttn bttn-icon mt-4 mt-sm-0">
+                            WNĘTRZA
                             <svg class="icon" viewBox="0 0 26 26">
                                 <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
                             </svg>
