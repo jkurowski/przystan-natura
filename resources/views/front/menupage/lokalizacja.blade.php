@@ -13,7 +13,41 @@
 @section('content')
     <main>
 
-        <section class="pb-0 location-map">
+        <section class="pt-0">
+            <div class="container">
+                <div class="row flex-wrap flex-xl-nowrap flex-row-reverse">
+                    <div class="col-12 col-xl-5">
+                        <x-section-header title="Między miastem <br><i>a spokojem</i>" subtitle="REGION" class="ps-0"></x-section-header>
+                        <div class="row location-points mt-100 distance-points">
+                            <div class="col-6">
+                                <x-distance-point time="5 min." title="Dłutów" />
+                            </div>
+                            <div class="col-6">
+                                <x-distance-point time="14 min." title="Pabianice" />
+                            </div>
+                        </div>
+                        <div class="row location-points distance-points">
+                            <div class="col-6">
+                                <x-distance-point time="25 min." title="Bełchatów" />
+                            </div>
+                            <div class="col-6">
+                                <x-distance-point time="32 min." title="Łódź" />
+                            </div>
+                        </div>
+                        <div class="row location-points distance-points">
+                            <div class="col-12">
+                                <x-distance-point time="33 min." title="Piotrków Trybunalski" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-7 vw-50 p-0 d-flex align-items-start">
+                        <img src="{{ asset('images/mapa-odleglosci.jpg') }}" alt="" class="w-100" width="1040" height="918">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-0 pt-0 location-map">
             <!-- Brakuje mapy -->
             <div class="container">
                 <div class="row flex-wrap flex-xl-nowrap">
