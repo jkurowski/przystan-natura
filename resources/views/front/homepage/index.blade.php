@@ -491,7 +491,7 @@
         </script>
     </section>
 
-    @include('front.contact.page-contact')
+    @include('front.contact.page-contact', ['page_name' => 'Strona główna'])
     </main>
 @endsection
 @push('scripts')

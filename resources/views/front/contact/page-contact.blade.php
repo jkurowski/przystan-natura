@@ -28,7 +28,11 @@
             </div>
             <div class="col-12 col-xl-6 mt-4 mt-sm-5 mt-xl-0">
                 <div class="ps-0 ps-xl-5">
-                @include('front.contact.form', ['page_name' => 'Strona główna', 'page_text' => '<p>Zakup domu to inwestycja przy której należy zwrócić uwagę na wiele szczegółów. Skontaktuj się z naszym opiekunem, który odpowie na Twoje pytania i zaprosi Cię na prezentację.</p>'])
+                @include('front.contact.form', [
+                    'page_name' => $page_name ?? 'Strona główna',
+                    'property' => $property ?? null,
+                    'page_text' => '<p>Zakup domu to inwestycja przy której należy zwrócić uwagę na wiele szczegółów. Skontaktuj się z naszym opiekunem, który odpowie na Twoje pytania i zaprosi Cię na prezentację.</p>'
+                ])
                 </div>
             </div>
         </div>

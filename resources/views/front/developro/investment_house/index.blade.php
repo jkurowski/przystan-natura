@@ -282,8 +282,8 @@
         </div>
 
         @include('front.contact.page-contact', [
-            'page_name' => $property->name,
-            'property' => $property->id,
+            'page_name' => $property->name ?? '',
+            'property' => $property->id ?? null,
             'back' => true
         ])
     </main>
