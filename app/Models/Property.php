@@ -103,7 +103,7 @@ class Property extends Model
     public function findNext(int $investment, int $current_number_order, ?int $floor_id = null, ?int $building_id = null)
     {
 
-        $query = $this->where('investment_id', $investment)->where('number_order', '>', $current_number_order)->orderByAsc('number_order');
+        $query = $this->where('investment_id', $investment)->where('number_order', '>', $current_number_order)->orderBy('number_order');
 
         if (!is_null($floor_id)) {
             $query->where('floor_id', $floor_id);
