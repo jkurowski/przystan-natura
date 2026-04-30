@@ -86,7 +86,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                         <a href="https://narutowicza1012.pl/" target="_blank">
                             <div class="house-model-item invest-model">
                                 <div class="house-model-thumb position-relative">
@@ -106,7 +106,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                         <a href="{{ route('front.developro.plan') }}">
                             <div class="house-model-item invest-model">
                                 <div class="house-model-thumb position-relative">
@@ -126,7 +126,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                         <a href="https://lidojurata.pl/" target="_blank">
                             <div class="house-model-item invest-model">
                                 <div class="house-model-thumb position-relative">
