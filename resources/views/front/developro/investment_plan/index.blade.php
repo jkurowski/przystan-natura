@@ -113,10 +113,6 @@
 @endsection
 @push('scripts')
     <script src="{{ asset('/js/plan/imagemapster.js') }}" charset="utf-8"></script>
-    @if($investment->type == 3)
-        <script src="{{ asset('/js/plan/tip.js') }}" charset="utf-8"></script>
-        <script src="{{ asset('/js/plan/floor.js') }}" charset="utf-8"></script>
-    @else
-        <script src="{{ asset('/js/plan/plan.js') }}" charset="utf-8"></script>
-    @endif
+    <script src="{{ asset('/js/plan/tip.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('/js/plan/floor.js') }}" charset="utf-8"></script>
 @endpush
