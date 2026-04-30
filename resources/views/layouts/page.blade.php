@@ -24,10 +24,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.0.4" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.0.5" />
 
     <!-- Preloads -->
-    <link rel="preload" href="{{ asset('images/logo-white-png.png') }}" as="image" />
+    <link rel="preload" href="{{ asset('images/SVG/logo.svg') }}" as="image" />
     <!-- /Preloads -->
 
     @yield('schema')

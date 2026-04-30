@@ -1,6 +1,28 @@
 @extends('layouts.homepage')
 
 @section('content')
+
+    <div id="hero" class="position-relative">
+        <img src="{{ asset('images/hero.png') }}" alt="" class="w-100">
+        <div class="container-fluid container-xl align-items-end align-items-xl-center d-flex">
+            <div class="row w-100 m-0">
+                <div class="col-12 col-lg-7">
+                    <x-section-header title="Naturalnie <br><i>dobry adres</i>" subtitle="DOMKI W STYLU SKANDYNAWSKIM" />
+                </div>
+                <div class="col-12 col-lg-5">
+                    <p>Gotowe domy wolnostojące w stylu skandynawskim, z własnymi działkami i nowoczesnym standardem. Dla osób, które chcą żyć spokojniej, bliżej natury i bez blokowego ścisku, ale nie chcą rezygnować z codziennej wygody.</p>
+                    <a href="{{ route('front.developro.plan') }}" class="bttn bttn-icon mt-0 mt-xl-5">
+                        POZNAJ OSIEDLE
+                        <svg class="icon" viewBox="0 0 26 26">
+                            <path d="M17.3375 10.1985L8.01328 19.5228L6.48145 17.9909L15.8046 8.66667H7.58753V6.5H19.5042V18.4167H17.3375V10.1985Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="pt-0">
     <section id="mainFeatures" class="py-5">
         <div class="container">
             <div class="row">
@@ -436,7 +458,7 @@
     </section>
 
     @include('front.contact.page-contact')
-
+    </main>
 @endsection
 @push('scripts')
     <script>

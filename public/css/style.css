@@ -1451,6 +1451,30 @@ header.scrolled #logo img {
 }
 /* Homepage
 ================================================== */
+#hero .container,
+#hero .container-fluid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 99;
+}
+#hero .section-text h2 {
+  font-weight: 700;
+  font-size: 108px;
+  line-height: 121px;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.33);
+  margin-bottom: 0;
+}
+#hero .bttn {
+  background: none;
+}
+#mainFeatures {
+  margin-top: -300px;
+  position: relative;
+}
 .feature-box h2 {
   font-weight: 700;
   font-size: 28px;
@@ -2728,6 +2752,17 @@ body.hidden-scroll {
     padding: 21px 0;
     margin-top: 50px;
   }
+  #hero .section-text h2 {
+    font-size: 78px;
+    line-height: 76px;
+  }
+  #hero p {
+    font-size: 19px;
+    line-height: 32px;
+  }
+  #mainFeatures {
+    margin-top: -170px;
+  }
 }
 /* end of 1640 */
 /* end of 1479.98 */
@@ -2829,6 +2864,17 @@ body.hidden-scroll {
   }
   .gallery-wrap {
     height: 655px;
+  }
+  #hero p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+  #hero .section-text h2 {
+    font-size: 69px;
+    line-height: 69px;
+  }
+  #mainFeatures {
+    margin-top: -110px;
   }
 }
 /* end of 1359.98 */
@@ -2938,6 +2984,9 @@ body.hidden-scroll {
   #bignumbers div {
     width: calc(100% - 180px);
   }
+  #mainFeatures {
+    margin-top: 70px;
+  }
 }
 /* end of 1199.98 */
 @media (max-width: 991.98px) {
@@ -3000,6 +3049,16 @@ body.hidden-scroll {
   .gallery-item-info span .icon {
     width: 40px;
     height: 40px;
+  }
+  #hero .section-text h2 {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  #hero .section-text span {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
   }
 }
 /* end of 991.98 */
@@ -3100,6 +3159,13 @@ body.hidden-scroll {
   #mainGallery {
     padding: 40px 0 !important;
     background: rgba(0, 0, 0, 0.3);
+  }
+  #hero .container,
+  #hero .container-fluid {
+    position: static;
+  }
+  #mainFeatures {
+    margin-top: 0;
   }
 }
 /* end of 767.98 */
