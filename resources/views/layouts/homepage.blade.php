@@ -20,7 +20,7 @@
     <link rel="preload" href="{{ asset('fonts/sora-latin-ext.woff2') }}" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.0.5" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.0.6" />
 
     <!-- Preloads -->
     <link rel="preload" href="{{ asset('images/logo-white-png.png') }}" as="image" />
