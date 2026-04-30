@@ -162,10 +162,10 @@
                                 </div>
                             @endif
 
-                            @if($property->balcony_area)
+                            @if($property->balcony_area_2)
                                 <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
                                     <span>Wiata garażowa</span>
-                                    <span><b>{{$property->balcony_area}}</b></span>
+                                    <span><b>{{$property->balcony_area_2}}</b></span>
                                 </div>
                             @endif
 
