@@ -365,7 +365,7 @@
                             status="{{ $p->status }}"
                             floors="-"
                             price="{{$p->price_brutto}}"
-                            condition="-"
+                            condition="{{ $property->loggia_area }}"
                             pdfUrl="{{ asset('/investment/property/pdf/'.$p->file_pdf) }}"
                             historyUrl="{{ route('front.developro.house', [
                                             $p,

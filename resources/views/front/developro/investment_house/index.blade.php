@@ -164,8 +164,15 @@
 
                             @if($property->balcony_area)
                                 <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
-                                    <span>Balkon</span>
-                                    <span><b>{{$property->balcony_area}} m<sup>2</sup></b></span>
+                                    <span>Wiata garażowa</span>
+                                    <span><b>{{$property->balcony_area}}</b></span>
+                                </div>
+                            @endif
+
+                            @if($property->loggia_area)
+                                <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
+                                    <span>Stan</span>
+                                    <span><b>{{$property->loggia_area}}</b></span>
                                 </div>
                             @endif
 
