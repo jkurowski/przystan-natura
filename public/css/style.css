@@ -1497,6 +1497,12 @@ header.scrolled #logo img {
   margin-top: -300px;
   position: relative;
 }
+.alert {
+  margin-bottom: 20px;
+}
+.alert ul {
+  margin-bottom: 0;
+}
 .feature-box h2 {
   font-weight: 700;
   font-size: 28px;
