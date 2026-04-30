@@ -127,7 +127,7 @@
                     </div>
 
                     <div class="row w-100 form-group">
-                        @include('form-elements.html-input-password', ['label' => 'Tajny klucz', 'name' => 'recaptcha_secret_key', 'value' => settings()->get("recaptcha_secret_key")])
+                        @include('form-elements.input-text', ['label' => 'Tajny klucz', 'name' => 'recaptcha_secret_key', 'value' => settings()->get("recaptcha_secret_key")])
                     </div>
 
                     <div class="row w-100">
