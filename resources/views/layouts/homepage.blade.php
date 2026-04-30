@@ -20,10 +20,10 @@
     <link rel="preload" href="{{ asset('fonts/sora-latin-ext.woff2') }}" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.0.7" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.0.8" />
 
     <!-- Preloads -->
-    <link rel="preload" href="{{ asset('images/logo-white-png.png') }}" as="image" />
+    <link rel="preload" href="{{ asset('images/SVG/logo.svg') }}" as="image" />
     <!-- /Preloads -->
 
     @stack('style')
