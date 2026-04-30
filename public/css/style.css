@@ -1493,7 +1493,7 @@ header.scrolled #logo img {
 #hero .bttn {
   background: none;
 }
-#mainFeatures {
+#page-home #mainFeatures {
   margin-top: -300px;
   position: relative;
 }
@@ -2794,7 +2794,7 @@ body.hidden-scroll {
     font-size: 19px;
     line-height: 32px;
   }
-  #mainFeatures {
+  #page-home #mainFeatures {
     margin-top: -170px;
   }
   #twocolums li {
@@ -2934,7 +2934,7 @@ body.hidden-scroll {
     font-size: 69px;
     line-height: 69px;
   }
-  #mainFeatures {
+  #page-home #mainFeatures {
     margin-top: -110px;
   }
   #twocolums li {
@@ -3054,7 +3054,7 @@ body.hidden-scroll {
   #bignumbers div {
     width: calc(100% - 180px);
   }
-  #mainFeatures {
+  #page-home #mainFeatures {
     margin-top: 70px;
   }
   .houses-gradient {
@@ -3274,7 +3274,7 @@ body.hidden-scroll {
   #hero .container-fluid {
     position: static;
   }
-  #mainFeatures {
+  #page-home #mainFeatures {
     margin-top: 0;
   }
 }
