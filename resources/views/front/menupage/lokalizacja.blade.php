@@ -48,7 +48,8 @@
                         </div>
                     </div>
                     <div class="col-12 col-xl-6 vw-50 p-0 d-flex align-items-end">
-                        <img src="{{ asset('images/location-map.jpg') }}" alt="" class="w-100" width="1160" height="787">
+                        <img src="{{ asset('images/location-map.jpg') }}" alt="" class="d-none d-xl-block w-100" width="1160" height="787">
+                        <img src="{{ asset('images/location-map-mobile.jpg') }}" alt="" class="d-block d-xl-none w-100" width="960" height="661">
                     </div>
                 </div>
             </div>
