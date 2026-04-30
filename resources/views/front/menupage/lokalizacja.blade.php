@@ -13,12 +13,12 @@
 @section('content')
     <main>
 
-        <section class="pb-0">
+        <section class="pb-0 location-map">
             <!-- Brakuje mapy -->
             <div class="container">
-                <div class="row flex-wrap-nowrap">
-                    <div class="col-7">
-                        <x-section-header title="Między naturą <i>a wygodą</i>" subtitle="LOKALIZACJA" class="pe-0">
+                <div class="row flex-wrap flex-xl-nowrap">
+                    <div class="col-12 col-xl-6">
+                        <x-section-header title="Między naturą, <br><i>a wygodą</i>" subtitle="LOKALIZACJA" class="pe-0">
                             <p>W pobliżu i na terenie osiedla zaplanowano udogodnienia sprzyjające aktywnemu i spokojnemu stylowi życia, takie jak mini-park, plac zabaw, siłownia plenerowa, drogi rowerowe, miejsca do wspólnego spędzania czasu oraz parkingi dla gości. To miejsce, które łączy bliskość natury z przestrzenią do odpoczynku, aktywności i wygodnego życia na co dzień.</p>
                         </x-section-header>
 
@@ -46,6 +46,9 @@
                                 <x-location-point icon="medical.svg" time="5 min" title="PRZYCHODNIA LEKARSKA" />
                             </div>
                         </div>
+                    </div>
+                    <div class="col-12 col-xl-6 vw-50 p-0 d-flex align-items-end">
+                        <img src="{{ asset('images/location-map.jpg') }}" alt="" class="w-100" width="1160" height="787">
                     </div>
                 </div>
             </div>
