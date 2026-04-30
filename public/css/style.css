@@ -2634,6 +2634,11 @@ body.hidden-scroll {
   width: 100%;
   justify-content: center;
 }
+@media (max-width: 1919.98px) {
+  .houses-gradient {
+    background-position: left -270px center;
+  }
+}
 @media (max-width: 1619.98px) {
   .contact-box {
     border-radius: 38px;
@@ -2763,6 +2768,16 @@ body.hidden-scroll {
   #mainFeatures {
     margin-top: -170px;
   }
+  #twocolums li {
+    font-size: 21px;
+    line-height: 30px;
+    margin: 26px 0;
+    gap: 20px;
+  }
+  #twocolums li img {
+    width: 60px;
+    height: 60px;
+  }
 }
 /* end of 1640 */
 /* end of 1479.98 */
@@ -2876,6 +2891,10 @@ body.hidden-scroll {
   #mainFeatures {
     margin-top: -110px;
   }
+  #twocolums li {
+    font-size: 19px;
+    line-height: 25px;
+  }
 }
 /* end of 1359.98 */
 /* end of 1199.98 */
@@ -2987,6 +3006,9 @@ body.hidden-scroll {
   #mainFeatures {
     margin-top: 70px;
   }
+  .houses-gradient {
+    background-position: left -520px center;
+  }
 }
 /* end of 1199.98 */
 @media (max-width: 991.98px) {
@@ -3059,6 +3081,14 @@ body.hidden-scroll {
     font-size: 11px;
     letter-spacing: 1px;
     margin-bottom: 2px;
+  }
+  #twocolums li {
+    font-size: 16px;
+    line-height: 21px;
+    padding-right: 20px;
+  }
+  .houses-gradient {
+    background: #02211e;
   }
 }
 /* end of 991.98 */
@@ -3400,7 +3430,8 @@ body.hidden-scroll {
     font-size: 14px;
     line-height: 20px;
   }
-  #mainGallery {
+  #mainGallery,
+  .houses-gradient {
     padding: 30px 15px !important;
     background: rgba(0, 0, 0, 0.3);
     margin-left: -15px;
@@ -3411,6 +3442,18 @@ body.hidden-scroll {
   }
   #mainGallery .bttn {
     width: 100%;
+  }
+  #twocolums li {
+    font-size: 11px;
+    line-height: 17px;
+    padding-right: 20px;
+  }
+  #twocolums li img {
+    width: 40px;
+    height: 40px;
+  }
+  #twocolums li {
+    gap: 13px;
   }
 }
 /* end of 575.98 */

@@ -122,10 +122,10 @@
     <section class="houses-gradient">
         <!-- Gradient z lewej dzwinie wyglada -->
         <div class="container">
-            <div class="row flex-wrap-nowrap">
-                <div class="col-5"></div>
-                <div class="col-7">
-                    <x-section-header title="Naturalna <i>wygoda</i>" subtitle="UDOGODNIENIA" class="ps-5 pe-0">
+            <div class="row flex-wrap flex-lg-nowrap">
+                <div class="col-12 col-lg-3 col-xl-5"></div>
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <x-section-header title="Naturalna <i>wygoda</i>" subtitle="UDOGODNIENIA" class="ps-0 ps-lg-5 pe-0">
                         <ul id="twocolums" class="mb-0 list-unstyled">
                             <li><img src="{{ asset('/images/icons/air-source-heat-pump.svg') }}" alt=""> Pompa ciepła</li>
                             <li><img src="{{ asset('/images/icons/underfloor-heating.svg') }}" alt=""> Ogrzewanie <br>podłogowe</li>
