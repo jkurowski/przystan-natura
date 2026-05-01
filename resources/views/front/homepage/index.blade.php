@@ -329,7 +329,7 @@
                                         @foreach($investment->properties as $house)
                                             <area
                                                 shape="poly"
-                                                href="{{route('front.developro.house', [$investment->slug, $house, Str::slug($house->name), round(floatval($house->area), 2).'-m2'])}}"
+                                                href="{{route('front.developro.house', [$house, Str::slug($house->name), round(floatval($house->area), 2).'-m2'])}}"
                                                 title="{{$house->name}}<br>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b><br /><b>{{ roomStatus($house->status) }}</b>"
                                                 alt="{{$house->slug}}"
                                                 data-roomnumber="{{$house->number}}"
