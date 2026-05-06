@@ -64,6 +64,11 @@
                                     <li><a href="https://www.facebook.com/przystannaturadomy" target="_blank">Facebook</a></li>
                                     <li><a href="https://www.instagram.com/przystan.natura?igsh=ZTI5anFnankweGIz">Instagram</a></li>
                                 </ul>
+                                <hr class="mt-4 mb-4">
+                                <h4 class="lh-1 mb-4">PARTNER SPRZEDAŻY</h4>
+                                <img src="{{ asset('images/mr-house-logo.png') }}" alt="Mr. House logo" width="128" height="128" class="mt-2 mb-2">
+                                <p class="mb-0">Marta Kasprzycka</p>
+                                <p class="mb-0">tel. <a href="tel:+48789199332" target="_blank">789 199 332</a></p>
                             </div>
                         </div>
                     </div>
