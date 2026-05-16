@@ -89,7 +89,7 @@
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/slick.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('js/app.js') }}?v=18032026"></script>
+<script src="{{ asset('js/app.js') }}?v=16052026"></script>
 <script>
     let lastState = false;
 
