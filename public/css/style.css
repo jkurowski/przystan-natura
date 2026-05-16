@@ -2163,8 +2163,8 @@ html.swipebox-html.swipebox-touch {
 #swipebox-slider .slide .swipebox-video-container,
 #swipebox-slider .slide img {
   display: inline-block;
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 90%;
+  max-width: 90%;
   margin: 0;
   padding: 0;
   width: auto;
@@ -2209,10 +2209,6 @@ html.swipebox-html.swipebox-touch {
 }
 #swipebox-bottom-bar {
   top: 50%;
-}
-#swipebox-bottom-bar.visible-bars {
-  -webkit-transform: translate3d(0, -50px, 0);
-  transform: translate3d(0, -50px, 0);
 }
 #swipebox-top-bar {
   top: -50px;
