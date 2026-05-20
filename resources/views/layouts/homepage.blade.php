@@ -23,7 +23,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.0.11" />
 
     <!-- Preloads -->
-    <link rel="preload" href="{{ asset('images/SVG/logo.svg') }}" as="image" />
+    <link rel="preload" as="image" href="{{ asset('images/SVG/logo.svg') }}" />
+    <link rel="preload" as="image" href="{{ asset('images/hero-mobile.webp') }}">
     <!-- /Preloads -->
 
     @stack('style')

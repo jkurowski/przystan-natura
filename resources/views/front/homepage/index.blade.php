@@ -3,7 +3,27 @@
 @section('content')
 
     <div id="hero" class="position-relative">
-        <img src="{{ asset('images/hero.png') }}" alt="" class="w-100">
+        <picture>
+
+            <source
+                media="(max-width:768px)"
+                srcset="{{ asset('images/hero-mobile.webp') }}">
+
+            <source
+                media="(max-width:1200px)"
+                srcset="{{ asset('images/hero-tablet.webp') }}">
+
+            <img
+                src="{{ asset('images/hero.webp') }}"
+                alt="Przystań Natura"
+                class="w-100"
+                width="1600"
+                height="900"
+                loading="eager"
+                fetchpriority="high">
+
+        </picture>
+
         <div class="container-fluid container-xl align-items-end align-items-xl-center d-flex">
             <div class="row w-100 m-0">
                 <div class="col-12 col-lg-7">
