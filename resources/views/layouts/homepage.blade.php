@@ -22,7 +22,15 @@
 
     <!-- Preloads -->
     <link rel="preload" href="{{ asset('fonts/sora-latin-ext.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" as="image" href="{{ asset('images/hero-mobile.webp') }}">
+    <link
+        rel="preload"
+        as="image"
+        href="/images/hero-mobile.webp"
+        imagesrcset="
+         /images/hero-mobile.webp 768w,
+         /images/hero-tablet.webp 1200w,
+         /images/hero.webp 1600w"
+        imagesizes="100vw">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://connect.facebook.net">
     <link rel="preconnect" href="https://www.google.com">
