@@ -328,7 +328,6 @@
             </div>
         </section>
 
-        @if(1==2)
         <section id="plan" class="d-none d-md-block">
             <!-- Troszke rozmyty plan -->
             <div class="container">
@@ -401,7 +400,6 @@
                 </div>
             </div>
         </section>
-        @endif
 
         <section id="mainGallery" class="pt-0">
             <div class="container">
@@ -518,11 +516,9 @@
     </main>
 @endsection
 @push('scripts')
-    @if(1==2)
     <script src="{{ asset('/js/plan/imagemapster.js') }}" charset="utf-8"></script>
     <script src="{{ asset('/js/plan/tip.js') }}" charset="utf-8"></script>
     <script src="{{ asset('/js/plan/floor.js') }}" charset="utf-8"></script>
-    @endif
     <script>
         document.querySelectorAll('.dropdown').forEach(dropdown => {
             const button = dropdown.querySelector('.dropdown-toggle');
