@@ -20,6 +20,7 @@
                 class="w-100"
                 loading="eager"
                 fetchpriority="high"
+                style="aspect-ratio:1600/900"
                 alt="Przystań Natura">
 
         </picture>
