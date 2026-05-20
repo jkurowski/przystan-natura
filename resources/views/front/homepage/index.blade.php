@@ -150,7 +150,7 @@
                             <ul id="twocolums" class="mb-0 list-unstyled">
                                 <li><img src="{{ asset('/images/icons/air-source-heat-pump.svg') }}" alt="" aria-hidden="true" width="87" height="87" loading="lazy" decoding="async"> Pompa ciepła</li>
                                 <li><img src="{{ asset('/images/icons/underfloor-heating.svg') }}" alt="" aria-hidden="true" width="87" height="87" loading="lazy" decoding="async"> Ogrzewanie <br>podłogowe</li>
-                                <li><img src="{{ asset('/images/icons/wifi.svg') }}" alt="" aria-hidden="true" width="87" height="87"> Światłowód</li>
+                                <li><img src="{{ asset('/images/icons/wifi.svg') }}" alt="" aria-hidden="true" width="87" height="87" loading="lazy" decoding="async"> Światłowód</li>
                                 <li><img src="{{ asset('/images/icons/garden.svg') }}" alt="" aria-hidden="true" width="87" height="87" loading="lazy" decoding="async"> Własny <br>ogródek</li>
                                 <li><img src="{{ asset('/images/icons/parking.svg') }}" alt="" aria-hidden="true" width="87" height="87" loading="lazy" decoding="async"> 1 lub 2 miejsca postojowe</li>
                                 <li><img src="{{ asset('/images/icons/fence.svg') }}" alt="" aria-hidden="true" width="87" height="87" loading="lazy" decoding="async"> Ogrodzenie <br>posesji</li>

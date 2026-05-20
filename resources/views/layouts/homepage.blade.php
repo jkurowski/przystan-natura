@@ -17,25 +17,16 @@
     <link rel="shortcut icon" href="/uploads/{{ settings()->get("page_favicon") }}">
     @endif
 
-    <link rel="preload" href="{{ asset('fonts/sora-latin-ext.woff2') }}" as="font" type="font/woff2" crossorigin>
-
-    <link rel="preload"
-          href="{{ asset('css/bootstrap.min.css') }}"
-          as="style"
-          onload="this.onload=null;this.rel='stylesheet'">
-
-    <link rel="preload"
-          href="{{ asset('css/style.css?v=1.0.11') }}"
-          as="style"
-          onload="this.onload=null;this.rel='stylesheet'">
-
-    <noscript>
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/style.css?v=1.0.11') }}">
-    </noscript>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css?v=1.0.11') }}">
 
     <!-- Preloads -->
+    <link rel="preload" href="{{ asset('fonts/sora-latin-ext.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" as="image" href="{{ asset('images/hero-mobile.webp') }}">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
     <!-- /Preloads -->
 
     @stack('style')
