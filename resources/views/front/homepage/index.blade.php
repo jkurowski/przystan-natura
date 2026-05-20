@@ -112,12 +112,61 @@
             </div>
         </section>
 
-        <x-visual-section
-            imageTop="wizualizacja-inwestycji-1.jpg"
-            imageBottom="horse.jpg"
-            title="W bezpośrednim <br>sąsiedztwie ze <i>stadniną <br>koni i szkółką</i>"
-            imageAlt="Nowoczesne domy jednorodzinne w inwestycji Przystań Natura"
-        />
+        <section class="pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <picture>
+
+                            <source
+                                media="(max-width:768px)"
+                                srcset="{{ asset('images/wizualizacja-inwestycji-1-mobile.webp') }}">
+
+                            <source
+                                media="(max-width:1200px)"
+                                srcset="{{ asset('images/wizualizacja-inwestycji-1-tablet.webp') }}">
+
+                            <img
+                                src="{{ asset('images/wizualizacja-inwestycji-1.webp') }}"
+                                alt="Widok osiedla Przystań Natura z domami jednorodzinnymi z lotu ptaka"
+                                class="w-100 big-borders"
+                                width="1620"
+                                height="825"
+                                loading="lazy"
+                                decoding="async">
+
+                        </picture>
+                    </div>
+                </div>
+                <div class="row row-under">
+                    <div class="col-12 col-sm-5 d-flex justify-content-center offset-0 offset-sm-1">
+                        <div class="big-stroke">
+                            <picture>
+
+                                <source
+                                    media="(max-width:768px)"
+                                    srcset="{{ asset('images/horse-mobile.webp') }}">
+
+                                <img
+                                    src="{{ asset('images/horse.webp') }}"
+                                    alt=""
+                                    class="big-borders"
+                                    width="590"
+                                    height="500"
+                                    loading="lazy"
+                                    decoding="async">
+
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="d-flex justify-content-center justify-content-sm-end align-items-end h-100">
+                            <h3>W bezpośrednim <br>sąsiedztwie ze <i>stadniną <br>koni i szkółką</i></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="">
             <div class="container">
