@@ -19,11 +19,22 @@
 
     <link rel="preload" href="{{ asset('fonts/sora-latin-ext.woff2') }}" as="font" type="font/woff2" crossorigin>
 
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=1.0.11" />
+    <link rel="preload"
+          href="{{ asset('css/bootstrap.min.css') }}"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="preload"
+          href="{{ asset('css/style.css?v=1.0.11') }}"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css?v=1.0.11') }}">
+    </noscript>
 
     <!-- Preloads -->
-    <link rel="preload" as="image" href="{{ asset('images/SVG/logo.svg') }}" />
     <link rel="preload" as="image" href="{{ asset('images/hero-mobile.webp') }}">
     <!-- /Preloads -->
 
