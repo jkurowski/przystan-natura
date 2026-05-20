@@ -1,9 +1,17 @@
-@props(['imageTop', 'imageBottom', 'title'])
+@props(['imageTop', 'imageBottom', 'title','imageAlt'])
 <section class="pb-0">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <img src="{{ asset('images/' . $imageTop) }}" alt="" class="w-100 big-borders" width="1620" height="825">
+                <img
+                    src="{{ asset('images/' . $imageTop) }}"
+                    alt="{{ $imageAlt }}"
+                    class="w-100 big-borders"
+                    width="1620"
+                    height="825"
+                    loading="lazy"
+                    decoding="async"
+                >
             </div>
         </div>
         <div class="row row-under">
