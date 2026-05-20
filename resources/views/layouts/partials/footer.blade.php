@@ -69,6 +69,8 @@
                                 <img src="{{ asset('images/mr-house-logo.png') }}" alt="Mr. House logo" width="128" height="128" class="mt-2 mb-2">
                                 <p class="mb-0">Marta Kasprzycka</p>
                                 <p class="mb-0">tel. <a href="tel:+48789199332" target="_blank">789 199 332</a></p>
+                                <p class="mb-0 mt-3">Marta Książczyk</p>
+                                <p class="mb-0">tel. <a href="tel:+48572991556" target="_blank">572 991 556</a></p>
                             </div>
                         </div>
                     </div>
