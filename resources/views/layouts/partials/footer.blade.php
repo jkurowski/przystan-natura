@@ -59,18 +59,17 @@
                                 </svg>
                             </span>konrad.dzialak@janton-invest.pl
                                 </a>
-
-                                <ul class="social mb-0 list-unstyled d-none">
-                                    <li><a href="https://www.facebook.com/przystannaturadomy" target="_blank">Facebook</a></li>
-                                    <li><a href="https://www.instagram.com/przystan.natura?igsh=ZTI5anFnankweGIz">Instagram</a></li>
-                                </ul>
-                                <hr class="mt-4 mb-4">
                                 <h4 class="lh-1 mb-4">PARTNER SPRZEDAŻY</h4>
                                 <img src="{{ asset('images/mr-house-logo.png') }}" alt="Mr. House logo" width="128" height="128" class="mt-2 mb-2">
                                 <p class="mb-0">Marta Kasprzycka</p>
                                 <p class="mb-0">tel. <a href="tel:+48789199332" target="_blank">789 199 332</a></p>
                                 <p class="mb-0 mt-3">Marta Książczyk</p>
                                 <p class="mb-0">tel. <a href="tel:+48572991556" target="_blank">572 991 556</a></p>
+                                <hr class="mt-4 mb-4">
+                                <ul class="social mb-0 list-unstyled d-none">
+                                    <li><a href="https://www.facebook.com/przystannaturadomy" target="_blank">Facebook</a></li>
+                                    <li><a href="https://www.instagram.com/przystan.natura?igsh=ZTI5anFnankweGIz">Instagram</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
