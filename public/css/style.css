@@ -1493,6 +1493,11 @@ header.scrolled #logo img {
 #hero .bttn {
   background: none;
 }
+#hero .bttn:hover {
+  background: var(--main-gold);
+  color: white;
+  border-color: var(--main-gold);
+}
 #page-home #mainFeatures {
   margin-top: -300px;
   position: relative;
