@@ -52,4 +52,14 @@
         </div>
     </div>
 </header>
+<div id="widget">
+    <ul>
+        <li>
+            <a rel="nofollow noopener noreferrer" target="_blank" class="Facebook" href="https://m.me/przystannaturadomy"><span>Messenger</span></a>
+        </li>
+        <li>
+            <a rel="nofollow noopener noreferrer" target="_blank" class="WhatsApp" href="https://wa.me/48789199332"><span>WhatsApp</span></a>
+        </li>
+    </ul>
+</div>
 <!-- END -> NAVIGATION -->

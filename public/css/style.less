@@ -1171,6 +1171,90 @@ header {
     padding: 10px;
 }
 
+/* Social
+================================================== */
+#widget {
+    position: fixed;
+    top: 270px;
+    z-index: 100;
+    right: 0;
+}
+#widget ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#widget li {
+    margin-top: 1px;
+}
+#widget a {
+    color: #fff;
+    display: flex;
+    font-size: 37px;
+    height: 55px;
+    line-height: 56px;
+    position: relative;
+    text-align: center;
+    width: 55px;
+    justify-content: center;
+    align-items: center;
+}
+#widget a:hover {
+    color: #fff;
+}
+#widget a span {
+    right: -600%;
+    font-size: 15px;
+    height: inherit;
+    line-height: 35px;
+    margin-left: -5px;
+    min-width: 146px;
+    width: auto;
+}
+#widget a span:before {
+    right: -4px;
+}
+#widget a span {
+    width: 0;
+    transition: opacity 0.3s, left 0.4s, right 0.4s, top 0.4s, bottom 0.4s, width 0.4s;
+    -ms-filter: "alpha(opacity=0)";
+    filter: alpha(opacity=0);
+    white-space: nowrap;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    color: white;
+    font-size: 15px;
+    line-height: 56px;
+}
+#widget a:hover span {
+    right: 100%;
+    opacity: 1;
+    -ms-filter: "alpha(opacity=1)";
+    filter: alpha(opacity=1);
+    margin-right: -5px;
+    padding: 0 13px 0 15px;
+    -webkit-border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
+}
+.Facebook,
+.Facebook span {
+    background: #006AFF;
+}
+.Facebook:before {
+    font-family: 'Line Awesome Brands' !important;
+    content: "\f39f";
+}
+.WhatsApp,
+.WhatsApp span {
+    background: #25D366;
+}
+.WhatsApp:before {
+    font-family: 'Line Awesome Brands' !important;
+    content: "\f232";
+}
+
 /* Homepage
 ================================================== */
 #hero {
@@ -1600,3 +1684,5 @@ body.hidden-scroll{overflow:hidden}.sl-overlay{position:fixed;left:0;right:0;top
 /* RWD
 ================================================== */
 @import "less-partials/responsive";
+
+@import "less-partials/fonts";
