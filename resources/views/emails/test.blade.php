@@ -86,7 +86,7 @@
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
                             <tr>
                                 <td align="center">
-                                    <a href="https://twojastrona.pl"
+                                    <a href="https://www.przystannatura.pl/oferta-domow"
                                        target="_blank"
                                        style="
                                             background-color:#003C38;
