@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Mail\ChatSend;
+use App\Mail\ChatThankYou;
 use App\Models\Floor;
 use App\Models\Investment;
 use App\Models\Property;
@@ -78,6 +79,10 @@ class IframePageController extends Controller
             $client = $this->clientRepository->createClient($request, $property);
             $property->notify(new PropertyNotification($request, $property));
             Mail::to(settings()->get("page_email"))->send(new ChatSend($request, $client, $property));
+
+            if($client->mail) {
+                Mail::to($client->mail)->send(new ChatThankYou());
+            }
 
             if (count(Mail::failures()) == 0) {
                 $cookie_name = 'dp_';

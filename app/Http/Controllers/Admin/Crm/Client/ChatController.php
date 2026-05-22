@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Crm\Client;
 use App\Events\MessageSent;
 use App\Http\Controllers\Controller;
 use App\Mail\ChatSend;
+use App\Mail\ChatThankYou;
 use App\Models\ClientMessage;
 use Illuminate\Http\Request;
 
@@ -50,9 +51,11 @@ class ChatController extends Controller
     public function create(ChatFormRequest $request, Client $client)
     {
         Mail::to($client->mail)->send(new ChatSend($request, $client));
+
         if( count(Mail::failures()) > 0 ) {
             return ['success' => false];
         } else {
+            Mail::to($client->mail)->send(new ChatThankYou());
             $this->repository->storeAnswer($request, $client);
             return ['success' => true];
         }

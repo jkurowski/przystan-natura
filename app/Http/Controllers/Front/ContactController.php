@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Cookie;
 
 //CMS
 use App\Mail\ChatSend;
+use App\Mail\ChatThankYou;
 use App\Models\Page;
 use App\Models\Property;
 use App\Models\RodoRules;
@@ -91,6 +92,10 @@ class ContactController extends Controller
                 Log::error('No valid emails found in settings()->get("page_email")');
             }
 
+            if($client->mail) {
+                Mail::to($client->mail)->send(new ChatThankYou());
+            }
+
             // Clear cookies if mail is sent successfully
             $cookie_name = 'dp_';
             foreach ($_COOKIE as $name => $value) {
@@ -147,6 +152,10 @@ class ContactController extends Controller
                 Mail::to($emails)->send(new ChatSend($request, $client, $property));
             } else {
                 Log::error('No valid emails found in settings()->get("page_email")');
+            }
+
+            if($client->mail) {
+                Mail::to($client->mail)->send(new ChatThankYou());
             }
 
             // Clear cookies if mail is sent successfully
