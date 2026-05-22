@@ -26,6 +26,6 @@ class ChatThankYou extends Mailable
      */
     public function build()
     {
-        return $this->subject('Dziękujemy za kontakt - '.config('app.name'))->view('emails.test');
+        return $this->subject('Przystań Nature - dziękujemy za kontakt')->view('emails.test');
     }
 }
