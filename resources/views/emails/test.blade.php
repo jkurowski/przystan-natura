@@ -203,13 +203,13 @@
                                     <table border="0" width="560" cellpadding="0" cellspacing="0" style="width:560px;max-width:560px;background-color:#04302b;">
                                         <tr>
                                             <td style="width:270px" width="270">
-                                                <img src="https://img.asariweb.pl/image/show/112309150" alt="">
+                                                <img src="https://www.przystannatura.pl/images/podziekowanie/dom-89-2.jpg" alt="Pobierz obrazek" width="270" height="185">
                                             </td>
                                             <td style="width:20px" width="20">
 
                                             </td>
                                             <td style="width:270px" width="270">
-                                                <img src="https://img.asariweb.pl/image/show/112309150" alt="">
+                                                <img src="https://www.przystannatura.pl/images/podziekowanie/dom-121.jpg" alt="Pobierz obrazek" width="270" height="185">
                                             </td>
                                         </tr>
                                         <tr>
