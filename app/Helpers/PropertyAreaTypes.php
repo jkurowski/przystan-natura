@@ -10,7 +10,7 @@ class PropertyAreaTypes {
 
     private const STATUS_MAP = [
         self::ROOM_APARTMENT => 'Mieszkanie / Apartament',
-        self::STORAGE => 'Komórka lokatorska',
+        self::STORAGE => 'Dom',
         self::PARKING => 'Miejsce parkingowe',
     ];
 
