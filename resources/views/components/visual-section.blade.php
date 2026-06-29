@@ -1,4 +1,4 @@
-@props(['imageTop', 'imageBottom', 'title','imageAlt'])
+@props(['imageTop', 'imageBottom', 'title', 'imageAlt'])
 <section class="pb-0">
     <div class="container">
         <div class="row">

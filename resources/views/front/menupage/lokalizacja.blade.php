@@ -93,6 +93,7 @@
             imageTop="wizualizacja-inwestycji-1.jpg"
             imageBottom="horse.jpg"
             title="W bezpośrednim <br>sąsiedztwie ze <i>stadniną <br>koni i szkółką</i>"
+            imageAlt="W bezpośrednim sąsiedztwie ze koni i szkółką</i>"
         />
 
         @include('front.contact.page-contact', [
