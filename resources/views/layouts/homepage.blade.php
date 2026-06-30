@@ -29,7 +29,7 @@
 
     <noscript>
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/style.css?v=1.0.13') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css?v=1.0.14') }}">
     </noscript>
 
     <!-- Preloads -->
@@ -65,6 +65,41 @@
     @include('layouts.partials.footer')
 
     @stack('scripts')
+
+@if (settings()->get('popup_status') == 1)
+    <div class="modal" tabindex="-1" id="popModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    {!! settings()->get('popup_text') !!}
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const popupEnabled = {{ settings()->get('popup_status') == 1 ? 'true' : 'false' }};
+        const shouldShow = {{ $popup == 1 ? 'true' : 'false' }};
+        const timeout = {{ settings()->get('popup_timeout') }};
+        if (!popupEnabled) return;
+
+        const popModal = new bootstrap.Modal(document.getElementById('popModal'), {
+            keyboard: false
+        });
+
+        if (shouldShow) {
+            popModal.show();
+
+            setTimeout(() => {
+                popModal.hide();
+            }, timeout);
+        }
+    });
+</script>
 
     {!! settings()->get("scripts_beforebody") !!}
 </body>
