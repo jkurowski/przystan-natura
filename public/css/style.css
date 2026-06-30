@@ -1459,6 +1459,28 @@ header.scrolled #logo img {
   background: var(--main-green);
   margin-top: 40px;
 }
+#pageheader.small-pageheader {
+  padding-top: 270px;
+}
+#pageheader.small-pageheader h1 {
+  margin-bottom: 10px;
+}
+@media (max-width: 1399.98px) {
+  #pageheader.small-pageheader {
+    padding-top: 220px;
+  }
+  #pageheader.small-pageheader h1 {
+    line-height: 70px;
+  }
+}
+@media (max-width: 575.98px) {
+  #pageheader.small-pageheader {
+    padding-top: 110px;
+  }
+  #pageheader.small-pageheader h1 {
+    line-height: 40px;
+  }
+}
 #page-kontakt #pageheader,
 #page-oferta #pageheader,
 #page-gallery #pageheader,

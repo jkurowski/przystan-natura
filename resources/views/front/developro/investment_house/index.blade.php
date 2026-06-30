@@ -8,7 +8,7 @@
 @endisset
 
 @section('pagehader')
-    <div id="pageheader">
+    <div id="pageheader" class="small-pageheader">
         <div class="container">
             <div class="row">
                 <div class="col-12">
