@@ -52,39 +52,6 @@
         </div>
 
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-12 col-xl-8">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-lg-4 mb-2 mb-lg-0">
-                            <div class="page-entry-karta__item">
-                                <x-icons.icon-area/>
-                                <span>Powierzchnia: {{$property->area}} m<sup>2</sup></span>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4 mb-2 mb-lg-0">
-                            <div class="page-entry-karta__item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36.343" height="36.343" viewBox="0 0 36.343 36.343">
-                                    <g id="pokoje-icn" transform="translate(0.75 0.75)">
-                                        <path id="Path_28" data-name="Path 28" d="M25,15.356V2H46.486V24.648H40.1V36.843H34.872" transform="translate(-11.644 -2)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-                                        <path id="Path_29" data-name="Path 29" d="M23.486,37.971,20,41.455H2V13H15.356" transform="translate(-2 -6.612)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-                                        <path id="Path_30" data-name="Path 30" d="M25,34v7.549" transform="translate(-11.644 -15.417)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-                                        <path id="Path_31" data-name="Path 31" d="M25,56v3.484" transform="translate(-11.644 -24.641)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-                                        <path id="Path_32" data-name="Path 32" d="M15.356,41H2" transform="translate(-2 -18.352)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-                                    </g>
-                                </svg>
-                                <span>Pokoje: {{$property->rooms}}</span>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="page-entry-karta__item">
-                                <x-icons.icon-area/>
-                                <span>Działka: {{$property->plot_area}} m<sup>2</sup></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="row justify-content-center">
                 <div class="col-12 col-xl-8">
                     <div class="row">
@@ -132,6 +99,20 @@
                                         <span><b>@money($property->price_brutto / $area)</b></span>
                                     </div>
                                 @endif
+                            @endif
+
+                            @if($property->area)
+                                <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
+                                    <span>Pow. domu</span>
+                                    <span><b>{{ $property->area }} m<sup>2</sup></b></span>
+                                </div>
+                            @endif
+
+                            @if($property->area)
+                                <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
+                                    <span>Pokoje</span>
+                                    <span><b>{{ $property->rooms }}</b></span>
+                                </div>
                             @endif
 
                             @if($property->plot_area)
