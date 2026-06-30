@@ -113,58 +113,78 @@
             </div>
         </section>
 
-        <section class="pb-0">
+        <section id="plan" class="d-none d-md-block pb-0">
+            <!-- Troszke rozmyty plan -->
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <picture>
-
-                            <source
-                                media="(max-width:768px)"
-                                srcset="{{ asset('images/wizualizacja-inwestycji-1-mobile.webp') }}">
-
-                            <source
-                                media="(max-width:1200px)"
-                                srcset="{{ asset('images/wizualizacja-inwestycji-1-tablet.webp') }}">
-
-                            <img
-                                src="{{ asset('images/wizualizacja-inwestycji-1.webp') }}"
-                                alt="Widok osiedla Przystań Natura z domami jednorodzinnymi z lotu ptaka"
-                                class="w-100 big-borders"
-                                width="1620"
-                                height="825"
-                                loading="lazy"
-                                decoding="async">
-
-                        </picture>
+                        <x-section-header title="Wybierz dom <i>dla siebie</i>" subtitle="DOSTĘPNOŚĆ" class="text-center" />
                     </div>
                 </div>
-                <div class="row row-under">
-                    <div class="col-12 col-sm-5 d-flex justify-content-center offset-0 offset-sm-1">
-                        <div class="big-stroke">
-                            <picture>
+            </div>
 
-                                <source
-                                    media="(max-width:768px)"
-                                    srcset="{{ asset('images/horse-mobile.webp') }}">
-
-                                <img
-                                    src="{{ asset('images/horse.webp') }}"
-                                    alt=""
-                                    class="big-borders"
-                                    width="590"
-                                    height="500"
-                                    loading="lazy"
-                                    decoding="async">
-
-                            </picture>
-                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 pe-4 ps-4">
+                        @if($investment->plan)
+                            <div id="plan-holder">
+                                <img src="{{ asset('/investment/plan/'.$investment->plan->file) }}" alt="Plan inwestycji Przystań Natura" id="invesmentplan" usemap="#invesmentplan" class="w-100 h-100 object-fit-cover rounded">
+                                @if($investment->type == 3)
+                                    <map name="invesmentplan">
+                                        @if($investment->properties)
+                                            @foreach($investment->properties as $house)
+                                                <area
+                                                    shape="poly"
+                                                    href="{{route('front.developro.house', [$house, Str::slug($house->name), round(floatval($house->area), 2).'-m2'])}}"
+                                                    title="{{$house->name}}<br>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b><br /><b>{{ roomStatus($house->status) }}</b>"
+                                                    alt="{{$house->slug}}"
+                                                    data-roomnumber="{{$house->number}}"
+                                                    data-roomtype="{{$house->typ}}"
+                                                    data-roomstatus="{{$house->status}}"
+                                                    coords="{{ $house->html ? (cords($house->html) ?? '') : '' }}"
+                                                    class="inline status-{{$house->status}}">
+                                            @endforeach
+                                        @endif
+                                    </map>
+                                @endif
+                            </div>
+                        @endif
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <div class="d-flex justify-content-center justify-content-sm-end align-items-end h-100">
-                            <h3>W bezpośrednim <br>sąsiedztwie ze <i>stadniną <br>koni i szkółką</i></h3>
-                        </div>
-                    </div>
+                </div>
+            </div>
+
+            <div class="container mieszkania-list mt-5">
+                <div class="row">
+                    @if($properties->count() === 0)
+                        <p class="text-center text-lg py-3">
+                            Brak wyników wyszukiwania, zmień parametry i spróbuj ponownie.
+                        </p>
+                    @else
+                        @foreach($properties as $p)
+
+                            <x-list-property-card
+                                number="{{ $p->number }}"
+                                title="{{ $p->name }}"
+                                subtitle="+ wiata garażowa"
+                                area="{{ $p->plot_area }} m²"
+                                house_area="{{ $p->area }} m²"
+                                rooms="{{ $p->rooms }}"
+                                status="{{ $p->status }}"
+                                floors="-"
+                                price="{{$p->price_brutto}}"
+                                promotion_price="{{$p->promotion_price}}"
+                                highlighted="{{$p->highlighted}}"
+                                condition="{{ $p->loggia_area }}"
+                                pdfUrl="{{ asset('/investment/property/pdf/'.$p->file_pdf) }}"
+                                historyUrl="{{ route('front.developro.house', [
+                                            $p,
+                                            Str::slug($p->name),
+                                            round(floatval($p->area), 2).'-m2'
+                                        ]) }}"
+                                statusClass="status-{{ $p->status }}"
+                            />
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </section>
@@ -374,82 +394,6 @@
                             </div>
                         </a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="plan" class="d-none d-md-block">
-            <!-- Troszke rozmyty plan -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <x-section-header title="Wybierz dom <i>dla siebie</i>" subtitle="DOSTĘPNOŚĆ" class="text-center" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 pe-4 ps-4">
-                        @if($investment->plan)
-                            <div id="plan-holder">
-                                <img src="{{ asset('/investment/plan/'.$investment->plan->file) }}" alt="Plan inwestycji Przystań Natura" id="invesmentplan" usemap="#invesmentplan" class="w-100 h-100 object-fit-cover rounded">
-                                @if($investment->type == 3)
-                                    <map name="invesmentplan">
-                                        @if($investment->properties)
-                                            @foreach($investment->properties as $house)
-                                                <area
-                                                    shape="poly"
-                                                    href="{{route('front.developro.house', [$house, Str::slug($house->name), round(floatval($house->area), 2).'-m2'])}}"
-                                                    title="{{$house->name}}<br>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b><br /><b>{{ roomStatus($house->status) }}</b>"
-                                                    alt="{{$house->slug}}"
-                                                    data-roomnumber="{{$house->number}}"
-                                                    data-roomtype="{{$house->typ}}"
-                                                    data-roomstatus="{{$house->status}}"
-                                                    coords="{{ $house->html ? (cords($house->html) ?? '') : '' }}"
-                                                    class="inline status-{{$house->status}}">
-                                            @endforeach
-                                        @endif
-                                    </map>
-                                @endif
-                            </div>
-                        @endif
-                    </div>
-                </div>
-            </div>
-
-            <div class="container mieszkania-list mt-5">
-                <div class="row">
-                    @if($properties->count() === 0)
-                        <p class="text-center text-lg py-3">
-                            Brak wyników wyszukiwania, zmień parametry i spróbuj ponownie.
-                        </p>
-                    @else
-                        @foreach($properties as $p)
-
-                            <x-list-property-card
-                                number="{{ $p->number }}"
-                                title="{{ $p->name }}"
-                                subtitle="+ wiata garażowa"
-                                area="{{ $p->plot_area }} m²"
-                                house_area="{{ $p->area }} m²"
-                                rooms="{{ $p->rooms }}"
-                                status="{{ $p->status }}"
-                                floors="-"
-                                price="{{$p->price_brutto}}"
-                                promotion_price="{{$p->promotion_price}}"
-                                highlighted="{{$p->highlighted}}"
-                                condition="{{ $p->loggia_area }}"
-                                pdfUrl="{{ asset('/investment/property/pdf/'.$p->file_pdf) }}"
-                                historyUrl="{{ route('front.developro.house', [
-                                            $p,
-                                            Str::slug($p->name),
-                                            round(floatval($p->area), 2).'-m2'
-                                        ]) }}"
-                                statusClass="status-{{ $p->status }}"
-                            />
-                        @endforeach
-                    @endif
                 </div>
             </div>
         </section>
