@@ -84,6 +84,7 @@
                             title="{{ $p->name }}"
                             subtitle="+ wiata garażowa"
                             area="{{ $p->plot_area }} m²"
+                            house_area="{{ $p->area }} m²"
                             rooms="{{ $p->rooms }}"
                             status="{{ $p->status }}"
                             floors="-"

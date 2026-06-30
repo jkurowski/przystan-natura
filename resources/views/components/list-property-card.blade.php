@@ -4,6 +4,7 @@
     'title' => null,
     'subtitle' => null,
     'area' => null,
+    'house_area' => null,
     'rooms' => null,
     'status' => null,
     'floors' => null,
@@ -33,7 +34,7 @@
             @if($area)<li class="w-50 border-right">Działka <span>{{ $area }}</span></li>@endif
             @if($rooms)<li class="w-50">Pokoje <span>{{ $rooms }}</span></li>@endif
             @if($status)<li>Status {!! roomStatusBadge($status) !!}</li>@endif
-            @if($floors)<li>Kondygnacje <span>{{ $floors }}</span></li>@endif
+            @if($house_area)<li>Pow. domu <span>{{ $house_area }}</span></li>@endif
 
             @if($price && $status == 1)
                 @if($highlighted && $promotion_price)
