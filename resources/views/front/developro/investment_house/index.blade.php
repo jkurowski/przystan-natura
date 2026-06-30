@@ -98,7 +98,7 @@
 
                             @if($property->status == 1)
                                 @if($property->highlighted && $property->promotion_price)
-                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100" style="color: #FF0000">
+                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100" style="color: #CC9E5D;font-size:21px">
                                         <span>Cena promocyjna</span>
                                         <span><b>@money($property->promotion_price)</b></span>
                                     </div>
@@ -109,14 +109,14 @@
                                 @endphp
 
                                 @if($property->highlighted && $property->promotion_price && $area > 0)
-                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100" style="color: #FF0000">
+                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100" style="color: #CC9E5D">
                                         <span>Cena promocyjna za m<sup>2</sup></span>
                                         <span><b>@money($property->promotion_price / $area)</b></span>
                                     </div>
                                 @endif
 
                                 @if($property->price_brutto)
-                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100 @if($property->highlighted) text-decoration-line-through text-muted @endif">
+                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100 @if($property->highlighted) text-decoration-line-through @endif" @if($property->highlighted) style="color: #4B6260" @endif>
                                         <span>Cena</span>
                                         <span><b>@money($property->price_brutto)</b></span>
                                     </div>
@@ -127,7 +127,7 @@
                                 @endphp
 
                                 @if($property->price_brutto && $area > 0)
-                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100 @if($property->highlighted) text-decoration-line-through text-muted @endif">
+                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100 @if($property->highlighted) text-decoration-line-through @endif" @if($property->highlighted)style="color: #4B6260" @endif>
                                         <span>Cena za m<sup>2</sup></span>
                                         <span><b>@money($property->price_brutto / $area)</b></span>
                                     </div>

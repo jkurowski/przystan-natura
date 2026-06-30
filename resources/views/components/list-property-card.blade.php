@@ -7,7 +7,9 @@
     'rooms' => null,
     'status' => null,
     'floors' => null,
+    'highlighted' => null,
     'price' => null,
+    'promotion_price' => null,
     'condition' => null,
     'pdfUrl' => '',
     'historyUrl' => '',
@@ -15,7 +17,10 @@
 ])
 
 <div class="col-12 col-md-6 col-xl-4">
-    <div class="house-item">
+    <div class="house-item position-relative @if($highlighted && $promotion_price) house-promo @endif">
+        @if($highlighted && $promotion_price)
+            <span class="house-item-promo">PROMOCJA</span>
+        @endif
         <div class="house-item-header">
             @if($number)
                 <strong>{{ $number }}</strong>
@@ -29,7 +34,17 @@
             @if($rooms)<li class="w-50">Pokoje <span>{{ $rooms }}</span></li>@endif
             @if($status)<li>Status {!! roomStatusBadge($status) !!}</li>@endif
             @if($floors)<li>Kondygnacje <span>{{ $floors }}</span></li>@endif
-            @if($price && $status == 1)<li>Cena <span>@money($price)</span></li> @else <li>Cena </li>@endif
+
+            @if($price && $status == 1)
+                @if($highlighted && $promotion_price)
+                    <li>Promocja <span class="text-end">@money($promotion_price) <br><s style="font-size:13px;color:#838383;">@money($price)</s></span></li>
+                @else
+                    <li>Cena <span>@money($price)</span></li>
+                @endif
+            @else
+                 <li>Cena </li>
+            @endif
+
             @if($condition)<li>Stan <span>{{ $condition }}</span></li>@endif
         </ul>
         <div class="house-item-footer row">
