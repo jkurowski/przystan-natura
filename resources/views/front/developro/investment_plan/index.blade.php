@@ -59,7 +59,7 @@
                                                 data-roomtype="{{$house->typ}}"
                                                 data-roomstatus="{{$house->status}}"
                                                 coords="{{ $house->html ? (cords($house->html) ?? '') : '' }}"
-                                                class="inline status-{{$house->status}}">
+                                                class="inline status-{{$house->status}} @if($house->highlighted) status-highlighted @endif">
                                         @endforeach
                                     @endif
                                 </map>
