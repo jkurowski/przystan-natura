@@ -1893,12 +1893,15 @@ footer hr {
   font-size: 15px;
 }
 .qtip-content li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 3px 0;
   font-weight: 300;
   font-size: 13px;
   line-height: 19px;
   display: flex;
+}
+.qtip-content li:last-child {
+  border-bottom: none;
 }
 .qtip-content li b {
   font-weight: 600;
