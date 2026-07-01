@@ -54,13 +54,18 @@
                                                 shape="poly"
                                                 href="{{route('front.developro.house', [$house, Str::slug($house->name), round(floatval($house->area), 2).'-m2'])}}"
                                                 title="<h4 class=mb-0>{{$house->name}}</h4>
-                                                Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b>
+                                                <ul class=list-unstyled mb-0>
+                                                <li>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b></li>
+                                                <li>Powierzchnia działki: <b class=fr>{{$house->plot_area}} m<sup>2</sup></b></li>
+                                                <li>
                                                 @if($house->highlighted && $house->promotion_price)
                                                 <br>Cena: <b class=fr>@money($house->promotion_price)</b>
                                                 @else
                                                 <br>Cena: <b class=fr>@money($house->price_brutto)</b>
                                                 @endif
-                                                <br><b>{{ roomStatus($house->status) }}</b>"
+                                                </li>
+                                                <li>{{ roomStatus($house->status) }}</li>
+                                                <ul>"
                                                 alt="{{$house->slug}}"
                                                 data-roomnumber="{{$house->number}}"
                                                 data-roomtype="{{$house->typ}}"
