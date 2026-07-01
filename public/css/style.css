@@ -1892,7 +1892,7 @@ footer hr {
   margin: 0;
   font-size: 15px;
 }
-.qtip-content li {
+.qtip-content ul li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 3px 0;
   font-weight: 300;
@@ -1900,8 +1900,8 @@ footer hr {
   line-height: 19px;
   display: flex;
 }
-.qtip-content li:last-child {
-  border-bottom: none;
+.qtip-content ul li:last-child {
+  border-bottom: 0;
 }
 .qtip-content li b {
   font-weight: 600;
