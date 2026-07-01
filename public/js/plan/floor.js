@@ -94,6 +94,10 @@ $(document).ready(function() {
                 fillColor: rent,
                 fillOpacity: normalState
             })
+            $("area[data-roomstatus='99']").mapster("set", true, {
+                fillColor: promotion,
+                fillOpacity: normalState
+            })
         }
     });
 
@@ -111,6 +115,10 @@ $(document).ready(function() {
     });
     $("area[data-roomstatus='4']").mapster("set", true, {
         fillColor: rent,
+        fillOpacity: normalState
+    });
+    $("area[data-roomstatus='99']").mapster("set", true, {
+        fillColor: promotion,
         fillOpacity: normalState
     });
 });
