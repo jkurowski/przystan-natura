@@ -29,7 +29,7 @@
 
     <noscript>
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=30062026">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=01072026">
     </noscript>
 
     <!-- Preloads -->
