@@ -53,7 +53,7 @@
                                             <area
                                                 shape="poly"
                                                 href="{{route('front.developro.house', [$house, Str::slug($house->name), round(floatval($house->area), 2).'-m2'])}}"
-                                                title="{{$house->name}}<br>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b><br /><b>{{ roomStatus($house->status) }}</b>"
+                                                title="{{$house->name}}<br>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b><br /><br>Cena: <b class=fr>@money($price)</b><br /><b>{{ roomStatus($house->status) }}</b>"
                                                 alt="{{$house->slug}}"
                                                 data-roomnumber="{{$house->number}}"
                                                 data-roomtype="{{$house->typ}}"
