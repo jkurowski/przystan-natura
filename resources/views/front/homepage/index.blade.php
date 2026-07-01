@@ -136,13 +136,29 @@
                                                 <area
                                                     shape="poly"
                                                     href="{{route('front.developro.house', [$house, Str::slug($house->name), round(floatval($house->area), 2).'-m2'])}}"
-                                                    title="{{$house->name}}<br>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b><br /><b>{{ roomStatus($house->status) }}</b>"
+                                                    title="<h4 class=mb-0>{{$house->name}}</h4>
+                                                <ul class='list-unstyled mb-0'>
+                                                <li>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b></li>
+                                                <li>Działka: <b class=fr>{{$house->plot_area}} m<sup>2</sup></b></li>
+                                                <li>
+                                                @if($house->highlighted && $house->promotion_price)
+                                                <br>Cena: <b class=fr>@money($house->promotion_price)</b>
+                                                @else
+                                                <br>Cena: <b class=fr>@money($house->price_brutto)</b>
+                                                @endif
+                                                </li>
+                                                <li>{{ roomStatus($house->status) }}</li>
+                                                <ul>"
                                                     alt="{{$house->slug}}"
                                                     data-roomnumber="{{$house->number}}"
                                                     data-roomtype="{{$house->typ}}"
-                                                    data-roomstatus="{{$house->status}}"
+                                                    @if($house->highlighted && $house->promotion_price)
+                                                        data-roomstatus="99"
+                                                    @else
+                                                        data-roomstatus="{{$house->status}}"
+                                                    @endif
                                                     coords="{{ $house->html ? (cords($house->html) ?? '') : '' }}"
-                                                    class="inline status-{{$house->status}}">
+                                                    class="inline status-{{$house->status}} @if($house->highlighted) status-highlighted @endif">
                                             @endforeach
                                         @endif
                                     </map>
