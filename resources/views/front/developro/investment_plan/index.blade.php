@@ -53,8 +53,8 @@
                                             <area
                                                 shape="poly"
                                                 href="{{route('front.developro.house', [$house, Str::slug($house->name), round(floatval($house->area), 2).'-m2'])}}"
-                                                title="{{$house->name}}
-                                                <br>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b>
+                                                title="<h4 class=mb-0>{{$house->name}}</h4>
+                                                Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b>
                                                 @if($house->highlighted && $house->promotion_price)
                                                 <br>Cena: <b class=fr>@money($house->promotion_price)</b>
                                                 @else
