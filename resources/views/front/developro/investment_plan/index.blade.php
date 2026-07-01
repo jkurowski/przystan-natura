@@ -64,7 +64,11 @@
                                                 alt="{{$house->slug}}"
                                                 data-roomnumber="{{$house->number}}"
                                                 data-roomtype="{{$house->typ}}"
+                                                @if($house->highlighted && $house->promotion_price)
+                                                data-roomstatus="99"
+                                                @else
                                                 data-roomstatus="{{$house->status}}"
+                                                @endif
                                                 coords="{{ $house->html ? (cords($house->html) ?? '') : '' }}"
                                                 class="inline status-{{$house->status}} @if($house->highlighted) status-highlighted @endif">
                                         @endforeach

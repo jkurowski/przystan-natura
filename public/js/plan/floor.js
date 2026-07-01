@@ -27,6 +27,7 @@ $(document).ready(function() {
     const reservation = 'FBC000'; // mieszkanie zarezerwowane
     const forsale = '3a9019'; // mieszkanie na sprzedaz
     const rent = 'de8300'; // mieszkanie wynajete
+    const promotion = 'A4804D'; // mieszkanie wynajete
     const hoverOpacity = 0.8;
     const normalState = 0.5;
 
@@ -65,6 +66,12 @@ $(document).ready(function() {
             if (a === "4") {
                 $(this).mapster("set", false).mapster("set", true, {
                     fillColor: rent,
+                    fillOpacity: hoverOpacity
+                })
+            }
+            if (a === "99") {
+                $(this).mapster("set", false).mapster("set", true, {
+                    fillColor: promotion,
                     fillOpacity: hoverOpacity
                 })
             }
