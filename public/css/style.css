@@ -1893,12 +1893,16 @@ footer hr {
   font-size: 15px;
 }
 .qtip-content li {
-  border-bottom: 1px solid #3f3f3f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 3px 0;
   font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
 }
 .qtip-content li b {
   font-weight: 600;
+  margin-left: auto;
 }
 .dostepny-ap,
 .sprzedany-ap,

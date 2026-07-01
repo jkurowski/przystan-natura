@@ -1587,8 +1587,15 @@ footer {
 .qtip-tip, .qtip-tip canvas{position: absolute;color:var(--main-orange) !important;border: 0 dashed transparent !important}
 .qtip-tip canvas{ top: 0; left: 0; }
 .qtip-content h3 {color:var(--main-orange);font-weight:600;margin:0;font-size:15px}
-.qtip-content li {border-bottom:1px solid #3f3f3f;padding:3px 0;font-weight:300}
-.qtip-content li b {font-weight:600}
+.qtip-content li {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 3px 0;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+}
+.qtip-content li b {font-weight:600;margin-left: auto;}
 .dostepny-ap, .sprzedany-ap, .rezerwacja-ap {
     font-size: 22px;
     text-transform: uppercase;

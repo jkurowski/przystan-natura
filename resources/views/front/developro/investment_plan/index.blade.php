@@ -56,7 +56,7 @@
                                                 title="<h4 class=mb-0>{{$house->name}}</h4>
                                                 <ul class=list-unstyled mb-0>
                                                 <li>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b></li>
-                                                <li>Powierzchnia działki: <b class=fr>{{$house->plot_area}} m<sup>2</sup></b></li>
+                                                <li>Działka: <b class=fr>{{$house->plot_area}} m<sup>2</sup></b></li>
                                                 <li>
                                                 @if($house->highlighted && $house->promotion_price)
                                                 <br>Cena: <b class=fr>@money($house->promotion_price)</b>
