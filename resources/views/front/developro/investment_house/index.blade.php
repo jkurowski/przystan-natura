@@ -300,7 +300,7 @@
                                     @foreach($property->priceHistory as $history)
                                         <tr>
                                             <td>
-                                                @if($history->price_before_gross < $history->price_gross)
+                                                @if($history->price_brutto < $history->new_price_brutto)
                                                     <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                                                          fill="none" stroke="#ae1515" stroke-width="2"
                                                          stroke-linecap="round" stroke-linejoin="round"
@@ -319,15 +319,15 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                {{ $history->price_before_gross }} zł
-                                                <small class="d-inline-block w-100">{{ $history->price_before_per_mkw }} zł/m<sup>2</sup></small>
+                                                {{ $history->price_brutto }} zł
+                                                <small class="d-inline-block w-100">{{ $history->price_brutto / $history->area }} zł/m<sup>2</sup></small>
                                             </td>
                                             <td>
-                                                {{ $history->price_gross }} zł
-                                                <small class="d-inline-block w-100">{{ $history->price_per_mkw }} zł/m<sup>2</sup></small>
+                                                {{ $history->new_price_brutto }} zł
+                                                <small class="d-inline-block w-100">{{ $history->new_price_brutto / $history->area }} zł/m<sup>2</sup></small>
                                             </td>
                                             <td>
-                                                {{ $history->formatted_date_modified }}
+                                                {{ $history->changed_at }}
                                             </td>
                                         </tr>
                                     @endforeach
