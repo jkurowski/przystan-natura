@@ -213,7 +213,7 @@
 
                             @if($property->priceHistory->count() > 0 && $property->status == 1 && $investment->show_pricehistory)
                                 <div>
-                                    <button type="button" class="custom-button mt-0mt-md-10" data-bs-toggle="modal" data-bs-target="#priceHistoryModal">Historia ceny</button>
+                                    <button type="button" class="bttn bttn-active" data-bs-toggle="modal" data-bs-target="#priceHistoryModal">Historia ceny</button>
                                 </div>
                             @endif
                             <div class="container-fluid p-0">
@@ -337,7 +337,7 @@
                         </div>
                     </div>
                     <div class="modal-footer border-0">
-                        <button type="button" class="custom-button mt-0mt-md-10" data-bs-dismiss="modal">Zamknij</button>
+                        <button type="button" class="bttn bttn-active" data-bs-dismiss="modal">Zamknij</button>
                     </div>
                 </div>
             </div>
