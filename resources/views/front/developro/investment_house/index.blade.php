@@ -320,11 +320,11 @@
                                             </td>
                                             <td>
                                                 {{ $history->price_brutto }} zł
-                                                <small class="d-inline-block w-100">{{ $history->price_brutto / $history->area }} zł/m<sup>2</sup></small>
+                                                <small class="d-inline-block w-100">{{ number_format($history->price_brutto / $history->area, 2, ',', ' ') }} zł/m<sup>2</sup></small>
                                             </td>
                                             <td>
                                                 {{ $history->new_price_brutto }} zł
-                                                <small class="d-inline-block w-100">{{ $history->new_price_brutto / $history->area }} zł/m<sup>2</sup></small>
+                                                <small class="d-inline-block w-100">{{ number_format($history->new_price_brutto / $history->area, 2, ',', ' ') }} zł/m<sup>2</sup></small>
                                             </td>
                                             <td>
                                                 {{ $history->changed_at }}
