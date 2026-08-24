@@ -582,6 +582,10 @@ button:focus,
   color: white;
   border-color: var(--main-gold);
 }
+.bttn.bttn-sm {
+  padding: 7px 17px;
+  font-size: 12px;
+}
 .bttn.bttn-icon {
   padding-right: 28px;
 }
