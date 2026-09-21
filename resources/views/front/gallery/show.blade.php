@@ -1,6 +1,6 @@
 @extends('layouts.page', ['body_class' => 'position-relative', 'body_id' => 'page-gallery'])
 
-@section('meta_title', $page->title ?? 'Galeria')
+@section('meta_title', $page->title ?? 'Galeria - '.$category->name)
 @section('seo_title',$page->meta_title ?? '')
 @section('seo_description', $page->meta_description ?? '')
 @section('seo_robots', $page->meta_robots ?? '')

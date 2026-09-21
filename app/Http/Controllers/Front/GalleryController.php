@@ -32,7 +32,7 @@ class GalleryController extends Controller
 
     public function show($id, $slug)
     {
-        $page = Page::where('id', 1)->first();
+        $page = Page::where('id', 3)->first();
 
         $galleries = Gallery::where('status', 1)
             ->orderBy('sort', 'asc')
