@@ -16,9 +16,10 @@
             <div class="col-9 col-md-10">
                 <nav class="h-100 align-items-start align-items-xl-center justify-content-end" aria-label="Menu główne">
                     <ul class="mb-0 list-unstyled d-flex justify-content-end">
-                        <li class="rwd-menu"><a href="/">Strona główna</a></li>
+                        <li class="rwd-menu rwd-menu-home"><a href="/">Strona główna</a></li>
                         <li class="rwd-menu"><a href="{{ route('front.developro.plan') }}">Oferta domów</a></li>
                         <li class="rwd-menu"><a href="{{ route('front.menu.show', ['uri' => 'lokalizacja']) }}">Lokalizacja</a></li>
+                        <li class="rwd-menu"><a href="{{ route('front.menu.show', ['uri' => 'standard-wykonczenia']) }}">Standard wykończenia</a></li>
                         <li class="rwd-menu"><a href="{{ route('front.menu.show', ['uri' => 'galeria']) }}">Galeria</a></li>
                         <li class="rwd-menu"><a href="{{ route('front.menu.show', ['uri' => 'o-inwestorze']) }}">O inwestorze</a></li>
                         <li class="rwd-menu"><a href="{{ route('front.menu.show', ['uri' => 'kontakt']) }}">Kontakt</a></li>

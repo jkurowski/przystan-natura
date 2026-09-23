@@ -28,6 +28,8 @@ class MenuController extends Controller
             'polityka-prywatnosci' => 6,
         ];
 
+        $page = null;
+
         if (isset($pages[$uri])) {
             $page = Page::find($pages[$uri]);
         }

@@ -1,4 +1,4 @@
-<section id="mainContact" class="bg-logo-2 pb-0">
+<section id="mainContact" class="bg-logo-2 {{ empty($hide_photo) ? 'pb-0' : 'pb-6' }}">
     <div class="container pt-0">
         <div class="row">
             <div class="col-12 col-xl-6">
@@ -55,6 +55,7 @@
             </div>
         </div>
     </div>
+    @if(empty($hide_photo))
     <div class="container pt-0 pb-0" style="background:none">
         <div class="row">
             <div class="col-12">
@@ -80,4 +81,5 @@
             </div>
         </div>
     </div>
+    @endif
 </section>

@@ -29,6 +29,7 @@
                                             <li><a href="/">Strona główna</a></li>
                                             <li><a href="{{ route('front.developro.plan') }}">Oferta domów</a></li>
                                             <li><a href="{{ route('front.menu.show', ['uri' => 'lokalizacja']) }}">Lokalizacja</a></li>
+                                            <li><a href="{{ route('front.menu.show', ['uri' => 'standard-wykonczenia']) }}">Standard wykończenia</a></li>
                                             <li><a href="{{ route('front.menu.show', ['uri' => 'galeria']) }}">Galeria</a></li>
                                             <li><a href="{{ route('front.menu.show', ['uri' => 'o-inwestorze']) }}">O inwestorze</a></li>
                                             <li><a href="{{ route('front.menu.show', ['uri' => 'kontakt']) }}">Kontakt</a></li>
