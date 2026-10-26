@@ -222,10 +222,18 @@ class Property extends Model
     {
         $dateFrom = Carbon::now()->subDays(30);
 
-        return $this->priceHistory()
+        // Ceny obowiązujące w ostatnich 30 dniach: aktualna + ceny przed i po każdej zmianie z tego okresu
+        $prices = $this->priceHistory()
             ->where('changed_at', '>=', $dateFrom)
-            ->orderBy('price_brutto', 'asc')
-            ->first()?->price_brutto;  // zwr�ci lowest price albo null, je�li brak
+            ->get(['price_brutto', 'new_price_brutto'])
+            ->flatMap(fn($history) => [$history->price_brutto, $history->new_price_brutto]);
+
+        $currentPrice = ($this->highlighted == 1 && $this->promotion_price > 0) ? $this->promotion_price : $this->price_brutto;
+
+        return $prices->push($currentPrice)
+            ->map(fn($price) => (float) $price)
+            ->filter(fn($price) => $price > 0)
+            ->min();  // zwróci najniższą cenę albo null, jeśli brak
     }
 
     public function visitorRelatedProperties()

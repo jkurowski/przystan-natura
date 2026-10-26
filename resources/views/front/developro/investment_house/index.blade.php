@@ -99,6 +99,17 @@
                                         <span><b>@money($property->price_brutto / $area)</b></span>
                                     </div>
                                 @endif
+
+                                @php
+                                    $lowestPrice = $property->lowestPriceLast30Days();
+                                @endphp
+
+                                @if($lowestPrice)
+                                    <div class="page-entry-karta__info-item d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between align-items-center align-items-sm-end w-100">
+                                        <span>Najniższa cena z 30 dni</span>
+                                        <span><b>@money($lowestPrice)</b></span>
+                                    </div>
+                                @endif
                             @endif
 
                             @if($property->area)
